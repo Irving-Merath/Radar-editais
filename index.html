@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radar de Editais de Inovação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Radar de Editais</h1>
+    <p class="sub">Fomento não reembolsável, CPSI, encomendas tecnológicas e desafios de inovação para CPF, MEI, startups e negócios de impacto.</p>
+    <p class="meta" id="meta"></p>
+  </header>
+
+  <div class="bar">
+    <div class="row">
+      <input type="search" id="q" placeholder="Buscar por tema, órgão ou palavra" aria-label="Buscar oportunidades">
+      <button class="btn" id="abrir" type="button" aria-haspopup="dialog">Filtros <span class="count" id="nf" hidden>0</span></button>
+    </div>
+  </div>
+
+  <div class="quick" id="quick" aria-label="Onde a oportunidade vale"></div>
+  <p class="summary" id="summary" aria-live="polite"></p>
+  <p class="note" id="aviso" hidden>Os itens marcados como <strong>exemplo</strong> são fictícios e servem para demonstrar os filtros. Os editais reais entram após a primeira coleta automática.</p>
+
+  <main id="lista"></main>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlgt">
+  <div class="sheet">
+    <div class="sheet-head"><h2 id="dlgt">Filtros</h2><button class="x" type="button" id="fechar" aria-label="Fechar filtros">×</button></div>
+    <div class="sheet-body">
+      <fieldset>
+        <legend>Onde vale</legend>
+        <div class="chips" id="f-onde"></div>
+        <div class="line"><label for="uf">Estado das oportunidades regionais</label><select id="uf"></select></div>
+      </fieldset>
+      <fieldset>
+        <legend>Quem pode participar</legend>
+        <p class="hint">“CNPJ” inclui MEI, startups, empresas e organizações.</p>
+        <div class="chips" id="f-prop"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Tipo de oportunidade</legend>
+        <div class="chips" id="f-tipo"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Segmentos</legend>
+        <div class="seg-mode" role="group" aria-label="Modo de busca por segmento">
+          <button type="button" data-modo="ampla">Busca ampla</button>
+          <button type="button" data-modo="especifica">Busca específica</button>
+        </div>
+        <p class="hint" id="modoTexto"></p>
+        <p class="grp">Tecnologias</p>
+        <div class="chips" id="f-tec"></div>
+        <p class="grp">Áreas de aplicação</p>
+        <div class="chips" id="f-area"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Prazo e ordem</legend>
+        <div class="line"><label for="abertos">Mostrar só inscrições abertas</label><input type="checkbox" id="abertos"></div>
+        <div class="line"><label for="ordem">Ordenar por</label>
+          <select id="ordem"><option value="prazo">Prazo mais próximo</option><option value="recentes">Adicionados recentemente</option></select></div>
+      </fieldset>
+    </div>
+    <div class="sheet-foot">
+      <button class="btn ghost" type="button" id="limpar">Limpar filtros</button>
+      <button class="btn" type="button" id="ver">Ver resultados</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
