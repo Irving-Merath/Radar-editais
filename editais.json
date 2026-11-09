@@ -1019,6 +1019,717 @@
    "ufs": [],
    "prazo": null,
    "valor": ""
+  },
+  {
+   "id": "7f37ac3d0ca6",
+   "titulo": "Lista final do Programa de Apoio à Editoração (Edital Nº 03/2026) tem 138 aprovados. Chamada recebeu 391 propostas na fase inicial. Resultado foi divulgado nesta quinta (16/7).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1069.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "agro",
+    "social"
+   ],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "b2b187820caa",
+   "titulo": "A FAPERJ anunciou sua adesão à chamada do Programa 'Desafios da Amazônia' – parceria entre o Fundo Amazônia e o CONFAP. Objetivo é apoiar o desenvolvimento de soluções inovadoras na região.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1065.7.6",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-12-08",
+   "valor": "R$ 107,1 milhões"
+  },
+  {
+   "id": "efd9648dca6b",
+   "titulo": "A FAPERJ anunciou, nesta quinta (16/7), sua participação em 3 chamadas de cooperação internacional realizadas em parceria com o CONFAP e instituições internacionais.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1066.7.1",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "logistica"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 731.000,00."
+  },
+  {
+   "id": "1f21b042d9b9",
+   "titulo": "A FAPERJ divulgou nesta quinta (2/7) o resultado preliminar do Programa de Apoio à Recuperação e Modernização da Infraestrutura de Hospitais Universitários (Edital Nº 01/2026): Seis propostas foram se",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1057.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "574a337253ce",
+   "titulo": "Fundação abre inscrições para uma nova edição do programa Treinamento e Capacitação Técnica – TCT (Edital FAPERJ Nº 14/2026). Inscrições vão até 31 de julho. Anúncio aconteceu nesta quinta (25/6).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1051.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "c6b2ee55f8e8",
+   "titulo": "Programa 'Agro do Futuro' (Edital FAPERJ Nº 07/2026) teve 35 propostas aprovadas no resultado preliminar. O resultado contempla projetos distribuídos nas Faixas A, B e C. Anúncio aconteceu na sexta (1",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1039.7.9",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "residuos",
+    "saude",
+    "agro",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "61eeaee55d05",
+   "titulo": "FAPERJ anunciou, nesta terça (16/06), o lançamento do Centelha 3 RJ (Edital N° 12/2026). Programa apoiará até 47 projetos para transformar ideias em empresas de base tecnológica.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1042.7.7",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6f0c93e25a08",
+   "titulo": "A FAPERJ anunciou nesta quinta (11/06) o resultado final do Programa Pesquisador na Empresa (Edital Nº 44/2025). Foram aprovados 118 projetos de inovação, contemplando a concessão de 139 bolsas.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1041.7.1",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "dd897b26f5e2",
+   "titulo": "A FAPERJ anunciou, nesta quarta (3/6), a lista dos projetos selecionados para a Fase 3 do programa HUB RJ Startup (Edital Nº 04/2025). Ao todo, 143 propostas foram classificadas para a última etapa do",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1027.7.1",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PB",
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 30 mil"
+  },
+  {
+   "id": "56a95ab6d906",
+   "titulo": "A FAPERJ divulgou nesta quarta (3/6) o resultado da 2ª Etapa de Avaliação de Mérito do Edital Nº 40/2025 – Apoio à Infraestrutura de Ambientes de Inovação e Laboratórios Compartilhados para Startups.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1037.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "clima"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "0e6081e73aba",
+   "titulo": "Fundação divulgou nesta quinta (21/5) o resultado preliminar do programa Pós-Doutorado Nota 10. Ao todo, foram aprovadas 132 propostas, distribuídas entre 18 instituições de ensino e pesquisa fluminen",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1024.7.5",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "8f640ea5b1e0",
+   "titulo": "Um total de 16 projetos foi pré-aprovado após avaliação das propostas recebidas no Edital de Apoio às Indicações Geográficas no Estado do RJ (Edital Nº 45/2025). Resultado saiu nesta quinta (14/5).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1021.7.9",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura",
+    "agro",
+    "social"
+   ],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "df8ad6d31059",
+   "titulo": "Com o anúncio nesta quinta (7/5) do resultado final do Programa Tecnova III (Edital FAPERJ Nº 32/2025), 43 empresas foram contempladas. Parceria com Finep, edital aborda temas prioritários para o RJ.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1016.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "agro",
+    "energia",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 600 mil"
+  },
+  {
+   "id": "937fa8f2c6a1",
+   "titulo": "Resultado final do edital Líder de Inovação do Nosso Estado - LINE (Edital FAPERJ Nº 31/2025) aprovou 59 propostas em todo o estado do Rio de Janeiro. Listagem foi divulgada nesta quinta (26/2).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=975.7.5",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "b82285594fd0",
+   "titulo": "Programa Prioridade Rio (Edital Nº34/2025) tem 40 propostas aprovadas na fase final. Chamada é voltada à solução de desafios dos municípios fluminenses. Resultado saiu nesta quinta (12/2).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=965.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "883af06ddd9e",
+   "titulo": "Bolsa de PD em Parasitologia Instituição: Universidade Estadual de Campinas - UNICAMP Cidade: Campinas Inscrições até: 15/11/2026 O bolsista irá investigar os mecanismos imunológicos e moleculares ass",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/sobre-a-suscetibilidade-a-malaria-investigando-os-mecanismos-de-resistencia-a-novos-antimalaricos-e-decifrando-os-fatores-fisiopatologicos-relacionados-ao-risco-de-recorrencia-da-malaria-por-plasmodium-vivax/9941/",
+   "resumo": "Título do projeto: Sobre a suscetibilidade à malária: Investigando os mecanismos de resistência a novos antimaláricos e decifrando os fatores fisiopatológicos relacionados ao risco de recorrência da malária por Plasmodium vivax",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "MA",
+    "SP"
+   ],
+   "prazo": "2026-11-15",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "0973cc38d1f4",
+   "titulo": "Bolsa de TT-V em Bioinformatica Instituição: Laboratório de Coleções Zoológicas/Instituto Butantan Cidade: São Paulo Inscrições até: 15/11/2026 • Auxiliar alunos e pesquisadores no acesso aos servidor",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/emu-infraestrutura-de-colecoes-biologicas-aquisicao-de-plataforma-para-analise-e-disponibilizacao-de-dados-omicos-e-microtomograficos-dos-acervos-zoologicos-do-instituto-butantan/9943/",
+   "resumo": "Título do projeto: EMU Infraestrutura de Coleções Biológicas: Aquisição de plataforma para análise e disponibilização de dados ômicos e microtomográficos dos acervos Zoológicos do Instituto Butantan",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-15",
+   "valor": ""
+  },
+  {
+   "id": "8b3e8831a586",
+   "titulo": "Bolsa de Doutorado em Fundamentos de Mecânica Quântica Instituição: Instituto de Física Teórica, Universidade Estadual Paulista (IFT-Unesp) Cidade: São Paulo Inscrições até: 16/11/2026 O bolsista será",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/recursos-quanticos-e-aplicacoes-em-cenarios-estendidos-de-amigo-de-wigner/9779/",
+   "resumo": "Título do projeto: Recursos Quânticos e Aplicações em Cenários Estendidos de Amigo de Wigner",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-16",
+   "valor": "R$ 5.790,00"
+  },
+  {
+   "id": "67a6b57f4114",
+   "titulo": "Bolsa de PD em Planejamento Urbano Instituição: Pontifícia Universidade Católica de Campinas (PUC-Campinas) Cidade: Campinas Inscrições até: 16/11/2026 O bolsista será responsável por desenvolver um e",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/requalificacao-de-imoveis-em-areas-centrais-estrategias-metodologicas-de-gestao-georreferenciada-de-dados-para-o-poligono-prioritario-de-campinas/9870/",
+   "resumo": "Título do projeto: Requalificação de imóveis em áreas centrais: estratégias metodológicas de gestão georreferenciada de dados para o polígono prioritário de Campinas",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cidades"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-16",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "cbcc10e24228",
+   "titulo": "Bolsa de Mestrado em Arquitetura e Urbanismo Instituição: Pontifícia Universidade Católica de Campinas (PUC-Campinas) Cidade: Campinas Inscrições até: 16/11/2026 Tem-se como objetivo investigar a rela",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/disperso-urbana--tipos-de-municpios-brasileiros-uma-contribuicao-para-a-concepcao-de-politicaspublicas-nacionais-de-base-territorial/9971/",
+   "resumo": "Título do projeto: DISPERSÃO URBANA – TIPOS DE MUNICÍPIOS BRASILEIROS: uma contribuição para a concepção de PolíticasPúblicas Nacionais de Base Territorial",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "logistica",
+    "clima",
+    "cidades"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-16",
+   "valor": "R$ 3.270,00"
+  },
+  {
+   "id": "839f262c0e0e",
+   "titulo": "Bolsa de PD em Linguagens e Tecnologia Instituição: Faculdade de Arquitetura, Urbanismo e de Design, Universidade de São Paulo (FAU-USP) Cidade: São Paulo Inscrições até: 16/11/2026 Mapeamento de acer",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/acervos-digitais-e-pesquisa-arte-arquitetura-design-e-tecnologia/9977/",
+   "resumo": "Título do projeto: Acervos Digitais e Pesquisa: arte, arquitetura, design e tecnologia",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "premio",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-16",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "fc2254e100e9",
+   "titulo": "Bolsa de PD em Relações Internacionais Instituição: Escola de Relações Internacionais da Fundação Getulio Vargas (FGV RI) Cidade: São Paulo Inscrições até: 19/11/2026 Uma Bolsa FAPESP de Pós-Doutorado",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/apoio-tecnico-a-cooperacao-internacional-para-o-enfrentamento-ao-crime-organizado-transnacional/9996/",
+   "resumo": "Título do projeto: Apoio Técnico à Cooperação Internacional para o Enfrentamento ao Crime Organizado Transnacional",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-19",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "c5a1b0eb44b2",
+   "titulo": "Bolsas de TT-I em Direitos Humanos Instituição: Instituto de Estudos Avançados, Universidade de São Paulo (IEA-USP) Cidade: São Paulo ou Ribeirão Preto Inscrições até: 19/11/2026 Resumo do trabalho a ",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/vieses-em-processos-decisorios-analisando-decisoes-praticas-e-procedimentos-que-influenciam-julgamentos-justos-em-perspectiva-racial-e-de-genero/9997/",
+   "resumo": "Título do projeto: Vieses em processos decisórios: analisando decisões, práticas e procedimentos que influenciam julgamentos justos em perspectiva racial e de gênero",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "educacao",
+    "saude",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-19",
+   "valor": "R$ 660,00"
+  },
+  {
+   "id": "e90ed0a83dbd",
+   "titulo": "Bolsa de TT-IV-A em Engenharia Biomédica / Neurociência Aplicada Instituição: Escola Paulista de Medicina, Universidade Federal de São Paulo (EPM-Unifesp) Cidade: São Paulo Inscrições até: 20/11/2026 ",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/avaliacao-quantitativa-neuromuscular-da-fadiga-e-sua-repercussao-no-desempenho-cirurgico-simulado-na-cirurgia-minimamente-invasiva/9952/",
+   "resumo": "Título do projeto: Avaliação quantitativa neuromuscular da fadiga e sua repercussão no desempenho cirúrgico simulado na cirurgia minimamente invasiva",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "educacao",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": ""
+  },
+  {
+   "id": "2fb25b95914d",
+   "titulo": "Bolsa de PD em Geoquímica / Sensoriamento Remoto Instituição: Instituto de Física, Universidade de São Paulo (IF-USP) Cidade: São Paulo Inscrições até: 20/11/2026 O projeto investiga a formação, o cre",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/formacao-de-novas-particulas-e-sua-interacao-com-nuvens-e-precipitacao-na-amazonia/9976/",
+   "resumo": "Título do projeto: Formação de Novas Partículas e sua Interação com Nuvens e Precipitação na Amazônia",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "logistica",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "e90450a429d2",
+   "titulo": "Bolsa de PD em Equações Diferenciais Parciais Instituição: Instituto de Ciências Matemáticas e de Computação, Universidade de São Paulo (ICMC-USP) Cidade: São Carlos Inscrições até: 20/11/2026 O proje",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/teoria-geometrica-de-edp-e-analise-complexa-multidimensional/9978/",
+   "resumo": "Valor da bolsa: R$ 12.570,00 (consulte os valores de Bolsas da FAPESP em fapesp.br/valores/bolsasnopais ).",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "c07d5ce878c6",
+   "titulo": "Bolsa de TT-IV em Citogenômica Animal Instituição: Departamento de Genética e Evolução, Universidade Federal de São Carlos (DGE-UFSCar) Cidade: São Carlos Inscrições até: 20/11/2026 O(A) bolsista de T",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/conectando-genomas-aos-cromossomos-preenchendo-a-lacuna-entre-dados-genomicos-e-citogeneticos/9985/",
+   "resumo": "Título do projeto: Conectando genomas aos cromossomos. Preenchendo a lacuna entre dados genômicos e citogenéticos.",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": ""
+  },
+  {
+   "id": "5648a98ca2bf",
+   "titulo": "Bolsa de Doutorado em Metabolismo e Sinalização Hormonal Instituição: Instituto de Ciências Biomédicas, Universidade de São Paulo (ICB-USP) Cidade: São Paulo Inscrições até: 20/11/2026 O bolsista atua",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/papel-do-estradiol-na-modulacao-metabolica-na-menopausa/9990/",
+   "resumo": "Project title: Estradiol Role in Metabolic Modulation: Receptor Interactions and Implications in Menopause",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": "R$ 5.790,00"
+  },
+  {
+   "id": "4e3597754aec",
+   "titulo": "Bolsa de PD em Bioquímica Instituição: Centro de Ciências e Tecnologias para a Sustentabilidade, Universidade Federal de São Carlos (CCTS-UFSCar) Cidade: Sorocaba Inscrições até: 20/11/2026 O projeto ",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/bioluminescencia-biodiversidade-origem-metabolica-estrutura-funcao-e-engenharia-de-luciferases-empregos-em-biossensores-bioensaios-e-bioindicacao-ambiental/9992/",
+   "resumo": "Título do projeto: Bioluminescência: biodiversidade; origem metabólica; estrutura/função e engenharia de luciferases; empregos em biossensores, bioensaios e bioindicação ambiental",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "iot",
+    "logistica",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "ae80985180b9",
+   "titulo": "Bolsa de PD em Espectrometria de Massas Instituição: Escola Paulista de Medicina, Universidade Federal de São Paulo (EPM-Unifesp) Cidade: Diadema Inscrições até: 20/11/2026 - Domínio de técnicas minia",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/cepid-aries--instituto-de-resistencia-aos-antimicrobianos-de-sao-paulo/10001/",
+   "resumo": "Título do projeto: CEPID ARIES – Instituto de Resistência aos Antimicrobianos de São Paulo",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "premio",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "agro",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-20",
+   "valor": "R$ 12.570,00"
   }
  ]
 }
