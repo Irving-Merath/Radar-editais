@@ -1,18 +1,1024 @@
-{"atualizado_em":"2026-11-08","editais":[
-{"id":"ex01","titulo":"Apoio a startups de base tecnológica no estado do Rio de Janeiro","orgao":"FAPERJ","tipo":"fomento","abrangencia":"regional","ufs":["RJ"],"proponentes":["startup","mei"],"segmentos":["ia","bigdata","iot","saude","educacao"],"valor":"até R$ 200 mil","prazo":"2026-12-15","link":"https://www.faperj.br","resumo":"Subvenção não reembolsável para desenvolver produto ou serviço inovador, para empresas com sede no RJ.","adicionado_em":"2026-11-05","fonte":"exemplo"},
-{"id":"ex02","titulo":"Subvenção para soluções de inteligência artificial na saúde pública","orgao":"Finep","tipo":"fomento","abrangencia":"nacional","ufs":[],"proponentes":["startup"],"segmentos":["ia","saude","bigdata"],"valor":"R$ 500 mil a R$ 2 milhões","prazo":"2027-01-30","link":"http://www.finep.gov.br","resumo":"Recursos não reembolsáveis para empresas que desenvolvam IA aplicada a diagnóstico, triagem e gestão do SUS.","adicionado_em":"2026-11-03","fonte":"exemplo"},
-{"id":"ex03","titulo":"Aceleração de negócios de impacto da economia circular","orgao":"AgeRio","tipo":"aceleracao","abrangencia":"regional","ufs":["RJ"],"proponentes":["mei","osc","startup"],"segmentos":["residuos","clima","social"],"valor":"Mentorias e capital semente","prazo":"2026-11-28","link":"https://www.agerio.com.br","resumo":"Programa de 4 meses para negócios que reduzem, reaproveitam ou reciclam resíduos em comunidades fluminenses.","adicionado_em":"2026-11-06","fonte":"exemplo"},
-{"id":"ex04","titulo":"CPSI: monitoramento de enchentes com sensores e visão computacional","orgao":"Prefeitura municipal (RJ)","tipo":"cpsi","abrangencia":"regional","ufs":["RJ"],"proponentes":["startup","parceria"],"segmentos":["iot","visao","clima","cidades"],"valor":"até R$ 1,6 milhão","prazo":"2026-11-20","link":"https://www.gov.br/compras/pt-br","resumo":"Contrato Público para Solução Inovadora: teste de solução que detecte alagamentos em tempo real e alerte a Defesa Civil.","adicionado_em":"2026-11-07","fonte":"exemplo"},
-{"id":"ex05","titulo":"CPSI: otimização de rotas da coleta de resíduos com dados","orgao":"Governo do estado de São Paulo","tipo":"cpsi","abrangencia":"regional","ufs":["SP"],"proponentes":["startup"],"segmentos":["bigdata","ia","residuos","logistica"],"valor":"até R$ 1,6 milhão","prazo":"2026-12-04","link":"https://www.gov.br/compras/pt-br","resumo":"Busca solução que reduza quilometragem e custo da coleta usando dados de GPS, volume e demanda.","adicionado_em":"2026-10-28","fonte":"exemplo"},
-{"id":"ex06","titulo":"Grants for climate tech in the Global South","orgao":"Fundação internacional","tipo":"fomento","abrangencia":"internacional","ufs":[],"proponentes":["osc","startup","parceria"],"segmentos":["clima","energia","iot"],"valor":"até US$ 100 mil","prazo":"2027-02-15","link":"https://www.globalinnovation.fund","resumo":"Doação para pilotos de energia limpa e adaptação climática liderados por organizações locais.","adicionado_em":"2026-11-04","fonte":"exemplo"},
-{"id":"ex07","titulo":"Projetos culturais que usam tecnologia para ampliar acesso","orgao":"Fundação cultural nacional","tipo":"fomento","abrangencia":"nacional","ufs":[],"proponentes":["cpf","mei","osc"],"segmentos":["cultura","educacao"],"valor":"até R$ 50 mil","prazo":"2026-12-10","link":"https://www.gov.br/cultura","resumo":"Aceita pessoa física. Apoia acervos digitais, acessibilidade e formação de público.","adicionado_em":"2026-10-20","fonte":"exemplo"},
-{"id":"ex08","titulo":"Desafio de inovação aberta: POC de visão computacional em centros de distribuição","orgao":"Programa de inovação de empresa de varejo","tipo":"poc","abrangencia":"nacional","ufs":[],"proponentes":["startup"],"segmentos":["visao","logistica","ia"],"valor":"POC remunerada","prazo":"2026-11-25","link":"https://www.google.com/search?q=desafio+inova%C3%A7%C3%A3o+aberta+POC+startups","resumo":"Prova de conceito de 90 dias para contagem automática de estoque e conferência de cargas.","adicionado_em":"2026-11-02","fonte":"exemplo"},
-{"id":"ex09","titulo":"Capacitação e bolsa para microempreendedores inovadores","orgao":"Sebrae","tipo":"aceleracao","abrangencia":"nacional","ufs":[],"proponentes":["mei","cpf"],"segmentos":["educacao","financas"],"valor":"Bolsa mensal","prazo":"2026-12-20","link":"https://sebrae.com.br","resumo":"Trilha de formação em gestão e validação de produto para quem está começando.","adicionado_em":"2026-11-02","fonte":"exemplo"},
-{"id":"ex10","titulo":"Bolsas para pesquisador empreendedor em IoT no agro","orgao":"CNPq","tipo":"fomento","abrangencia":"nacional","ufs":[],"proponentes":["cpf","parceria"],"segmentos":["iot","agro","bigdata"],"valor":"Bolsa + custeio","prazo":"2027-01-15","link":"https://www.gov.br/cnpq","resumo":"Para pesquisadores que queiram levar tecnologia ao mercado em parceria com empresas.","adicionado_em":"2026-10-15","fonte":"exemplo"},
-{"id":"ex11","titulo":"Encomenda tecnológica: triagem de exames de imagem com IA","orgao":"Hospital público federal","tipo":"etec","abrangencia":"nacional","ufs":[],"proponentes":["startup","parceria"],"segmentos":["ia","visao","saude"],"valor":"até R$ 3 milhões","prazo":"2027-01-10","link":"https://www.gov.br/mcti","resumo":"ETEC para desenvolver solução ainda inexistente no mercado, com risco tecnológico compartilhado.","adicionado_em":"2026-11-08","fonte":"exemplo"},
-{"id":"ex12","titulo":"Primeiros passos: ideia inovadora para empresa","orgao":"FAPEMIG","tipo":"fomento","abrangencia":"regional","ufs":["MG"],"proponentes":["cpf","startup"],"segmentos":["ia","agro","energia"],"valor":"até R$ 80 mil","prazo":"2026-12-01","link":"https://fapemig.br","resumo":"Aceita CPF na inscrição; a empresa precisa ser aberta só se a proposta for aprovada.","adicionado_em":"2026-10-30","fonte":"exemplo"},
-{"id":"ex13","titulo":"Prêmio para soluções de educação e inclusão digital","orgao":"Fundação educacional","tipo":"premio","abrangencia":"nacional","ufs":[],"proponentes":["cpf","osc"],"segmentos":["educacao","social"],"valor":"R$ 30 mil","prazo":"2026-11-15","link":"https://www.google.com/search?q=pr%C3%AAmio+educa%C3%A7%C3%A3o+inclus%C3%A3o+digital","resumo":"Reconhece iniciativas que levam conectividade e letramento digital a escolas públicas.","adicionado_em":"2026-10-22","fonte":"exemplo"},
-{"id":"ex14","titulo":"Gestão comunitária de resíduos sólidos","orgao":"Fundação estadual (BA)","tipo":"fomento","abrangencia":"regional","ufs":["BA"],"proponentes":["osc","parceria"],"segmentos":["residuos","social","clima"],"valor":"até R$ 120 mil","prazo":"2026-10-30","link":"https://www.google.com/search?q=edital+res%C3%ADduos+s%C3%B3lidos+Bahia","resumo":"Projetos de coleta seletiva conduzidos por associações e cooperativas.","adicionado_em":"2026-10-01","fonte":"exemplo"},
-{"id":"ex15","titulo":"Open call for health data startups (Europe and Latin America)","orgao":"Aceleradora europeia","tipo":"aceleracao","abrangencia":"internacional","ufs":[],"proponentes":["startup","parceria"],"segmentos":["saude","bigdata","ia"],"valor":"€ 50 mil + aceleração","prazo":"2026-12-31","link":"https://www.google.com/search?q=open+call+health+data+startups","resumo":"Programa remoto com investimento inicial para startups de dados em saúde.","adicionado_em":"2026-11-01","fonte":"exemplo"},
-{"id":"ex16","titulo":"CPSI: plataforma de gestão escolar com análise de dados","orgao":"Secretaria de Educação (PE)","tipo":"cpsi","abrangencia":"regional","ufs":["PE"],"proponentes":["startup","mei"],"segmentos":["educacao","bigdata"],"valor":"até R$ 1,6 milhão","prazo":"2026-12-08","link":"https://www.gov.br/compras/pt-br","resumo":"Teste de solução para prever evasão escolar e apoiar a gestão das redes de ensino.","adicionado_em":"2026-11-06","fonte":"exemplo"}
-]}
+{
+ "atualizado_em": "2026-11-09",
+ "editais": [
+  {
+   "id": "d79c5a37fabd",
+   "titulo": "Ações e Programas",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=10.5.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura",
+    "cidades"
+   ],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "3d683809144f",
+   "titulo": "Saem os resultados preliminares das chamadas para pesquisas em obesidade (Editais Nº 18 e 19/2026). Foram selecionadas 21 propostas, focadas em prevenção, diagnóstico e tratamento da obesidade.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1143.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "saude"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "684dd9389afd",
+   "titulo": "A FAPERJ lançou nesta quinta (5/11) o Programa de Atração de Grupos de Pesquisa do Cone Sul (Edital Nº 35/2026), destinado a apoiar projetos colaborativos com instituições sediadas na América do Sul.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1141.7.9",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "logistica"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "ede851b5ab49",
+   "titulo": "Resultado final programa Prioridade Indústria RJ 4.0 (Edital Nº 15/2026), anunciado nesta quinta (5/11), aprovou um total de 40 projetos voltados à transformação digital e modernização da indústria fl",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1145.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "iot"
+   ],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "9a919f977bbf",
+   "titulo": "Em cerimônia realizada nesta terça (20/10), 3 novos editais foram anunciados: o de Fomento às Ciências Humanas e Sociais (Edital Nº 32/2026) e apoio a Biotérios, incluindo os de nível NB-3 (Nº 30 e 31",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1134.7.9",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "logistica",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "264010c24da2",
+   "titulo": "Após um intervalo de vários anos, a FAPERJ voltou a lançar, nesta quarta (21/10), uma chamada em Apoio à Divulgação Científica e Popularização da Ciência no estado do Rio de Janeiro (Edital Nº 33/2026",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1132.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "ba9bdc804b75",
+   "titulo": "Em parceria com o Confap e a Comissão Europeia, chamada  'Biodiversa+ 2024–2025' vai apoiar projetos de pesquisa voltados à conservação da biodiversidade. Resultado saiu nesta quinta (22/10).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1135.7.4",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "residuos",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-11-10",
+   "valor": ""
+  },
+  {
+   "id": "5f895e0b632a",
+   "titulo": "FAPERJ divulga nesta quinta (08/10) o resultado preliminar do Programa Raízes (Edital nº 16/2026). Com alta demanda, a chamada recebeu 106 propostas. Nesta etapa, 52 foram selecionadas.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1127.7.9",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "cultura",
+    "saude",
+    "social"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "9c16787df0c9",
+   "titulo": "Novas edições dos Programas de bolsas de Iniciação e Inovação Tecnológica foram anunciadas nesta quinta (24/9). Chamadas terão apenas uma etapa e o proponente deverá indicar o bolsista na submissão.",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1115.7.1",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "4ff75b848413",
+   "titulo": "Resultado preliminar traz 11 propostas selecionadas no Programa de Apoio às Academias Nacionais Sediadas no Estado do RJ (Edital FAPERJ Nº 13/2026). Lista dos selecionados foi divulgada nesta quinta (",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1105.7.5",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "agro",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "94a79a1175aa",
+   "titulo": "FAPERJ divulga lista preliminar das 200 empresas selecionadas para participar da Fase 2 do Programa Centelha 3 RJ (Edital FAPERJ Nº 12/2026), uma parceria com a Finep e o MCTI. Anúncio foi nesta terça",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1100.7.8",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura"
+   ],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "5e55a7feff1d",
+   "titulo": "Fundação divulgou, nesta quinta (20/08), o resultado preliminar da 2ª janela do Programa Bolsa Nota 10 – Mestrado e Doutorado 2026 (Edital FAPERJ Nº 04/2026). Ao todo, foram selecionadas 118 propostas",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1094.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "fe0c6c659ab8",
+   "titulo": "FAPERJ divulga resultado preliminar da pré-seleção do Programa Pesquisa para o SUS (Edital FAPERJ Nº 11/2025), que teve 38 propostas selecionadas. Anúncio aconteceu nesta quinta (13/8).",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1089.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "ia",
+    "educacao",
+    "saude",
+    "social"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "da7563d45957",
+   "titulo": "As listas preliminares das propostas selecionadas no edital Apoio à Jovem Cientista Mulher – Dra Tatiana Sampaio (Edital FAPERJ Nº 08/2026) foram divulgadas nesta quinta (16/07). Foram selecionadas 98",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1064.7.0",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "poc",
+   "segmentos": [
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "4c8a7a4193ab",
+   "titulo": "FAPERJ divulgou nesta quinta (16/7) o resultado preliminar dos programas Pesquisador Visitante (PV) e Visitante Emérito (PVE), editais Nº 05 e 06 de 2026. Foram concedidas 20 bolsas no âmbito do PV, e",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/?id=1067.7.7",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPERJ",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "31da9a5b00ee",
+   "titulo": "Ações e Programas",
+   "orgao": "AgeRio",
+   "link": "https://www.agerio.com.br/transparencia/acoes-e-programas/",
+   "resumo": "A AgeRio investe em empreendimentos de todos os portes e setores, desde o microempreendedor individual até as grandes empresas e prefeituras do Rio  de Janeiro, através de recursos próprios e repasses de linhas de crédito. \nAssim, a empresa contribui para a geração de empregos no",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:AgeRio",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "40efcd84e5b2",
+   "titulo": "Bolsa de Mestrado em Fisiologia Cardiovascular Instituição: Instituto de Ciências Biomédicas / Universidade de São Paulo (ICB-USP) Cidade: São Paulo Inscrições até: 09/11/2026 A gestação impõe ao cora",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/caracterizacao-do-succinato-como-molecula-sinalizadora-no-coracao/9922/",
+   "resumo": "Título do projeto: Caracterização do succinato como molécula sinalizadora no coração",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "educacao",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-09",
+   "valor": "R$ 3.270,00"
+  },
+  {
+   "id": "4cff26976e15",
+   "titulo": "Bolsa de PD em Fisiologia Molecular Vegetal Instituição: Departamento de Botânica, Instituto de Biociências, Universidade de São Paulo Cidade: São Paulo Inscrições até: 10/11/2026 O bolsista será resp",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/rotas-de-transducao-de-sinal-luminoso-e-de-estresse-como-otimizar-multiplas-respostas-para-melhorar-o-rendimento-e-a-qualidade-das-culturas/9908/",
+   "resumo": "Título do projeto: Rotas de transdução de sinal luminoso e de estresse: como otimizar múltiplas respostas para melhorar o rendimento e a qualidade das culturas",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-10",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "a0d2bd653f7c",
+   "titulo": "Bolsa de PD em Genômica Microbiana Instituição: Infectologia / Unifesp Cidade: São Paulo Inscrições até: 10/11/2026 Atuar no planejamento científico, supervisão da coleta e processamento de amostras, ",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/infeccao-neonatal---esclarecendo-o-ambiente-microbioma-no-inicio-da-vida/9938/",
+   "resumo": "Título do projeto: Infecção Neonatal - esclarecendo o ambiente: microbioma no início da vida",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-10",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "23184458681b",
+   "titulo": "Bolsas de Mestrado em Microbiologia Instituição: Faculdade de Ciências Farmacêuticas de Ribeirão Preto, Universidade de São Paulo (FCFRP-USP) Cidade: Ribeirão Preto Inscrições até: 10/11/2026 O projet",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/ecologia-funcional-e-potencial-biotecnologico-de-leveduras-associadas-a-abelhas-meliponini/9981/",
+   "resumo": "Título do projeto: Ecologia funcional e potencial biotecnológico de leveduras associadas a abelhas Meliponini",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-10",
+   "valor": "R$ 3.270,00"
+  },
+  {
+   "id": "cd3a71a0f5ba",
+   "titulo": "Bolsa de PD em Química Instituição: Escola Superior de Agricultura Luiz de Queiroz (ESALQ), Universidade de São Paulo (USP) Cidade: Campinas Inscrições até: 11/11/2026 Os objetivos do projeto são comp",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/investigacao-do-perfil-metabolico-de-especies-de-citrus-suscetiveis-e-resistentes-a-doenca-huanglongbing-utilizando-metabolomica-untargeted-via-lc-hrms/9935/",
+   "resumo": "Título do projeto: Investigação do perfil metabólico de espécies de Citrus suscetíveis e resistentes à doença Huanglongbing utilizando metabolômica untargeted via LC-HRMS",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "agro"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-11",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "1e584fd5549b",
+   "titulo": "Bolsa de PD em Restauração de Imagens de Radar Meteorológico Instituição: Faculdade de Ciências – UNESP, câmpus Bauru Cidade: Bauru Inscrições até: 12/11/2026 A bolsa de Pós-Doutorado terá duração de ",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/cepex--centro-paulista-de-integracao-de-dados-para-monitoramento-de-eventos-extremos/9967/",
+   "resumo": "Título do projeto: CePEX – Centro Paulista de integração de dados para monitoramento de Eventos eXtremos",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia",
+    "visao"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-12",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "71a325811627",
+   "titulo": "Bolsa de PD em Integração de Dados de Radar e de Sensoriamento Remoto Instituição: Faculdade de Ciências – UNESP, câmpus Bauru Cidade: Bauru Inscrições até: 12/11/2026 A bolsa de pós-doutorado terá du",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/cepex---centro-paulista-de-integracao-de-dados-para-monitoramento-de-eventos-extremos/9968/",
+   "resumo": "Título do projeto: CePEX - Centro Paulista de integração de dados para monitoramento de Eventos eXtremos",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia",
+    "visao"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-12",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "31aa0f5304d4",
+   "titulo": "Bolsa de PD em Psicologia Experimental Instituição: Instituto de Artes, Universidade Estadual Paulista (IA-Unesp) Cidade: São Paulo Inscrições até: 12/11/2026 O Centro Interdisciplinar de Desenvolvime",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/saude-mental-de-adolescentes-e-jovens-estudantes-de-musica-um-estudo-misto-no-guri-e-escola-de-musica-do-estado-de-sao-paulo-emesp---tom-jobim/9982/",
+   "resumo": "Título do projeto: Saúde mental de adolescentes e jovens estudantes de música: Um estudo misto no Guri e Escola de Música do Estado de São Paulo/Emesp - Tom Jobim",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia",
+    "educacao",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-12",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "e6f6b83a1f70",
+   "titulo": "Bolsa de PD em Análise / Equações Diferenciais Parciais Instituição: Departamento de Matemática, Universidade Federal de São Carlos (DM-UFSCar) Cidade: São Carlos Inscrições até: 13/11/2026 Uma posiçã",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/atratores-existencia-estrutura-e-continuidade/9954/",
+   "resumo": "Valor da bolsa: R$ 12.570,00 (consulte os valores de Bolsas da FAPESP em fapesp.br/valores/bolsasnopais ).",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-13",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "2b76298dbb53",
+   "titulo": "Bolsa de PD em Resiliência Urbana a Inundações, Ciência de Dados e IA Instituição: Faculdade de Engenharia Elétrica e de Computação, Universidade Estadual de Campinas (FEEC-Unicamp) Cidade: Campinas I",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/centro-de-ciencia-para-o-desenvolvimento-ccd--cidades-resilientes-a-inundacoes/9974/",
+   "resumo": "Título do projeto: Centro de Ciência para o Desenvolvimento (CCD) – Cidades Resilientes a Inundações",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "clima",
+    "cidades"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-13",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "f610a6905771",
+   "titulo": "Bolsa de TT-IV em Biologia do Óxido Nitrico e MMPs Instituição: Faculdade de Medicina de Ribeirão Preto, Universidade de São Paulo (FMRP-USP) Cidade: Ribeirão Preto Inscrições até: 13/11/2026 Análises",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/interacao-entre-exposicao-a-metais-toxicos-e-ao-selenio-em-populacoes-ribeirinhas-amazonicas-impacto-em-marcadores-da-fisiopatologia-cardiovascular/9987/",
+   "resumo": "Título do projeto: Interação entre exposição a metais tóxicos e ao selênio em populações ribeirinhas amazônicas: impacto em marcadores da fisiopatologia cardiovascular",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-13",
+   "valor": ""
+  },
+  {
+   "id": "6318ca4810a4",
+   "titulo": "Bolsa de PD em Biomedicina Instituição: Instituto Butantan Cidade: São Paulo Inscrições até: 14/11/2026 Serão estabelecidos os camundongos humanizados a partir de camundongos NSG, transfectados com cé",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/consolidacao-de-uma-cepa-de-bcg-recombinante-como--vacina-aprimorada-contra-tuberculose-e-como-tratamento-contra-cancer/9934/",
+   "resumo": "Título do projeto: Consolidação de uma cepa de BCG recombinante como  vacina aprimorada contra tuberculose e como tratamento contra câncer",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-14",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "a6eac11f39c9",
+   "titulo": "Bolsa de PD em Inteligência Artificial Instituição: Faculdade de Engenharia Mecânica, Universidade Estadual de Campinas (FEM-Unicamp) Cidade: Campinas Inscrições até: 14/11/2026 O Laboratório de Intel",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/centro-de-inovacao-em-producao-de-energia-epic/9972/",
+   "resumo": "Valor da bolsa: R$ 12.570,00 (consulte os valores de Bolsas da FAPESP em fapesp.br/valores/bolsasnopais ).",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "poc",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "visao",
+    "energia"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-14",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "6451412e4309",
+   "titulo": "Bolsa de PD em Impacto Humano, Biodiversidade e Funcionamento Ecossistêmico Instituição: Instituto de Biologia, Universidade Estadual de Campinas (IB-Unicamp) Cidade: Campinas Inscrições até: 15/11/20",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/mudancas-globais-na-biodiversidade-e-funcionamento-de-ecossistemas-aquaticos-continentais-respostas-as-pressoes-antropicas-perdas-de-habitats-e-mudancas-climaticas/9846/",
+   "resumo": "Título do projeto: Mudanças globais na biodiversidade e funcionamento de ecossistemas aquáticos continentais: respostas às pressões antrópicas, perdas de habitats e mudanças climáticas",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-15",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "e97aebe6c1e0",
+   "titulo": "Bolsa de PD em Inteligência Artificial Instituição: Universidade de São Paulo (USP/EACH) Cidade: São Paulo Inscrições até: 15/11/2026 O bolsista será responsável por tarefas associadas à predição, à o",
+   "orgao": "FAPESP",
+   "link": "https://fapesp.br/oportunidades/centro-de-ia-e-gestao-publica-cia-gp/9910/",
+   "resumo": "Valor da bolsa: R$ 12.570,00 (consulte os valores de Bolsas da FAPESP em fapesp.br/valores/bolsasnopais ).",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPESP",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "educacao",
+    "cidades"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-15",
+   "valor": "R$ 12.570,00"
+  },
+  {
+   "id": "562340785e8b",
+   "titulo": "Explorar Chamadas",
+   "orgao": "FAPEMIG",
+   "link": "https://fapemig.br/oportunidades/chamadas-e-editais?status=aberta",
+   "resumo": "Oportunidades da FAPEMIG para pesquisa, inovação, capacitação e parcerias, incluindo editais com prazos definidos e programas em fluxo contínuo, por público e linha de fomento.",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPEMIG",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "MG"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "66108ded8516",
+   "titulo": "Chamadas e Editais",
+   "orgao": "FAPEMIG",
+   "link": "https://fapemig.br/oportunidades/chamadas-e-editais",
+   "resumo": "Oportunidades da FAPEMIG para pesquisa, inovação, capacitação e parcerias, incluindo editais com prazos definidos e programas em fluxo contínuo, por público e linha de fomento.",
+   "adicionado_em": "2026-11-09",
+   "fonte": "html:FAPEMIG",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "MG"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "83b512f1fd78",
+   "titulo": "Edital de inovação vai premiar startups com até R$ 30 mil; veja como se inscrever",
+   "orgao": "fapto.org.br",
+   "link": "https://www.fapto.org.br/site/noticia/visualizar?uid=NjE1",
+   "resumo": "Impulsionando o desenvolvimento do Tocantins através da inovação e do conhecimento. A Fapto é uma instituição sem fins lucrativos que se dedica a apoiar instituições públicas e privadas no desenvolvimento de projetos nas áreas do ensino, pesquisa, extensão, inovação e desenvolvim",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:g1.globo.com",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "agro",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 30 mil"
+  },
+  {
+   "id": "5335920b4eb1",
+   "titulo": "Petrobras anuncia edital de R$ 16 milhões para projetos de inovação de startups",
+   "orgao": "conexoes-inovacao.petrobras.com.br",
+   "link": "https://conexoes-inovacao.petrobras.com.br/pt/conexoes-inovacao",
+   "resumo": "A Petrobras anunciou um edital a ser publicado na próxima terça-feira, 24, com um valor de R$ 16 milhões, que será distribuído para projetos de inovação criados por startups. As iniciativas deverão ...",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:istoedinheiro.com.br",
+   "tipo": "poc",
+   "segmentos": [
+    "saude",
+    "agro",
+    "energia",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 16 milhões"
+  },
+  {
+   "id": "a8d19e68705c",
+   "titulo": "Encomenda tecnológica e CPSI impulsionam transformação digital",
+   "orgao": "wa.me",
+   "link": "https://wa.me/?text=Encomenda%20tecnol%C3%B3gica%20e%20CPSI%20impulsionam%20transforma%C3%A7%C3%A3o%20digital%20https%3A%2F%2Fconjur.com.br%2F2025-dez-05%2Finstrumentos-juridicos-para-a-inovacao-publica-como-a-encomenda-tecnologica-e-o-cpsi-impulsionam-a-transformacao-digital-e-projetos-de-smart-cities%2F",
+   "resumo": "WhatsApp: More than 2 billion people\n          in over 180 countries use WhatsApp to stay in touch with friends and\n          family, anytime and anywhere. WhatsApp is free and offers simple, secure,\n          reliable messaging and calling, available on phones all over the world",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:conjur.com.br",
+   "tipo": "cpsi",
+   "segmentos": [
+    "cidades"
+   ],
+   "proponentes": [],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6463f56ada94",
+   "titulo": "Governo estadual lança edital que prevê fomento à aceleração de negócios de impacto",
+   "orgao": "adece.ce.gov.br",
+   "link": "https://www.adece.ce.gov.br/wp-content/uploads/sites/98/2025/09/19-Edital-Assinado.pdf",
+   "resumo": "O governo do Ceará lançou edital do projeto Impacto Produtivo que visa fomentar negócios de impacto voltados para a solução de problemas socioambientais existentes nas cadeias produtivas de setores ...",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:opovo.com.br",
+   "tipo": "poc",
+   "segmentos": [
+    "ia",
+    "educacao",
+    "saude",
+    "clima",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 25 mil"
+  },
+  {
+   "id": "73c0a26ad73d",
+   "titulo": "BNDES Garagem abre inscrições para até 100 startups de impacto socioambiental",
+   "orgao": "agenciadenoticias.bndes.gov.br",
+   "link": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-Garagem-abre-inscricoes-para-selecionar-ate-100-startups-de-impacto-socioambiental",
+   "resumo": "Novo ciclo do programa, o terceiro desta edição, reforça conexão com investidores e amplia oportunidades de acesso a capital para negócios inovadores; inscrições vão até 30 de novembro",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:canalrural.com.br",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "saude",
+    "agro",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-30",
+   "valor": "R$ 250 mil"
+  },
+  {
+   "id": "08c9b9c50a2c",
+   "titulo": "Programa vai oferecer mentorias gratuitas a negócios que gerem impacto socioambiental",
+   "orgao": "www2.susep.gov.br",
+   "link": "https://www2.susep.gov.br/safe/Corretores/pesquisa",
+   "resumo": "Estão abertas, até 2 de agosto, as inscrições para o Programa de desenvolvimento de Negócios de Impacto Socioambiental e Projetos de Extensão - Lab de Impacto. A iniciativa, promovida pela ...",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:segs.com.br",
+   "tipo": "fomento",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "7dba69b4b169",
+   "titulo": "Pernambuco abre inscrições para programa de startups",
+   "orgao": "cdn.folhape.com.br",
+   "link": "https://cdn.folhape.com.br/img/pc/450/450/dn_arquivo/2025/10/301025-centelha3-sauloaleixo-31.jpg",
+   "resumo": "A Secretaria de Ciência, Tecnologia e Inovação (Secti-PE) e a Fundação de Amparo à Ciência e Tecnologia do Estado de Pernambuco (Facepe) lançaram, nesta quinta-feira (30), o Programa Centelha 3 ...",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:folhape.com.br",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "energia",
+    "clima",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PE",
+    "RJ",
+    "SP"
+   ],
+   "prazo": null,
+   "valor": "R$ 4 milhões"
+  },
+  {
+   "id": "a88013bd94e6",
+   "titulo": "Programa seleciona 100 startups para impulsionar negócios e ampliar acesso a investimentos; saiba como participar",
+   "orgao": "threads.net",
+   "link": "https://threads.net/intent/post?text=https://diariodocomercio.com.br/negocios/programa-startups-negocios/?utm_source=social-share&utm_medium=content",
+   "resumo": "Join Threads to share ideas, ask questions, post random thoughts, find your people and more. Log in with your Instagram.",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:diariodocomercio.com.br",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6a4645857f1d",
+   "titulo": "Prodesp e Sebrae-SP disponibilizam vagas para programa de capacitação de startups",
+   "orgao": "programas.sebraestartups.com.br",
+   "link": "https://programas.sebraestartups.com.br/",
+   "resumo": "Encontre a oportunidade oferecida pelo Sebrae que combina com a sua startup e se inscreva agora mesmo!",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:dgabc.com.br",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "0b3dd28bb12b",
+   "titulo": "Programa de inovação que conecta cooperativas a startups entra na última semana de inscrições",
+   "orgao": "digital2.correiodopovo.com.br",
+   "link": "https://digital2.correiodopovo.com.br/neoflip/pub/correiodopovo/leitor?ed=5f19464f4a574faa51f2558107071d1f#page/1",
+   "resumo": "Correio do Povo",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:correiodopovo.com.br",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "64f0d5092dc1",
+   "titulo": "São Caetano abre inscrições para o programa Startups for Students 2026",
+   "orgao": "addtoany.com",
+   "link": "https://www.addtoany.com/add_to/telegram?linkurl=https://www.dgabc.com.br/Noticia/4285151&linkname=São Caetano abre inscrições para o programa Startups for Students 2026 - Diário do Grande ABC",
+   "resumo": "A Prefeitura de São Caetano, por meio da SEDETI (Secretaria Municipal de Desenvolvimento Econômico, Trabalho, Turismo, Tecnologia e Inovação) e do PQTEC (Parque Tecnológico Municipal), abriu ...",
+   "adicionado_em": "2026-11-09",
+   "fonte": "noticia:dgabc.com.br",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  }
+ ]
+}
