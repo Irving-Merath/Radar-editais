@@ -230,6 +230,8 @@ TITULO_NOTICIA = re.compile(r"\b(lanca|lancou|lancam|abre|abriu|anuncia|anunciou
                             r"recebe|prorroga|prorrogou|participa|aderiu|adesao|nesta (segunda|terca|quarta|quinta|"
                             r"sexta)|neste (sabado|domingo)|vai premiar|vai selecionar|seleciona|oferece)\b")
 ARQUIVO_EDITAL = re.compile(r"pdf|msword|officedocument|opendocument", re.I)
+# Páginas que pedem login/cadastro para ver o conteúdo não servem como "o edital".
+URL_LOGIN = re.compile(r"login|signin|sign-in|/auth|/sso|cadastr|/entrar|/registr|account|minha-conta", re.I)
 NUMERO_EDITAL = re.compile(r"\b(\d{1,3})\s?/\s?(20\d\d)\b")
 
 
@@ -246,8 +248,18 @@ def eh_ruido(titulo):
     return bool(anos) and max(anos) < HOJE.year
 
 
+def eh_pagina_inicial(href):
+    """Página inicial de um site (ex.: programas.sebraestartups.com.br/) não é um edital."""
+    u = urlparse(href)
+    return u.path.strip("/") in ("", "pt", "pt-br", "index.html", "index.php", "home") and not u.query
+
+
 def link_valido(href):
     return href.startswith("http") and not DOMINIOS_IGNORADOS.search(href) and not ARQUIVO_NAO_EDITAL.search(href)
+
+
+def link_de_edital_valido(href):
+    return link_valido(href) and not eh_pagina_inicial(href) and not URL_LOGIN.search(href)
 
 
 def conteudo_principal(sopa, lista=False):
@@ -275,6 +287,9 @@ def ler_pagina(url):
         # Só PDF/documento conta como arquivo de edital; imagem, vídeo etc. são descartados.
         return (r.url, None, "", "") if ARQUIVO_EDITAL.search(tipo) or r.url.lower().endswith(".pdf") else None
     sopa = BeautifulSoup(r.text, "html.parser")
+    if URL_LOGIN.search(r.url) or sopa.find("input", attrs={"type": "password"}):
+        print("  pede login/cadastro, ignorada:", r.url)
+        return None
     meta = sopa.find("meta", attrs={"name": "description"}) or sopa.find("meta", attrs={"property": "og:description"})
     resumo = (meta.get("content", "") if meta else "").strip()
     principal = conteudo_principal(sopa)
@@ -304,7 +319,7 @@ def escolher_link_edital(principal, url_pagina, titulo, ignorar=frozenset()):
     melhor, melhor_nota = None, 0
     for a in principal.find_all("a", href=True):
         href = urljoin(url_pagina, a["href"]).split("#")[0]
-        if not link_valido(href) or href in ignorar or href.rstrip("/") == url_pagina.rstrip("/"):
+        if not link_de_edital_valido(href) or href in ignorar or href.rstrip("/") == url_pagina.rstrip("/"):
             continue
         texto_a = a.get_text(" ", strip=True)
         texto = normalizar(texto_a + " " + href)
@@ -365,6 +380,7 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
             if mais:
                 return mais, resumo, texto
     if (aceitar_propria and OFICIAL.search(dominio(url_final)) and not parece_noticia(url_final, titulo)
+            and link_de_edital_valido(url_final)
             and SINAL_FORTE.search(normalizar(titulo + " " + texto[:3000]))):
         return url_final, resumo, texto
     return None, resumo, texto
@@ -477,7 +493,10 @@ def item_ruim(i):
     link = i.get("link") or ""
     if i.get("fonte") == "exemplo" or "news.google.com" in link or "google.com/search" in link:
         return True
-    if not link_valido(link) or eh_ruido(i.get("titulo", "")):
+    if not link_de_edital_valido(link) or eh_ruido(i.get("titulo", "")):
+        return True
+    # Itens da versão antiga do robô (sem o campo "anuncio") não tiveram o edital verificado.
+    if "anuncio" not in i:
         return True
     # O link precisa ser o edital, não uma notícia (PDF sempre passa).
     if not link.lower().endswith(".pdf") and (URL_NOTICIA.search(link) or
