@@ -1,4 +1,344 @@
 {
  "atualizado_em": "2026-11-15",
- "editais": []
+ "editais": [
+  {
+   "id": "08ed47acdbfd",
+   "titulo": "Edital FAPERJ Nº 35/2026 – Programa de Atração de Grupos de Pesquisa do Cone Sul",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_35_2026_–_Programa_de_Atração_de_Grupos_de_Pesquisa_do_Cone_Sul.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1141.7.9",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "logistica",
+    "clima",
+    "cidades"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-12-21",
+   "valor": "R$ 3.435.000,00"
+  },
+  {
+   "id": "1dd1771f409f",
+   "titulo": "Edital FAPERJ Nº 33/2026 – Apoio à Divulgação Científica e Popularização da Ciência no Estado do Rio de Janeiro",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_33_2026_–_Apoio_à_Divulgação_Científica_e_Popularização_da_Ciência_no_Estado_do_Rio_de_Janeiro.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1132.7.8",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 150.000,00"
+  },
+  {
+   "id": "b585cab887d4",
+   "titulo": "Edital FAPERJ Nº 26/2026 – Bolsa de Inovação Tecnológica (INT)",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPPERJ_Nº_26_2026_–_Bolsa_de_Inovação_Tecnológica_(INT).pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1115.7.1",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-11-26",
+   "valor": "R$ 90.000.000,00"
+  },
+  {
+   "id": "be3764da5149",
+   "titulo": "Edital FAPERJ Nº 27/2026 – Bolsa de Iniciação Tecnológica (IT)",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_27_2026_–_Bolsa_de_Iniciação_Tecnológica_(IT).pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1115.7.1",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-11-26",
+   "valor": "R$ 90.000.000,00"
+  },
+  {
+   "id": "ad8c69f29949",
+   "titulo": "A FAPERJ anunciou sua adesão à chamada do Programa 'Desafios da Amazônia' – parceria entre o Fundo Amazônia e o CONFAP. Objetivo é apoiar o desenvolvimento de soluções inovadoras na região.",
+   "orgao": "FAPERJ",
+   "link": "https://www.amazoniamaisdez.org.br/chamadas-abertas",
+   "resumo": "The British Council, through the UK government's International Science Partnerships Fund (ISPF), has joined the Amazonia+10 Initiative to launch another call for proposals under the Amazonia BR/UK Workshops Grants program, aimed at researchers from the UK and Brazil. The call wil",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1065.7.6",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-12-08",
+   "valor": "R$ 107,1 milhões"
+  },
+  {
+   "id": "c6392bd9c570",
+   "titulo": "A FAPERJ anunciou, nesta quinta (16/7), sua participação em 3 chamadas de cooperação internacional realizadas em parceria com o CONFAP e instituições internacionais.",
+   "orgao": "FAPERJ",
+   "link": "https://confap.org.br/pt/editais/111/chamada-confap-wbi-belgica-2026",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1066.7.1",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "agro",
+    "energia",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-10-30",
+   "valor": ""
+  },
+  {
+   "id": "21838bb645df",
+   "titulo": "Edital FAPERJ Nº 12/2026 – Programa Centelha 3 RJ",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_12_2026_Programa_CENTELHA_3_16_jun_2026.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1042.7.7",
+   "tipo": "cpsi",
+   "segmentos": [
+    "educacao",
+    "clima",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 8.158.260,00"
+  },
+  {
+   "id": "43cd0ccdb912",
+   "titulo": "Estreitando a cooperação com a UE, América Latina e Caribe, a Fundação anunciou, nesta quinta (27/2), o apoio a 3 chamadas em parceria com o Confap: Mobility CONFAP Italy, EU-LAC e CDTI Espanha.",
+   "orgao": "FAPERJ",
+   "link": "https://news.confap.org.br/wp-content/uploads/2025/02/Chamada-CONFAP-CDTI-2025-2026.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=731.7.4",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "logistica",
+    "clima",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 220 mil"
+  },
+  {
+   "id": "6463f56ada94",
+   "titulo": "Governo estadual lança edital que prevê fomento à aceleração de negócios de impacto",
+   "orgao": "adece.ce.gov.br",
+   "link": "https://www.adece.ce.gov.br/wp-content/uploads/sites/98/2025/09/19-Edital-Assinado.pdf",
+   "resumo": "Na primeira fase do programa, 10 negócios serão incentivados com o valor de R$ 25 mil cada para o desenvolvimento das soluções. Inscrições seguem até 2 de outubro",
+   "adicionado_em": "2026-11-15",
+   "fonte": "noticia:opovo.com.br",
+   "anuncio": "https://www.opovo.com.br/noticias/economia/2025/09/15/governo-estadual-lanca-edital-que-preve-fomento-a-aceleracao-de-negocios-de-impacto.html",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude",
+    "logistica",
+    "agro",
+    "energia",
+    "clima",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "CE"
+   ],
+   "prazo": null,
+   "valor": "R$ 25 mil"
+  },
+  {
+   "id": "6ad9f903a295",
+   "titulo": "IMPA Tech abre 50 vagas em Teresina para graduação em Matemática, Tecnologia e Inovação a partir de 2027; confira edital",
+   "orgao": "impatech.edu.br",
+   "link": "https://impatech.edu.br/wp-content/uploads/2026/10/Edital-IMPA_Tech_RJ-NE_2027_vs-1.0_-aprovada_site.pdf",
+   "resumo": "O bacharelado de quatro anos é 100% gratuito, em horário integral e presencial – no Rio de Janeiro (RJ) ou em Teresina (PI).",
+   "adicionado_em": "2026-11-15",
+   "fonte": "noticia:florianonews.com",
+   "anuncio": "https://www.florianonews.com/noticia/impa-tech-abre-50-vagas-em-teresina-para-graduacao-em-matematica-tecnologia-e-inovacao-a-partir-de-2027-confira-edital-onmu",
+   "tipo": "premio",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "educacao",
+    "cultura"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PI",
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "db4eff860056",
+   "titulo": "Economia Solidária: Finep abre seleção de projetos de inovação social",
+   "orgao": "finep.gov.br",
+   "link": "https://www.finep.gov.br/en/e/chamada-publica/222684/1057230",
+   "resumo": "description",
+   "adicionado_em": "2026-11-15",
+   "fonte": "noticia:gov.br",
+   "anuncio": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2026/setembro/economia-solidaria-finep-abre-selecao-de-projetos-de-inovacao-social",
+   "tipo": "fomento",
+   "segmentos": [
+    "residuos",
+    "saude",
+    "agro",
+    "energia",
+    "clima",
+    "cidades",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2027-01-14",
+   "valor": "R$ 2 milhões"
+  },
+  {
+   "id": "f4532c29ca18",
+   "titulo": "Finep abre chamada de R$ 500 milhões para pesquisa aplicada",
+   "orgao": "finep.gov.br",
+   "link": "http://www.finep.gov.br/chamadas-publicas/chamadapublica/768",
+   "resumo": "description",
+   "adicionado_em": "2026-11-15",
+   "fonte": "noticia:istoedinheiro.com.br",
+   "anuncio": "https://istoedinheiro.com.br/finep-abre-chamada-de-r-500-milhoes-para-pesquisa-aplicada",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "logistica",
+    "agro"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 500 milhões"
+  }
+ ]
 }
