@@ -55,66 +55,6 @@
    "valor": ""
   },
   {
-   "id": "a6a603035d08",
-   "titulo": "Subvenção Econômica Direta",
-   "orgao": "Finep",
-   "link": "https://legacy.finep.gov.br/area-para-clientes-externo/subvencao-economica",
-   "resumo": "Agência pública que financia a inovação, desde a pesquisa básica até a preparação do produto para o mercado.",
-   "adicionado_em": "2026-11-15",
-   "fonte": "html:Finep",
-   "anuncio": "https://legacy.finep.gov.br/area-para-clientes-externo/subvencao-economica",
-   "tipo": "fomento",
-   "segmentos": [],
-   "proponentes": [
-    "startup"
-   ],
-   "abrangencia": "nacional",
-   "ufs": [],
-   "prazo": null,
-   "valor": ""
-  },
-  {
-   "id": "250f7860f8f4",
-   "titulo": "- Subvenção Econômica Descentralizada",
-   "orgao": "Finep",
-   "link": "https://legacy.finep.gov.br/images/chamadas-publicas/2018/20_12_2018_Anexo_DPCT_Manual_CENTELHA.pdf",
-   "resumo": "Agência pública que financia a inovação, desde a pesquisa básica até a preparação do produto para o mercado.",
-   "adicionado_em": "2026-11-15",
-   "fonte": "html:Finep",
-   "anuncio": "https://legacy.finep.gov.br/area-para-clientes-externo/acompanhamento-financeiro/subvencao-economica-descentralizada",
-   "tipo": "fomento",
-   "segmentos": [],
-   "proponentes": [
-    "startup"
-   ],
-   "abrangencia": "nacional",
-   "ufs": [],
-   "prazo": null,
-   "valor": ""
-  },
-  {
-   "id": "389ddc46c0a2",
-   "titulo": "Como submeter propostas",
-   "orgao": "FAPESP",
-   "link": "https://fapesp.br/comosubmeterproposta",
-   "resumo": "A FAPESP é uma das principais agências de fomento à pesquisa científica e tecnológica do país e concede Bolsas e Auxílios a projetos em todas as áreas do conhecimento.",
-   "adicionado_em": "2026-11-15",
-   "fonte": "html:FAPESP",
-   "anuncio": "https://fapesp.br/comosubmeterproposta",
-   "tipo": "fomento",
-   "segmentos": [],
-   "proponentes": [
-    "cpf",
-    "startup"
-   ],
-   "abrangencia": "regional",
-   "ufs": [
-    "SP"
-   ],
-   "prazo": null,
-   "valor": ""
-  },
-  {
    "id": "db4eff860056",
    "titulo": "Economia Solidária: Finep abre seleção de projetos de inovação social",
    "orgao": "finep.gov.br",
@@ -166,30 +106,6 @@
    "ufs": [],
    "prazo": null,
    "valor": "R$ 500 milhões"
-  },
-  {
-   "id": "1793cc46d9fb",
-   "titulo": "Últimas semanas para inscrição no boostlab, programa de investimento em startups do BTG Pactual",
-   "orgao": "boostlab.com.br",
-   "link": "https://www.boostlab.com.br?utm_channel=parceiros&utm_medium=partners&utm_network={network}:{placement}&utm_source=exame&utm_campaign=exame_AWN_BUBOOSTLAB_batch2025_sazonal_202502&utm_campaign_id={campaignid}&utm_content=exame_AWN_BUBOOSTLAB_batch2025_sazonal_202502_afinidade_branded-content&utm_content_id={adgroupid}&utm_term=exame_AWN_BUBOOSTLAB_batch2025_sazonal_202502_afinidade_branded-content_texto_&utm_term_id={targetid}:{adposition}:{matchtype}:{keyword}:{creative}",
-   "resumo": "Programa de investimento oferece até R$ 2 milhões em aporte e mentorias personalizadas com apoio da Endeavor",
-   "adicionado_em": "2026-11-15",
-   "fonte": "noticia:exame.com",
-   "anuncio": "https://exame.com/invest/btg-insights/ultimas-semanas-para-inscricao-no-boostlab-programa-de-investimento-em-startups-do-btg-pactual/",
-   "tipo": "poc",
-   "segmentos": [
-    "financas",
-    "social"
-   ],
-   "proponentes": [
-    "cpf",
-    "startup",
-    "parceria"
-   ],
-   "abrangencia": "nacional",
-   "ufs": [],
-   "prazo": null,
-   "valor": "R$ 2 milhões"
   }
  ]
 }

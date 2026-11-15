@@ -218,7 +218,7 @@ RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecion
                    r"balanco|seminario|palestra|webinar|workshop|entrevista|opiniao|retrospectiva|"
                    r"visita|assinam|assina acordo|posse|nomead|cerimonia|exposicao|"
                    r"eliminacao de doc|licitacao|pregao|concurso publico|processo seletivo simplificado|"
-                   r"contratacao de pessoal|aviso de|errata", re.I)
+                   r"contratacao de pessoal|aviso de|errata|como submeter|manual|tutorial|perguntas frequentes|faq", re.I)
 # Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
 BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
                              r"treinamento tecnico)")
@@ -265,15 +265,23 @@ def eh_ruido(titulo):
 def eh_pagina_inicial(href):
     """Página inicial de um site (ex.: programas.sebraestartups.com.br/) não é um edital."""
     u = urlparse(href)
-    return u.path.strip("/") in ("", "pt", "pt-br", "index.html", "index.php", "home") and not u.query
+    query_real = [k for k in parse_qs(u.query) if not k.startswith("utm_")]  # utm_* é só propaganda
+    return u.path.strip("/") in ("", "pt", "pt-br", "index.html", "index.php", "home") and not query_real
 
 
 def link_valido(href):
     return href.startswith("http") and not DOMINIOS_IGNORADOS.search(href) and not ARQUIVO_NAO_EDITAL.search(href)
 
 
+def link_antigo(href):
+    """Arquivo com ano no endereço (ex.: /2018/...) anterior ao ano passado: edital velho."""
+    anos = [int(a) for a in re.findall(r"(?<!\d)(20\d\d)(?!\d)", urlparse(href).path)]
+    return bool(anos) and max(anos) < HOJE.year - 1
+
+
 def link_de_edital_valido(href):
-    return link_valido(href) and not eh_pagina_inicial(href) and not URL_LOGIN.search(href)
+    return (link_valido(href) and not eh_pagina_inicial(href) and not URL_LOGIN.search(href)
+            and not link_antigo(href))
 
 
 def conteudo_principal(sopa, lista=False):
@@ -599,6 +607,9 @@ def item_ruim(i):
     if i.get("fonte") == "exemplo" or "news.google.com" in link or "google.com/search" in link:
         return True
     if not link_de_edital_valido(link) or eh_ruido(i.get("titulo", "")):
+        return True
+    # Itens de fontes de órgãos que saíram da lista FONTES_HTML.
+    if i.get("fonte", "").startswith("html:") and i["fonte"][5:] not in {f["orgao"] for f in FONTES_HTML}:
         return True
     # Itens da versão antiga do robô (sem o campo "anuncio") não tiveram o edital verificado.
     if "anuncio" not in i:
