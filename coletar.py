@@ -22,12 +22,13 @@ MAX_POR_FONTE = 15
 # e salva o link da página/PDF do edital (não o da notícia).
 FONTES_HTML = [
     {"orgao": "FAPERJ", "url": "https://www.faperj.br/", "ufs": ["RJ"]},
-    {"orgao": "Finep", "url": "http://www.finep.gov.br/chamadas-publicas", "ufs": []},
     {"orgao": "AgeRio", "url": "https://www.agerio.com.br/", "ufs": ["RJ"]},
-    {"orgao": "Sebrae Startups", "url": "https://programas.sebraestartups.com.br/", "ufs": []},
+    {"orgao": "Centelha RJ", "url": "https://rj.programacentelha.com.br/", "ufs": ["RJ"]},
+    {"orgao": "InovAtiva", "url": "https://inovativa.online/painel-de-oportunidades/", "ufs": []},
     {"orgao": "FAPESP", "url": "https://fapesp.br/oportunidades", "ufs": ["SP"]},
-    {"orgao": "FAPEMIG", "url": "https://fapemig.br/", "ufs": ["MG"]},
 ]
+# Finep, FAPEMIG, Prosas e Sebrae Startups montam a lista de editais com JavaScript (o robô não
+# consegue ler); a Finep entra pelas buscas de notícias. O site do BNDES recusa conexões do GitHub.
 
 # Buscas no Bing (RSS gratuito).
 # - BUSCAS (notícias): a notícia é só uma pista; o robô abre a matéria e procura
@@ -366,7 +367,8 @@ def escolher_link_edital(principal, url_pagina, titulo, ignorar=frozenset()):
 
 
 def montar_item(titulo, orgao, link, anuncio, fonte, resumo_reserva="", ufs_padrao=None, corpo_reserva=""):
-    resumo, corpo = texto_da_pagina(link) if link != anuncio else ("", "")
+    # PDF não é lido (não há leitor de PDF aqui); prazo e público vêm do texto do anúncio.
+    resumo, corpo = texto_da_pagina(link) if link != anuncio and not link.lower().endswith(".pdf") else ("", "")
     item = {"id": gerar_id(link), "titulo": titulo[:200], "orgao": orgao, "link": link,
             "resumo": resumo or resumo_reserva[:280], "adicionado_em": HOJE.isoformat(), "fonte": fonte}
     item["anuncio"] = anuncio or link
@@ -374,8 +376,24 @@ def montar_item(titulo, orgao, link, anuncio, fonte, resumo_reserva="", ufs_padr
     return item
 
 
+def pdfs_de_edital(principal, url_pagina, ignorar=frozenset()):
+    """Todos os PDFs de edital citados num anúncio oficial (um anúncio pode lançar vários editais).
+    Devolve [(texto_do_link, href)], usando o texto do link como título do edital."""
+    achados = []
+    for a in principal.find_all("a", href=True):
+        href = urljoin(url_pagina, a["href"]).split("#")[0]
+        texto = a.get_text(" ", strip=True)
+        if (href.lower().endswith(".pdf") and href not in ignorar and len(texto) >= 15
+                and re.search(r"edital|chamada", normalizar(texto)) and not eh_ruido(texto)
+                and href not in [h for _, h in achados]):
+            achados.append((texto, href))
+    return achados
+
+
 def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, nivel=0):
-    """Abre um anúncio e devolve (link_do_edital, resumo, texto_do_anuncio).
+    """Abre um anúncio e devolve (link_do_edital, resumo, texto_do_anuncio, outros_pdfs).
+
+    outros_pdfs: em site oficial, todos os PDFs de edital do anúncio [(título, link)].
 
     O link devolvido é sempre o edital (PDF ou página do edital/programa), nunca uma notícia:
     - se o melhor link achado ainda parece notícia, o robô entra nele e procura de novo (1 nível);
@@ -384,25 +402,26 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
     """
     lido = ler_pagina(url)
     if not lido:
-        return None, "", ""
+        return None, "", "", []
     url_final, principal, resumo, texto = lido
     if principal is None:  # o link já é um PDF/documento: é o próprio edital
-        return url_final, "", ""
+        return url_final, "", "", []
+    pdfs = pdfs_de_edital(principal, url_final, ignorar) if OFICIAL.search(dominio(url_final)) else []
     link, nota = escolher_link_edital(principal, url_final, titulo, ignorar)
     if nivel == 0 and not (link and nota >= 5):
         print(f"    melhor link em {url_final[:80]}: {link} (nota {nota})")
     if link and nota >= 5:
         if not parece_noticia(link) or link.lower().endswith(".pdf"):
-            return link, resumo, texto
+            return link, resumo, texto, pdfs
         if nivel == 0:
-            mais, _, _ = resolver_anuncio(titulo, link, ignorar, aceitar_propria=False, nivel=1)
+            mais, _, _, pdfs2 = resolver_anuncio(titulo, link, ignorar, aceitar_propria=False, nivel=1)
             if mais:
-                return mais, resumo, texto
+                return mais, resumo, texto, pdfs2
     if (aceitar_propria and OFICIAL.search(dominio(url_final)) and not parece_noticia(url_final, titulo)
             and link_de_edital_valido(url_final)
             and SINAL_FORTE.search(normalizar(titulo + " " + texto[:3000]))):
-        return url_final, resumo, texto
-    return None, resumo, texto
+        return url_final, resumo, texto, pdfs
+    return None, resumo, texto, pdfs
 
 
 # ---------------------------------------------------------------- coletores
@@ -435,10 +454,9 @@ def ler_lista(url):
         if (LISTA_EDITAIS.match(normalizar(texto)) and dominio(href) == dominio(r.url)
                 and href.rstrip("/") != r.url.rstrip("/") and href not in sublistas):
             sublistas.append(href)
-    principal = conteudo_principal(sopa, lista=True)
-    links = principal.find_all("a", href=True)
-    if len(links) < 5:  # o "conteúdo principal" veio vazio: usa a página toda
-        links = BeautifulSoup(r.text, "html.parser").find_all("a", href=True)
+    # Em páginas de lista, todos os links são lidos (os de menu caem nos filtros de título e de
+    # nav/cabeçalho/rodapé): cortar blocos por classe fazia a lista de notícias sumir em alguns sites.
+    links = sopa.find_all("a", href=True)
     return r.url, [(a.get_text(" ", strip=True), abs_(a)) for a in links], ignorar, sublistas, menus_links
 
 
@@ -458,32 +476,41 @@ def coletar_html(fonte, conhecidos):
         print(f"{fonte['orgao']}: {url_final} → {len(links)} links, {len(sublistas)} listas de editais")
         if url == fonte["url"]:
             fila += [u for u in sublistas if u not in visitadas][:MAX_SUBLISTAS]
-        vistos = set()
+        vistos, motivos = set(), {}
         for titulo, link in links:
             if link in vistos or link in visitadas or link in menus_links or not link_valido(link):
                 continue
             vistos.add(link)
-            if len(titulo) < 15 or not OPORTUNIDADE.search(normalizar(titulo)) or eh_ruido(titulo):
+            n = normalizar(titulo)
+            motivo = ("curto" if len(titulo) < 15 else "sem cara de oportunidade" if not OPORTUNIDADE.search(n)
+                      else "ruído/resultado" if eh_ruido(titulo) else "lista" if LISTA_EDITAIS.match(n)
+                      else "já conhecido" if gerar_id(link) in conhecidos or gerar_id(titulo) in conhecidos
+                      else None)
+            if motivo:
+                motivos[motivo] = motivos.get(motivo, 0) + 1
                 continue
-            if LISTA_EDITAIS.match(normalizar(titulo)):
-                continue
-            if gerar_id(link) in conhecidos or gerar_id(titulo) in conhecidos:
-                continue
-            edital, resumo, texto = resolver_anuncio(titulo, link, ignorar - {link}, aceitar_propria=True)
-            if not edital:
-                conhecidos |= {gerar_id(titulo), gerar_id(link)}
+            edital, resumo, texto, pdfs = resolver_anuncio(titulo, link, ignorar - {link}, aceitar_propria=True)
+            conhecidos |= {gerar_id(titulo), gerar_id(link)}
+            # Um anúncio oficial pode lançar vários editais: cada PDF vira um item, com o nome do edital.
+            achados = pdfs or ([(titulo, edital)] if edital else [])
+            # Link com texto genérico ("Clique aqui e leia o edital") fica com o título do anúncio.
+            achados = [(titulo if re.match(r" ?(clique|acesse|leia|confira|baixe|veja|consulte|link)", normalizar(t))
+                        else t, h) for t, h in achados]
+            if not achados:
                 print("  sem edital, descartado:", titulo[:70])
                 continue
-            uid = gerar_id(edital)
-            if uid in conhecidos:
-                continue
-            conhecidos |= {uid, gerar_id(titulo), gerar_id(link)}
-            item = montar_item(titulo, fonte["orgao"], edital, link, "html:" + fonte["orgao"],
-                               resumo, fonte["ufs"], texto)
-            novos.append(item)
-            print("  ok:", titulo[:60], "→", edital)
+            for titulo_edital, link_edital in achados:
+                uid = gerar_id(link_edital)
+                if uid in conhecidos:
+                    continue
+                conhecidos.add(uid)
+                item = montar_item(titulo_edital, fonte["orgao"], link_edital, link, "html:" + fonte["orgao"],
+                                   resumo, fonte["ufs"], texto)
+                novos.append(item)
+                print("  ok:", titulo_edital[:60], "→", link_edital)
             if len(novos) >= MAX_POR_FONTE:
                 break
+        print("  descartes por motivo:", motivos)
     print(fonte["orgao"], "→", len(novos), "novos")
     return novos
 
@@ -545,7 +572,7 @@ def coletar_busca(busca, conhecidos, web=False):
         conhecidos.add(gerar_id(titulo))
         oficial = bool(OFICIAL.search(dominio(pagina)))
         # Em site oficial, a própria página pode ser a publicação do edital.
-        edital, resumo, texto = resolver_anuncio(titulo, pagina, aceitar_propria=oficial)
+        edital, resumo, texto, _ = resolver_anuncio(titulo, pagina, aceitar_propria=oficial)
         if not edital:
             conhecidos.add(gerar_id(pagina))
             print("  sem link de edital, descartada:", titulo[:70])
