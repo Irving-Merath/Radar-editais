@@ -106,6 +106,252 @@
    "ufs": [],
    "prazo": null,
    "valor": "R$ 500 milhões"
+  },
+  {
+   "id": "08ed47acdbfd",
+   "titulo": "Edital FAPERJ Nº 35/2026 – Programa de Atração de Grupos de Pesquisa do Cone Sul",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_35_2026_–_Programa_de_Atração_de_Grupos_de_Pesquisa_do_Cone_Sul.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1141.7.9",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "logistica"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "1dd1771f409f",
+   "titulo": "Edital FAPERJ Nº 33/2026 – Apoio à Divulgação Científica e Popularização da Ciência no Estado do Rio de Janeiro",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_33_2026_–_Apoio_à_Divulgação_Científica_e_Popularização_da_Ciência_no_Estado_do_Rio_de_Janeiro.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1132.7.8",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "b585cab887d4",
+   "titulo": "Edital FAPERJ Nº 26/2026 – Bolsa de Inovação Tecnológica (INT)",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPPERJ_Nº_26_2026_–_Bolsa_de_Inovação_Tecnológica_(INT).pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1115.7.1",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "be3764da5149",
+   "titulo": "Edital FAPERJ Nº 27/2026 – Bolsa de Iniciação Tecnológica (IT)",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_27_2026_–_Bolsa_de_Iniciação_Tecnológica_(IT).pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1115.7.1",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "ad8c69f29949",
+   "titulo": "A FAPERJ anunciou sua adesão à chamada do Programa 'Desafios da Amazônia' – parceria entre o Fundo Amazônia e o CONFAP. Objetivo é apoiar o desenvolvimento de soluções inovadoras na região.",
+   "orgao": "FAPERJ",
+   "link": "https://www.amazoniamaisdez.org.br/chamadas-abertas",
+   "resumo": "O Conselho Nacional de Fundações Estaduais de Amparo à Pesquisa (CONFAP), no âmbito da Iniciativa Amazônia+10, em parceria com o Banco Nacional de Desenvolvimento Econômico e Social (BNDES), torna pública a 1ª Chamada do Programa Desafios da Amazônia e convida pesquisadores e org",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1065.7.6",
+   "tipo": "poc",
+   "segmentos": [
+    "logistica",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-12-08",
+   "valor": "R$ 107,1 milhões"
+  },
+  {
+   "id": "c6392bd9c570",
+   "titulo": "A FAPERJ anunciou, nesta quinta (16/7), sua participação em 3 chamadas de cooperação internacional realizadas em parceria com o CONFAP e instituições internacionais.",
+   "orgao": "FAPERJ",
+   "link": "https://confap.org.br/pt/editais/111/chamada-confap-wbi-belgica-2026",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1066.7.1",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude",
+    "agro",
+    "energia",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "AL",
+    "AM",
+    "ES",
+    "GO",
+    "MA",
+    "PA",
+    "PB",
+    "PE",
+    "PR",
+    "RJ",
+    "RO",
+    "RR",
+    "RS",
+    "SC",
+    "TO"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "82436460cf44",
+   "titulo": "Edital FAPERJ Nº 14/2026 – Programa Treinamento e Capacitação Técnica (TCT)",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_14_2026_–_Treinamento_e_Capacitação_Técnica_(TCT).pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1051.7.8",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "21838bb645df",
+   "titulo": "Edital FAPERJ Nº 12/2026 – Programa Centelha 3 RJ",
+   "orgao": "FAPERJ",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_12_2026_Programa_CENTELHA_3_16_jun_2026.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=1042.7.7",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "43cd0ccdb912",
+   "titulo": "https://news.confap.org.br/wp-content/uploads/2025/02/Chamada-CONFAP-CDTI-2025-2026.pdf",
+   "orgao": "FAPERJ",
+   "link": "https://news.confap.org.br/wp-content/uploads/2025/02/Chamada-CONFAP-CDTI-2025-2026.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-15",
+   "fonte": "html:FAPERJ",
+   "anuncio": "https://www.faperj.br/?id=731.7.4",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "saude",
+    "logistica",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 220 mil"
   }
  ]
 }
