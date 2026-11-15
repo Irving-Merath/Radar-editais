@@ -24,8 +24,6 @@ FONTES_HTML = [
     {"orgao": "FAPERJ", "url": "https://www.faperj.br/", "ufs": ["RJ"]},
     {"orgao": "Finep", "url": "http://www.finep.gov.br/chamadas-publicas", "ufs": []},
     {"orgao": "AgeRio", "url": "https://www.agerio.com.br/", "ufs": ["RJ"]},
-    {"orgao": "Petrobras", "url": "https://conexoes-inovacao.petrobras.com.br/", "ufs": []},
-    {"orgao": "Embrapii", "url": "https://embrapii.org.br/chamadas/", "ufs": []},
     {"orgao": "Sebrae Startups", "url": "https://programas.sebraestartups.com.br/", "ufs": []},
     {"orgao": "FAPESP", "url": "https://fapesp.br/oportunidades", "ufs": ["SP"]},
     {"orgao": "FAPEMIG", "url": "https://fapemig.br/", "ufs": ["MG"]},
@@ -207,7 +205,12 @@ def dominio(url):
 RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecionad|aprovados|homologa|"
                    r"contemplad|vencedor|premiados|classificados|inscricoes encerradas|encerrad|saem os|"
                    r"balanco|seminario|palestra|webinar|workshop|entrevista|opiniao|retrospectiva|"
-                   r"visita|assinam|assina acordo|posse|nomead|cerimonia|exposicao", re.I)
+                   r"visita|assinam|assina acordo|posse|nomead|cerimonia|exposicao|"
+                   r"eliminacao de doc|licitacao|pregao|concurso publico|processo seletivo simplificado|"
+                   r"contratacao de pessoal|aviso de|errata", re.I)
+# Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
+BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
+                             r"treinamento tecnico)")
 # Links de menu: títulos curtos e genéricos que apontam para listas, não para um edital.
 MENU = re.compile(r"^ ?(acoes e programas|programas|editais|chamadas|chamadas e editais|chamadas publicas|"
                   r"editais abertos|chamadas abertas|oportunidades|explorar chamadas|ver todos|ver todas|"
@@ -242,7 +245,7 @@ def parece_noticia(url, titulo=""):
 def eh_ruido(titulo):
     """True para links de menu, notícias de resultado/evento e editais de anos passados."""
     t = normalizar(titulo)
-    if MENU.match(t) or RUIDO.search(t):
+    if MENU.match(t) or RUIDO.search(t) or BOLSA_ACADEMICA.match(t):
         return True
     anos = [int(a) for a in re.findall(r"\b(20\d\d)\b", t)]
     return bool(anos) and max(anos) < HOJE.year
@@ -267,9 +270,13 @@ def conteudo_principal(sopa, lista=False):
     Em páginas de lista (lista=True) não usa <article>, que costuma ser só o 1º item."""
     for tag in sopa(["script", "style", "nav", "footer", "header", "aside", "form"]):
         tag.decompose()
+    # Blocos com classe "menu", "rodape" etc. só saem se forem pequenos: em vários sites de órgão
+    # públicos a página inteira fica dentro de um <div class="...menu...">.
+    total = len((sopa.body or sopa).get_text(" ", strip=True)) or 1
     for tag in sopa.select("[class*=menu], [id*=menu], [class*=navbar], [class*=rodape], [id*=rodape], "
                            "[class*=footer], [class*=share], [class*=social], [class*=breadcrumb]"):
-        tag.decompose()
+        if not tag.decomposed and len(tag.get_text(" ", strip=True)) < 0.3 * total:
+            tag.decompose()
     if lista:
         return sopa.find("main") or sopa.find(attrs={"role": "main"}) or sopa.body or sopa
     return sopa.find("article") or sopa.find("main") or sopa.find(attrs={"role": "main"}) or sopa.body or sopa
@@ -372,6 +379,8 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
     if principal is None:  # o link já é um PDF/documento: é o próprio edital
         return url_final, "", ""
     link, nota = escolher_link_edital(principal, url_final, titulo, ignorar)
+    if nivel == 0 and not (link and nota >= 5):
+        print(f"    melhor link em {url_final[:80]}: {link} (nota {nota})")
     if link and nota >= 5:
         if not parece_noticia(link) or link.lower().endswith(".pdf"):
             return link, resumo, texto
@@ -398,7 +407,7 @@ def coletar_html(fonte, conhecidos):
     # Links de menu do site (dentro de nav/rodapé ou com texto curto/genérico) se repetem em todas
     # as páginas; ao abrir um anúncio, eles são ignorados na hora de achar o edital.
     menus_links = set()
-    for bloco in sopa.select("nav, header, footer, [class*=menu], [id*=menu], [class*=footer], [class*=rodape]"):
+    for bloco in sopa.select("nav, header, footer"):
         menus_links |= {urljoin(r.url, a["href"]).split("#")[0] for a in bloco.find_all("a", href=True)}
     ignorar = set(menus_links)
     for a in sopa.find_all("a", href=True):
@@ -407,6 +416,7 @@ def coletar_html(fonte, conhecidos):
             ignorar.add(urljoin(r.url, a["href"]).split("#")[0])
     principal = conteudo_principal(sopa, lista=True)
     vistos = set()
+    print(fonte["orgao"], ":", len(principal.find_all("a", href=True)), "links na página")
     for a in principal.find_all("a", href=True):
         titulo = a.get_text(" ", strip=True)
         link = urljoin(r.url, a["href"]).split("#")[0]
@@ -449,6 +459,21 @@ def itens_rss(url):
         yield titulo, desc, link_real_bing(it.findtext("link") or "")
 
 
+def busca_duckduckgo(busca):
+    """Resultados da web pelo DuckDuckGo (versão HTML, sem chave). Usado quando o Bing não devolve nada."""
+    r = requests.post("https://html.duckduckgo.com/html/", data={"q": busca, "kl": "br-pt"},
+                      headers=HEADERS, timeout=25)
+    r.raise_for_status()
+    sopa = BeautifulSoup(r.text, "html.parser")
+    for a in sopa.select("a.result__a"):
+        href = a.get("href", "")
+        if "uddg=" in href:
+            href = parse_qs(urlparse(href).query).get("uddg", [href])[0]
+        trecho = a.find_parent(class_="result")
+        desc = trecho.select_one(".result__snippet").get_text(" ", strip=True) if trecho and trecho.select_one(".result__snippet") else ""
+        yield a.get_text(" ", strip=True), desc, href
+
+
 def coletar_busca(busca, conhecidos, web=False):
     """Notícias (web=False) ou resultados da web (web=True) do Bing → link do edital oficial."""
     caminho = "search" if web else "news/search"
@@ -458,10 +483,18 @@ def coletar_busca(busca, conhecidos, web=False):
         resultados = list(itens_rss(url))
     except Exception as e:
         print("Falha na busca", busca, e)
-        return novos
+        resultados = []
+    print(f"Busca {'web' if web else 'notícias'}: {busca} → {len(resultados)} resultados do Bing")
+    if web and not resultados:
+        try:
+            resultados = list(busca_duckduckgo(busca))
+            print(f"  DuckDuckGo → {len(resultados)} resultados")
+        except Exception as e:
+            print("  Falha no DuckDuckGo", e)
     for titulo, desc, pagina in resultados:
         t = normalizar(titulo + " " + (desc if web else ""))
         if not (OPORTUNIDADE.search(t) and INOVACAO.search(t)) or eh_ruido(titulo) or not link_valido(pagina):
+            print("  fora do tema/ruído:", titulo[:70])
             continue
         if gerar_id(titulo) in conhecidos or gerar_id(pagina) in conhecidos:
             continue
