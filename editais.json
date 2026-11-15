@@ -1,32 +1,6 @@
 {
- "atualizado_em": "2026-11-10",
+ "atualizado_em": "2026-11-15",
  "editais": [
-  {
-   "id": "83b512f1fd78",
-   "titulo": "Edital de inovação vai premiar startups com até R$ 30 mil; veja como se inscrever",
-   "orgao": "fapto.org.br",
-   "link": "https://www.fapto.org.br/site/noticia/visualizar?uid=NjE1",
-   "resumo": "Impulsionando o desenvolvimento do Tocantins através da inovação e do conhecimento. A Fapto é uma instituição sem fins lucrativos que se dedica a apoiar instituições públicas e privadas no desenvolvimento de projetos nas áreas do ensino, pesquisa, extensão, inovação e desenvolvim",
-   "adicionado_em": "2026-11-09",
-   "fonte": "noticia:g1.globo.com",
-   "tipo": "aceleracao",
-   "segmentos": [
-    "educacao",
-    "cultura",
-    "saude",
-    "agro",
-    "clima"
-   ],
-   "proponentes": [
-    "cpf",
-    "startup",
-    "parceria"
-   ],
-   "abrangencia": "internacional",
-   "ufs": [],
-   "prazo": null,
-   "valor": "R$ 30 mil"
-  },
   {
    "id": "5335920b4eb1",
    "titulo": "Petrobras anuncia edital de R$ 16 milhões para projetos de inovação de startups",
@@ -77,33 +51,6 @@
    "ufs": [],
    "prazo": null,
    "valor": "R$ 25 mil"
-  },
-  {
-   "id": "73c0a26ad73d",
-   "titulo": "BNDES Garagem abre inscrições para até 100 startups de impacto socioambiental",
-   "orgao": "agenciadenoticias.bndes.gov.br",
-   "link": "https://agenciadenoticias.bndes.gov.br/noticia/BNDES-Garagem-abre-inscricoes-para-selecionar-ate-100-startups-de-impacto-socioambiental",
-   "resumo": "Novo ciclo do programa, o terceiro desta edição, reforça conexão com investidores e amplia oportunidades de acesso a capital para negócios inovadores; inscrições vão até 30 de novembro",
-   "adicionado_em": "2026-11-09",
-   "fonte": "noticia:canalrural.com.br",
-   "tipo": "aceleracao",
-   "segmentos": [
-    "ia",
-    "cultura",
-    "saude",
-    "agro",
-    "clima",
-    "social"
-   ],
-   "proponentes": [
-    "startup",
-    "osc",
-    "parceria"
-   ],
-   "abrangencia": "internacional",
-   "ufs": [],
-   "prazo": "2026-11-30",
-   "valor": "R$ 250 mil"
   },
   {
    "id": "6a4645857f1d",

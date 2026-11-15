@@ -223,7 +223,18 @@ SINAL_EDITAL = re.compile(r"edital|chamada|inscri|regulamento|cpsi|encomenda|sel
 SINAL_FORTE = re.compile(r"edital|chamada|regulamento|inscric|inscreva|formulario|submiss", re.I)
 OFICIAL = re.compile(r"\.gov\.br|\.org\.br|\.edu\.br|\.jus\.br|\.leg\.br|\.rio$|fap|finep|sebrae|bndes|firjan|senai|"
                      r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio", re.I)
+# Endereços e títulos com cara de notícia: o robô não aceita uma notícia como "o edital".
+URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|materia|/blog|/artigo|/post/|/\d{4}/\d{2}/|"
+                         r"faperj\.br/\?id=\d+\.7\.", re.I)
+TITULO_NOTICIA = re.compile(r"\b(lanca|lancou|lancam|abre|abriu|anuncia|anunciou|divulga|divulgou|apresenta|"
+                            r"recebe|prorroga|prorrogou|participa|aderiu|adesao|nesta (segunda|terca|quarta|quinta|"
+                            r"sexta)|neste (sabado|domingo)|vai premiar|vai selecionar|seleciona|oferece)\b")
+ARQUIVO_EDITAL = re.compile(r"pdf|msword|officedocument|opendocument", re.I)
 NUMERO_EDITAL = re.compile(r"\b(\d{1,3})\s?/\s?(20\d\d)\b")
+
+
+def parece_noticia(url, titulo=""):
+    return bool(URL_NOTICIA.search(url or "")) or bool(TITULO_NOTICIA.search(normalizar(titulo)))
 
 
 def eh_ruido(titulo):
@@ -259,8 +270,10 @@ def ler_pagina(url):
     except Exception as e:
         print("  não abriu", url, e)
         return None
-    if "html" not in r.headers.get("content-type", ""):
-        return r.url, None, "", ""
+    tipo = r.headers.get("content-type", "")
+    if "html" not in tipo:
+        # Só PDF/documento conta como arquivo de edital; imagem, vídeo etc. são descartados.
+        return (r.url, None, "", "") if ARQUIVO_EDITAL.search(tipo) or r.url.lower().endswith(".pdf") else None
     sopa = BeautifulSoup(r.text, "html.parser")
     meta = sopa.find("meta", attrs={"name": "description"}) or sopa.find("meta", attrs={"property": "og:description"})
     resumo = (meta.get("content", "") if meta else "").strip()
@@ -303,8 +316,10 @@ def escolher_link_edital(principal, url_pagina, titulo, ignorar=frozenset()):
         nota = 1
         if SINAL_FORTE.search(texto):
             nota += 3
-        if href.lower().endswith(".pdf"):
-            nota += 2
+        if href.lower().endswith((".pdf", ".doc", ".docx", ".odt")):
+            nota += 3
+        if URL_NOTICIA.search(href):
+            nota -= 1  # notícia: só é usada como ponte (o robô entra nela e procura o edital)
         if OFICIAL.search(dom):
             nota += 3
         elif not pagina_oficial and dom != dom_pagina:
@@ -327,22 +342,30 @@ def montar_item(titulo, orgao, link, anuncio, fonte, resumo_reserva="", ufs_padr
     return item
 
 
-def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False):
+def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, nivel=0):
     """Abre um anúncio e devolve (link_do_edital, resumo, texto_do_anuncio).
 
-    Em site oficial, se não houver link melhor e a própria página tiver cara de edital,
-    a própria página é a publicação do edital (aceitar_propria=True).
+    O link devolvido é sempre o edital (PDF ou página do edital/programa), nunca uma notícia:
+    - se o melhor link achado ainda parece notícia, o robô entra nele e procura de novo (1 nível);
+    - a própria página só é aceita (aceitar_propria=True) se for de site oficial e não tiver
+      cara de notícia (endereço com /noticia/, título "FAPERJ lança…", etc.).
     """
     lido = ler_pagina(url)
     if not lido:
         return None, "", ""
     url_final, principal, resumo, texto = lido
-    if principal is None:  # o link já é um PDF/arquivo: é o próprio edital
+    if principal is None:  # o link já é um PDF/documento: é o próprio edital
         return url_final, "", ""
     link, nota = escolher_link_edital(principal, url_final, titulo, ignorar)
     if link and nota >= 5:
-        return link, resumo, texto
-    if aceitar_propria and OFICIAL.search(dominio(url_final)) and SINAL_FORTE.search(normalizar(titulo + " " + texto[:3000])):
+        if not parece_noticia(link) or link.lower().endswith(".pdf"):
+            return link, resumo, texto
+        if nivel == 0:
+            mais, _, _ = resolver_anuncio(titulo, link, ignorar, aceitar_propria=False, nivel=1)
+            if mais:
+                return mais, resumo, texto
+    if (aceitar_propria and OFICIAL.search(dominio(url_final)) and not parece_noticia(url_final, titulo)
+            and SINAL_FORTE.search(normalizar(titulo + " " + texto[:3000]))):
         return url_final, resumo, texto
     return None, resumo, texto
 
@@ -455,6 +478,10 @@ def item_ruim(i):
     if i.get("fonte") == "exemplo" or "news.google.com" in link or "google.com/search" in link:
         return True
     if not link_valido(link) or eh_ruido(i.get("titulo", "")):
+        return True
+    # O link precisa ser o edital, não uma notícia (PDF sempre passa).
+    if not link.lower().endswith(".pdf") and (URL_NOTICIA.search(link) or
+                                               (i.get("anuncio") == link and parece_noticia(link, i.get("titulo", "")))):
         return True
     # Notícias de órgão salvas sem o link do edital (coletas antigas).
     return i.get("fonte", "").startswith("html:") and "anuncio" not in i
