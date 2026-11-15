@@ -139,22 +139,31 @@ def tem(texto, palavras):
 
 
 def achar_prazo(texto):
-    """Procura datas futuras perto de palavras como 'inscrições até' ou 'prazo'."""
+    """Procura datas perto de palavras como 'inscrições até' ou 'prazo'.
+
+    Devolve a data futura mais próxima. Se só houver datas passadas, devolve a mais recente:
+    assim um edital já encerrado fica marcado como encerrado (e sai do site depois de 90 dias)."""
     achados = []
     for m in re.finditer(r"(\d{1,2})/(\d{1,2})/(\d{4})", texto):
         achados.append((m.start(), m.group(1), m.group(2), m.group(3)))
     for m in re.finditer(r"(\d{1,2}) de (" + "|".join(MESES) + r") de (\d{4})", texto):
         achados.append((m.start(), m.group(1), MESES[m.group(2)], m.group(3)))
-    datas = []
+    datas, passadas = [], []
     for pos, d, mth, a in achados:
         try:
             data = dt.date(int(a), int(mth), int(d))
         except ValueError:
             continue
         perto = texto[max(0, pos - 90):pos]
-        if HOJE <= data <= HOJE + dt.timedelta(days=400) and re.search(r"inscri|prazo|submiss|ate |encerra|limite|deadline", perto):
+        if not re.search(r"inscri|prazo|submiss|ate |encerra|limite|deadline", perto):
+            continue
+        if HOJE <= data <= HOJE + dt.timedelta(days=400):
             datas.append(data)
-    return min(datas).isoformat() if datas else None
+        elif HOJE - dt.timedelta(days=400) <= data < HOJE:
+            passadas.append(data)
+    if datas:
+        return min(datas).isoformat()
+    return max(passadas).isoformat() if passadas else None
 
 
 def achar_valor(texto_original):
@@ -183,7 +192,10 @@ def classificar(titulo, corpo, ufs_padrao=None, link="", resumo=""):
     segmentos = [s for s, kws in SEG_KW.items() if tem(t, kws)]
     tipo = next((k for k, kws in TIPO_KW if tem(t, kws)), "fomento")
     proponentes = [p for p, kws in PROP_KW.items() if tem(t, kws)]
-    ufs = {uf for uf, rx in UF_RE.items() if re.search(rx, t_regiao)} | set(ufs_padrao or []) | uf_do_dominio(link)
+    if ufs_padrao:  # fonte de um estado (ex.: FAPERJ): vale para esse estado
+        ufs = set(ufs_padrao) | uf_do_dominio(link)
+    else:
+        ufs = {uf for uf, rx in UF_RE.items() if re.search(rx, t_regiao)} | uf_do_dominio(link)
     if len(ufs) > 3 and not ufs_padrao:  # cita muitos estados: provavelmente vale para o país todo
         ufs = uf_do_dominio(link)
     ufs = sorted(ufs)
@@ -325,6 +337,21 @@ def ler_pagina(url):
     return r.url, principal, resumo[:280], principal.get_text(" ", strip=True)[:20000]
 
 
+def texto_pdf(url, paginas=8, limite_mb=15):
+    """Texto das primeiras páginas de um PDF (para achar prazo e público). Vazio se não der."""
+    try:
+        from pypdf import PdfReader
+        import io
+        r = requests.get(url, headers=HEADERS, timeout=40, stream=True)
+        r.raise_for_status()
+        dados = r.raw.read(limite_mb * 1024 * 1024, decode_content=True)
+        leitor = PdfReader(io.BytesIO(dados))
+        return " ".join((pg.extract_text() or "") for pg in leitor.pages[:paginas])[:30000]
+    except Exception as e:
+        print("  PDF não lido", url[:90], type(e).__name__)
+        return ""
+
+
 def texto_da_pagina(url):
     """Resumo e texto do edital para achar prazo e público. PDFs ficam só com o título."""
     lido = ler_pagina(url)
@@ -375,8 +402,11 @@ def escolher_link_edital(principal, url_pagina, titulo, ignorar=frozenset()):
 
 
 def montar_item(titulo, orgao, link, anuncio, fonte, resumo_reserva="", ufs_padrao=None, corpo_reserva=""):
-    # PDF não é lido (não há leitor de PDF aqui); prazo e público vêm do texto do anúncio.
-    resumo, corpo = texto_da_pagina(link) if link != anuncio and not link.lower().endswith(".pdf") else ("", "")
+    if link.lower().endswith(".pdf"):
+        # PDF: as primeiras páginas do edital somam-se ao texto do anúncio (prazo e público).
+        resumo, corpo = "", (corpo_reserva or "") + " " + texto_pdf(link)
+    else:
+        resumo, corpo = texto_da_pagina(link) if link != anuncio else ("", "")
     item = {"id": gerar_id(link), "titulo": titulo[:200], "orgao": orgao, "link": link,
             "resumo": resumo or resumo_reserva[:280], "adicionado_em": HOJE.isoformat(), "fonte": fonte}
     item["anuncio"] = anuncio or link
@@ -508,7 +538,7 @@ def coletar_html(fonte, conhecidos):
             # Um anúncio oficial pode lançar vários editais: cada PDF vira um item, com o nome do edital.
             achados = pdfs or ([(titulo, edital)] if edital else [])
             # Link com texto genérico ("Clique aqui e leia o edital") fica com o título do anúncio.
-            achados = [(titulo if re.match(r" ?(clique|acesse|leia|confira|baixe|veja|consulte|link)", normalizar(t))
+            achados = [(titulo if re.match(r" ?(clique|acesse|leia|confira|baixe|veja|consulte|link|http|www)", normalizar(t))
                         else t, h) for t, h in achados]
             if not achados:
                 print("  sem edital, descartado:", titulo[:70])
