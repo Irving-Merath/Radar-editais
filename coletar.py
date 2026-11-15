@@ -230,7 +230,8 @@ RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecion
                    r"balanco|seminario|palestra|webinar|workshop|entrevista|opiniao|retrospectiva|"
                    r"visita|assinam|assina acordo|posse|nomead|cerimonia|exposicao|"
                    r"eliminacao de doc|licitacao|pregao|concurso publico|processo seletivo simplificado|"
-                   r"contratacao de pessoal|aviso de|errata|como submeter|manual|tutorial|perguntas frequentes|faq", re.I)
+                   r"contratacao de pessoal|aviso de|errata|como submeter|manual|tutorial|perguntas frequentes|faq|"
+                   r"graduacao|vestibular|vagas para curso", re.I)
 # Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
 BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
                              r"treinamento tecnico)")
