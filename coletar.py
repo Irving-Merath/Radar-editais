@@ -464,8 +464,14 @@ def ler_lista(url):
             sublistas.append(href)
     # Em páginas de lista, todos os links são lidos (os de menu caem nos filtros de título e de
     # nav/cabeçalho/rodapé): cortar blocos por classe fazia a lista de notícias sumir em alguns sites.
-    links = sopa.find_all("a", href=True)
-    return r.url, [(a.get_text(" ", strip=True), abs_(a)) for a in links], ignorar, sublistas, menus_links
+    # O mesmo endereço costuma aparecer em vários links (foto sem texto + título): fica o texto mais longo.
+    melhores = {}
+    for a in sopa.find_all("a", href=True):
+        texto, href = a.get_text(" ", strip=True), abs_(a)
+        if href not in melhores or len(texto) > len(melhores[href]):
+            melhores[href] = texto
+    links = [(t, h) for h, t in melhores.items()]
+    return r.url, links, ignorar, sublistas, menus_links
 
 
 def coletar_html(fonte, conhecidos):
