@@ -50,6 +50,14 @@ BUSCAS = [
     "Firjan Senai edital inovação",
     "Governo do Estado do Rio de Janeiro chamada pública inovação",
     "AgeRio edital inovação",
+    "FAPERJ edital inscrições",
+    "FAPERJ lança edital",
+    "Finep chamada pública",
+    "BNDES inscrições abertas startups",
+    "Sebrae edital startups inscrições",
+    "chamada pública inovação empresas inscrições",
+    "programa de aceleração startups inscrições abertas",
+    "edital startups inscrições abertas",
 ]
 BUSCAS_WEB = [
     "edital inovação inscrições abertas 2026",
@@ -67,8 +75,10 @@ BUSCAS_WEB = [
     "edital empreendedorismo \"Rio de Janeiro\" inscrições",
 ]
 
-OPORTUNIDADE = re.compile(r"edital|chamada|cpsi|encomenda tecnol|desafio|premio|programa|selecao|inscric|open call|aceleracao|grant", re.I)
-INOVACAO = re.compile(r"inova|startup|tecnolog|impacto|pesquisa|cpsi|empreend|ciencia", re.I)
+OPORTUNIDADE = re.compile(r"edital|chamada|cpsi|encomenda tecnol|desafio|premio|programa|selecao|seleciona|inscric|"
+                          r"open call|aceleracao|acelerar|grant|vagas|propostas|concorrer|subvencao", re.I)
+INOVACAO = re.compile(r"inova|startup|tecnolog|impacto|pesquisa|cpsi|empreend|ciencia|finep|bndes|faperj|fapesp|"
+                      r"sebrae|embrapii|sustentab|acelera|negocio|subvencao|empresa|industria|digital", re.I)
 
 SEG_KW = {
     "bigdata": ["big data", "ciencia de dados", "analise de dados", "dados abertos", "analytics"],
@@ -219,7 +229,7 @@ MENU = re.compile(r"^ ?(acoes e programas|programas|editais|chamadas|chamadas e 
 DOMINIOS_IGNORADOS = re.compile(r"facebook|instagram|twitter|x\.com|linkedin|youtube|youtu\.be|whatsapp|wa\.me|"
                                 r"t\.me|telegram|threads\.net|addtoany|neoflip|pinterest|reddit|tiktok|flipboard|"
                                 r"google\.|bing\.|msn\.com|mailto:|sharer|share\?|/share|intent/|"
-                                r"susep\.gov\.br|globo\.com/(?!.*edital)", re.I)
+                                r"susep\.gov\.br", re.I)
 ARQUIVO_NAO_EDITAL = re.compile(r"\.(jpe?g|png|gif|webp|svg|mp4|mp3|zip|css|js)(\?|$)", re.I)
 SINAL_EDITAL = re.compile(r"edital|chamada|inscri|regulamento|cpsi|encomenda|selecao|programa|desafio|premio|"
                           r"call|apply|candidat|submiss|oportunidade", re.I)
@@ -396,51 +406,84 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
 
 
 # ---------------------------------------------------------------- coletores
-def coletar_html(fonte, conhecidos):
-    novos = []
+# Links de lista que valem a pena abrir dentro do site do órgão (ex.: "Editais abertos").
+LISTA_EDITAIS = re.compile(r"^ ?(editais|chamadas|chamadas publicas|editais abertos|chamadas abertas|"
+                           r"editais e chamadas|chamadas e editais|programas e editais|inscricoes abertas|"
+                           r"oportunidades|oportunidades abertas|programas abertos|editais vigentes|"
+                           r"chamadas vigentes|explorar chamadas|programas com inscricoes abertas|"
+                           r"acoes e programas|programas) ?$")
+MAX_SUBLISTAS = 4
+
+
+def ler_lista(url):
+    """Abre uma página de lista. Devolve (url_final, links, ignorar, sublistas, links_de_menu) ou None."""
     try:
-        r = baixar(fonte["url"])
+        r = baixar(url)
     except Exception as e:
-        print("Falha em", fonte["orgao"], e)
-        return novos
+        print("  falha ao abrir", url, e)
+        return None
     sopa = BeautifulSoup(r.text, "html.parser")
-    # Links de menu do site (dentro de nav/rodapé ou com texto curto/genérico) se repetem em todas
-    # as páginas; ao abrir um anúncio, eles são ignorados na hora de achar o edital.
-    menus_links = set()
-    for bloco in sopa.select("nav, header, footer"):
-        menus_links |= {urljoin(r.url, a["href"]).split("#")[0] for a in bloco.find_all("a", href=True)}
-    ignorar = set(menus_links)
+    def abs_(a):
+        return urljoin(r.url, a["href"]).split("#")[0]
+    # Links dentro de nav/cabeçalho/rodapé se repetem em todas as páginas: não são anúncios.
+    menus_links = {abs_(a) for bloco in sopa.select("nav, header, footer") for a in bloco.find_all("a", href=True)}
+    ignorar, sublistas = set(menus_links), []
     for a in sopa.find_all("a", href=True):
-        texto = a.get_text(" ", strip=True)
+        texto, href = a.get_text(" ", strip=True), abs_(a)
         if len(texto) < 15 or MENU.match(normalizar(texto)):
-            ignorar.add(urljoin(r.url, a["href"]).split("#")[0])
+            ignorar.add(href)
+        if (LISTA_EDITAIS.match(normalizar(texto)) and dominio(href) == dominio(r.url)
+                and href.rstrip("/") != r.url.rstrip("/") and href not in sublistas):
+            sublistas.append(href)
     principal = conteudo_principal(sopa, lista=True)
-    vistos = set()
-    print(fonte["orgao"], ":", len(principal.find_all("a", href=True)), "links na página")
-    for a in principal.find_all("a", href=True):
-        titulo = a.get_text(" ", strip=True)
-        link = urljoin(r.url, a["href"]).split("#")[0]
-        if link in vistos or link in menus_links or not link_valido(link):
+    links = principal.find_all("a", href=True)
+    if len(links) < 5:  # o "conteúdo principal" veio vazio: usa a página toda
+        links = BeautifulSoup(r.text, "html.parser").find_all("a", href=True)
+    return r.url, [(a.get_text(" ", strip=True), abs_(a)) for a in links], ignorar, sublistas, menus_links
+
+
+def coletar_html(fonte, conhecidos):
+    """Lê a página do órgão e as páginas de "Editais"/"Chamadas" ligadas a ela (1 nível)."""
+    novos, visitadas = [], set()
+    fila = [fonte["url"]]
+    while fila and len(novos) < MAX_POR_FONTE:
+        url = fila.pop(0)
+        if url in visitadas:
             continue
-        vistos.add(link)
-        if len(titulo) < 15 or not OPORTUNIDADE.search(normalizar(titulo)) or eh_ruido(titulo):
+        visitadas.add(url)
+        lido = ler_lista(url)
+        if not lido:
             continue
-        if gerar_id(link) in conhecidos or gerar_id(titulo) in conhecidos:
-            continue
-        edital, resumo, texto = resolver_anuncio(titulo, link, ignorar - {link}, aceitar_propria=True)
-        if not edital:
-            print("  sem edital, descartado:", titulo[:70])
-            continue
-        uid = gerar_id(edital)
-        if uid in conhecidos:
-            continue
-        conhecidos |= {uid, gerar_id(titulo), gerar_id(link)}
-        item = montar_item(titulo, fonte["orgao"], edital, link, "html:" + fonte["orgao"],
-                           resumo, fonte["ufs"], texto)
-        novos.append(item)
-        print("  ok:", titulo[:60], "→", edital)
-        if len(novos) >= MAX_POR_FONTE:
-            break
+        url_final, links, ignorar, sublistas, menus_links = lido
+        print(f"{fonte['orgao']}: {url_final} → {len(links)} links, {len(sublistas)} listas de editais")
+        if url == fonte["url"]:
+            fila += [u for u in sublistas if u not in visitadas][:MAX_SUBLISTAS]
+        vistos = set()
+        for titulo, link in links:
+            if link in vistos or link in visitadas or link in menus_links or not link_valido(link):
+                continue
+            vistos.add(link)
+            if len(titulo) < 15 or not OPORTUNIDADE.search(normalizar(titulo)) or eh_ruido(titulo):
+                continue
+            if LISTA_EDITAIS.match(normalizar(titulo)):
+                continue
+            if gerar_id(link) in conhecidos or gerar_id(titulo) in conhecidos:
+                continue
+            edital, resumo, texto = resolver_anuncio(titulo, link, ignorar - {link}, aceitar_propria=True)
+            if not edital:
+                conhecidos |= {gerar_id(titulo), gerar_id(link)}
+                print("  sem edital, descartado:", titulo[:70])
+                continue
+            uid = gerar_id(edital)
+            if uid in conhecidos:
+                continue
+            conhecidos |= {uid, gerar_id(titulo), gerar_id(link)}
+            item = montar_item(titulo, fonte["orgao"], edital, link, "html:" + fonte["orgao"],
+                               resumo, fonte["ufs"], texto)
+            novos.append(item)
+            print("  ok:", titulo[:60], "→", edital)
+            if len(novos) >= MAX_POR_FONTE:
+                break
     print(fonte["orgao"], "→", len(novos), "novos")
     return novos
 
@@ -476,39 +519,41 @@ def busca_duckduckgo(busca):
 
 def coletar_busca(busca, conhecidos, web=False):
     """Notícias (web=False) ou resultados da web (web=True) do Bing → link do edital oficial."""
-    caminho = "search" if web else "news/search"
-    url = f"https://www.bing.com/{caminho}?q={quote_plus(busca)}&format=rss&setlang=pt-BR&cc=BR&mkt=pt-BR"
+    # Notícias: RSS do Bing Notícias. Web: DuckDuckGo (o RSS de busca web do Bing ignora a pergunta
+    # e devolve resultados aleatórios).
     novos = []
     try:
-        resultados = list(itens_rss(url))
+        if web:
+            resultados = list(busca_duckduckgo(busca))
+        else:
+            url = f"https://www.bing.com/news/search?q={quote_plus(busca)}&format=rss&setlang=pt-BR&cc=BR&mkt=pt-BR"
+            resultados = list(itens_rss(url))
     except Exception as e:
         print("Falha na busca", busca, e)
         resultados = []
-    print(f"Busca {'web' if web else 'notícias'}: {busca} → {len(resultados)} resultados do Bing")
-    if web and not resultados:
-        try:
-            resultados = list(busca_duckduckgo(busca))
-            print(f"  DuckDuckGo → {len(resultados)} resultados")
-        except Exception as e:
-            print("  Falha no DuckDuckGo", e)
+    print(f"Busca {'web (DuckDuckGo)' if web else 'notícias (Bing)'}: {busca} → {len(resultados)} resultados")
     for titulo, desc, pagina in resultados:
         t = normalizar(titulo + " " + (desc if web else ""))
-        if not (OPORTUNIDADE.search(t) and INOVACAO.search(t)) or eh_ruido(titulo) or not link_valido(pagina):
+        if not link_valido(pagina):
+            print("  site ignorado:", dominio(pagina), "|", titulo[:60])
+            continue
+        if not (OPORTUNIDADE.search(t) and INOVACAO.search(t)) or eh_ruido(titulo):
             print("  fora do tema/ruído:", titulo[:70])
             continue
         if gerar_id(titulo) in conhecidos or gerar_id(pagina) in conhecidos:
             continue
-        conhecidos |= {gerar_id(titulo), gerar_id(pagina)}
+        conhecidos.add(gerar_id(titulo))
         oficial = bool(OFICIAL.search(dominio(pagina)))
         # Em site oficial, a própria página pode ser a publicação do edital.
         edital, resumo, texto = resolver_anuncio(titulo, pagina, aceitar_propria=oficial)
         if not edital:
+            conhecidos.add(gerar_id(pagina))
             print("  sem link de edital, descartada:", titulo[:70])
             continue
         uid = gerar_id(edital)
         if uid in conhecidos:
             continue
-        conhecidos.add(uid)
+        conhecidos |= {uid, gerar_id(pagina)}
         origem = ("web:" if web else "noticia:") + dominio(pagina)
         item = montar_item(titulo, dominio(edital), edital, pagina, origem, resumo or desc, None, texto)
         novos.append(item)
