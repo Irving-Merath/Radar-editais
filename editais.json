@@ -922,6 +922,30 @@
    "ufs": [],
    "prazo": "2027-02-15",
    "valor": ""
+  },
+  {
+   "id": "1d1a6bde271e",
+   "titulo": "EU-LAC Digital Accelerator lanza su sexta convocatoria para alianzas entre corporaciones y startups de Europa, América Latina y el Caribe",
+   "orgao": "eulacdigitalaccelerator.com",
+   "link": "https://eulacdigitalaccelerator.com/open-call/?utm_campaign=oc6&utm_medium=press-kit&utm_source=article",
+   "resumo": "€10,500 in grants available for startups to execute their PoC with the corporate partner",
+   "adicionado_em": "2026-11-16",
+   "fonte": "noticia:eeas.europa.eu",
+   "anuncio": "https://www.eeas.europa.eu/delegations/venezuela/eu-lac-digital-accelerator-lanza-su-sexta-convocatoria-para-alianzas-entre-corporaciones-y-startups_und_pt",
+   "tipo": "poc",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-30",
+   "valor": "€10,500"
   }
  ]
 }
