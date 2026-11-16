@@ -219,32 +219,6 @@
    "valor": "R$ 25 milhões"
   },
   {
-   "id": "b6e67f88a1f3",
-   "titulo": "Saiba mais sobre o programa",
-   "orgao": "FAPESP PIPE",
-   "link": "https://fapesp.br/pipe/sobre/",
-   "resumo": "O  PIPE-FAPESP apoia a execução de pesquisa científica e/ou tecnológica em     pequenas empresas no estado de São Paulo.",
-   "adicionado_em": "2026-11-16",
-   "fonte": "html:FAPESP PIPE",
-   "anuncio": "https://fapesp.br/pipe/sobre/",
-   "tipo": "fomento",
-   "segmentos": [
-    "ia",
-    "cultura",
-    "agro"
-   ],
-   "proponentes": [
-    "cpf",
-    "startup"
-   ],
-   "abrangencia": "regional",
-   "ufs": [
-    "SP"
-   ],
-   "prazo": null,
-   "valor": ""
-  },
-  {
    "id": "ec3b41de20db",
    "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Tecnologias Educacionais – Fase 1",
    "orgao": "FAPESP PIPE",
@@ -484,27 +458,6 @@
    "tipo": "fomento",
    "segmentos": [],
    "proponentes": [],
-   "abrangencia": "regional",
-   "ufs": [
-    "ES"
-   ],
-   "prazo": null,
-   "valor": ""
-  },
-  {
-   "id": "4e7583dd7bed",
-   "titulo": "3ª CHAMADA TRSNACIONAL CONJUNTA - PARCERIA ECONOMIA AZUL SUSTENTÁVEL",
-   "orgao": "FAPES",
-   "link": "https://fapes.es.gov.br/media/Editais/SBEP%20Call%20text%202025.pdf?v=1759164126000",
-   "resumo": "",
-   "adicionado_em": "2026-11-16",
-   "fonte": "html:FAPES",
-   "anuncio": "https://fapes.es.gov.br/media/Editais/SBEP%20Call%20text%202025.pdf?v=1759164126000",
-   "tipo": "fomento",
-   "segmentos": [],
-   "proponentes": [
-    "parceria"
-   ],
    "abrangencia": "regional",
    "ufs": [
     "ES"
@@ -913,31 +866,6 @@
    "abrangencia": "internacional",
    "ufs": [],
    "prazo": "2026-09-03",
-   "valor": ""
-  },
-  {
-   "id": "7b319ad89760",
-   "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
-   "orgao": "Confap",
-   "link": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
-   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
-   "adicionado_em": "2026-11-16",
-   "fonte": "html:Confap",
-   "anuncio": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
-   "tipo": "fomento",
-   "segmentos": [
-    "educacao",
-    "residuos",
-    "clima"
-   ],
-   "proponentes": [
-    "startup",
-    "osc",
-    "parceria"
-   ],
-   "abrangencia": "internacional",
-   "ufs": [],
-   "prazo": "2027-02-15",
    "valor": ""
   },
   {

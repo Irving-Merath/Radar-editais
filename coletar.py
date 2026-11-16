@@ -253,7 +253,7 @@ RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecion
                    r"^ ?anexo|anexo [ivx]+\b|modelo|termo de adesao|diretrizes fapes|^ ?divulgacao|announcement|"
                    r"formulario|plano de trabalho|cronograma|enquadrad|premiad|agraciad|anunciados|lista |"
                    r"fornecedores|dispensa|rodada de submiss|publicacao confap|aditivo|minuta|busca de chamadas|"
-                   r"a submissao de propostas|conselho nacional das fundacoes", re.I)
+                   r"a submissao de propostas|conselho nacional das fundacoes|saiba mais|sobre o programa", re.I)
 # Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
 BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
                              r"treinamento tecnico)")
@@ -594,6 +594,8 @@ def coletar_html(fonte, conhecidos):
         vistos, motivos = set(), {}
         for titulo, link in links:
             if link in vistos or link in visitadas or link in menus_links or not link_valido(link):
+                continue
+            if link.lower().split("?")[0].endswith(".pdf") and not link_de_edital_valido(link):
                 continue
             vistos.add(link)
             n = normalizar(titulo)
