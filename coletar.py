@@ -780,7 +780,7 @@ def coletar_ue(conhecidos):
     q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501", "31094502"]}}]}}
     arquivos = {"query": ("blob", json.dumps(q), "application/json"),
                 "languages": ("blob", json.dumps(["en"]), "application/json")}
-    total_lidas = 0
+    total_lidas = citam = 0
     for pagina in range(1, 21):
         try:
             r = requests.post("https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA"
@@ -802,8 +802,11 @@ def coletar_ue(conhecidos):
                 continue
             vistos.add(ident)
             desc = BeautifulSoup(" ".join(md.get("description", [])), "html.parser").get_text(" ", strip=True)
-            if not filtro.search(titulo + " " + desc):
+            # A menção à América Latina pode estar em qualquer campo (descrição, destino, condições...).
+            todo_texto = BeautifulSoup(json.dumps(md, ensure_ascii=False), "html.parser").get_text(" ")
+            if not filtro.search(todo_texto):
                 continue  # só chamadas que citam Brasil ou América Latina
+            citam += 1
             prazos = sorted(d[:10] for d in md.get("deadlineDate", []) if d[:10] >= HOJE.isoformat())
             if not prazos:
                 continue
@@ -815,7 +818,7 @@ def coletar_ue(conhecidos):
             conhecidos.add(item["id"])
             novos.append(item)
             print("  ok:", titulo[:60], "→", prazos[0])
-    print(f"União Europeia: {total_lidas} chamadas abertas lidas")
+    print(f"União Europeia: {total_lidas} chamadas abertas ou em breve lidas, {citam} citam Brasil/América Latina")
     print("União Europeia →", len(novos), "novos")
     return novos
 
