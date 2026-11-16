@@ -899,6 +899,30 @@
    "valor": "R$ 2 milhões"
   },
   {
+   "id": "1d1a6bde271e",
+   "titulo": "EU-LAC Digital Accelerator lanza su sexta convocatoria para alianzas entre corporaciones y startups de Europa, América Latina y el Caribe",
+   "orgao": "eulacdigitalaccelerator.com",
+   "link": "https://eulacdigitalaccelerator.com/open-call/?utm_campaign=oc6&utm_medium=press-kit&utm_source=article",
+   "resumo": "€10,500 in grants available for startups to execute their PoC with the corporate partner",
+   "adicionado_em": "2026-11-16",
+   "fonte": "noticia:eeas.europa.eu",
+   "anuncio": "https://www.eeas.europa.eu/delegations/venezuela/eu-lac-digital-accelerator-lanza-su-sexta-convocatoria-para-alianzas-entre-corporaciones-y-startups_und_pt",
+   "tipo": "poc",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "saude"
+   ],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-30",
+   "valor": "€10,500"
+  },
+  {
    "id": "7b319ad89760",
    "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
    "orgao": "Confap",
@@ -924,28 +948,184 @@
    "valor": ""
   },
   {
-   "id": "1d1a6bde271e",
-   "titulo": "EU-LAC Digital Accelerator lanza su sexta convocatoria para alianzas entre corporaciones y startups de Europa, América Latina y el Caribe",
-   "orgao": "eulacdigitalaccelerator.com",
-   "link": "https://eulacdigitalaccelerator.com/open-call/?utm_campaign=oc6&utm_medium=press-kit&utm_source=article",
-   "resumo": "€10,500 in grants available for startups to execute their PoC with the corporate partner",
+   "id": "ce4a5ac4d951",
+   "titulo": "Better understanding and attribution of land and ocean carbon sources and sinks (HORIZON-CL5-2027-01-D1-12)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-12",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-12",
+   "resumo": "",
    "adicionado_em": "2026-11-16",
-   "fonte": "noticia:eeas.europa.eu",
-   "anuncio": "https://www.eeas.europa.eu/delegations/venezuela/eu-lac-digital-accelerator-lanza-su-sexta-convocatoria-para-alianzas-entre-corporaciones-y-startups_und_pt",
-   "tipo": "poc",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-03-04",
+   "valor": ""
+  },
+  {
+   "id": "1161785c559c",
+   "titulo": "Next generation scenarios for informing climate and sustainability transitions (HORIZON-CL5-2027-01-D1-13)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-13",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-01-D1-13",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
    "segmentos": [
-    "ia",
-    "cultura",
-    "saude"
+    "clima"
+   ],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-03-04",
+   "valor": ""
+  },
+  {
+   "id": "7695a44599bf",
+   "titulo": "Innovative advanced materials and new production processes – reducing dependencies on Critical and Strategic Raw Materials (IA) (Innovative Advanced Materials for the EU and Processes4Planet partnersh",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-01-MAT-PROD-22",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-01-MAT-PROD-22",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia"
    ],
    "proponentes": [
-    "startup",
     "parceria"
    ],
    "abrangencia": "internacional",
    "ufs": [],
-   "prazo": "2026-11-30",
-   "valor": "€10,500"
+   "prazo": "2027-02-02",
+   "valor": ""
+  },
+  {
+   "id": "ba7ac865dd53",
+   "titulo": "Technologies for innovative processing of raw materials (IA) (HORIZON-CL4-2027-01-MAT-PROD-16)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-01-MAT-PROD-16",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-01-MAT-PROD-16",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia"
+   ],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-02-02",
+   "valor": ""
+  },
+  {
+   "id": "1c7c4eb4470b",
+   "titulo": "Development aid and democratic governance (HORIZON-CL2-2027-01-DEMOCRACY-05)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-DEMOCRACY-05",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-DEMOCRACY-05",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-09-23",
+   "valor": ""
+  },
+  {
+   "id": "de47eace7827",
+   "titulo": "Access to research infrastructures, their resources and services: large-scale pilots for more integrated scheme across (sub)domains (HORIZON-INFRA-2027-SERV-01-01)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-INFRA-2027-SERV-01-01",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-INFRA-2027-SERV-01-01",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-06-15",
+   "valor": ""
+  },
+  {
+   "id": "0b24d04c5655",
+   "titulo": "Access to research infrastructure services to enable R&I addressing EU priorities and emerging challenges (HORIZON-INFRA-2027-SERV-01-02)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-INFRA-2027-SERV-01-02",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-INFRA-2027-SERV-01-02",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-06-15",
+   "valor": ""
+  },
+  {
+   "id": "5865026bb348",
+   "titulo": "Future-proofing sustainable cultural tourism (HORIZON-CL2-2027-01-HERITAGE-06)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-06",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-HERITAGE-06",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura"
+   ],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-09-23",
+   "valor": ""
+  },
+  {
+   "id": "6e77a00ef413",
+   "titulo": "Global Human Rights and EU values (HORIZON-CL2-2027-01-DEMOCRACY-08)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-DEMOCRACY-08",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL2-2027-01-DEMOCRACY-08",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-09-23",
+   "valor": ""
+  },
+  {
+   "id": "9d9d17f1ed88",
+   "titulo": "International dimension of the circular bio-based economy: seeking win-win opportunities (HORIZON-CL6-2027-03-GOVERNANCE-03)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-03-GOVERNANCE-03",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-03-GOVERNANCE-03",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-11",
+   "valor": ""
   }
  ]
 }
