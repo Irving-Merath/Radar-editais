@@ -922,6 +922,28 @@
    "ufs": [],
    "prazo": "2027-02-15",
    "valor": ""
+  },
+  {
+   "id": "f70d5ab4d679",
+   "titulo": "IDRC invites applications for the John G. Bene Fellowship 2026",
+   "orgao": "IDRC (Canadá)",
+   "link": "https://idrc-crdi.ca/en/funding/idrc-invites-applications-john-g-bene-fellowship-2026",
+   "resumo": "The John G Bene Fellowship provides funding to eligible students at Canadian universities to cover the cost of field research conducted in the Global South.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:IDRC (Canadá)",
+   "anuncio": "https://idrc-crdi.ca/en/funding/idrc-invites-applications-john-g-bene-fellowship-2026",
+   "tipo": "premio",
+   "segmentos": [
+    "agro",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-30",
+   "valor": ""
   }
  ]
 }
