@@ -897,6 +897,168 @@
    "ufs": [],
    "prazo": "2027-01-14",
    "valor": "R$ 2 milhões"
+  },
+  {
+   "id": "7b319ad89760",
+   "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "residuos",
+    "clima"
+   ],
+   "proponentes": [
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-02-15",
+   "valor": ""
+  },
+  {
+   "id": "ee12e8ae9901",
+   "titulo": "competitive and institutional grants",
+   "orgao": "IDRC (Canadá)",
+   "link": "https://idrc-crdi.ca/en/funding/applying",
+   "resumo": "IDRC provides grants, funding and awards to researchers and institutions to support research on topics aligned with our priorities and programming aimed at finding solutions for development challenges.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:IDRC (Canadá)",
+   "anuncio": "https://idrc-crdi.ca/en/funding/applying-funding",
+   "tipo": "premio",
+   "segmentos": [],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "f70d5ab4d679",
+   "titulo": "IDRC invites applications for the John G. Bene Fellowship 2026",
+   "orgao": "IDRC (Canadá)",
+   "link": "https://idrc-crdi.ca/en/funding/idrc-invites-applications-john-g-bene-fellowship-2026",
+   "resumo": "The John G Bene Fellowship provides funding to eligible students at Canadian universities to cover the cost of field research conducted in the Global South.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:IDRC (Canadá)",
+   "anuncio": "https://idrc-crdi.ca/en/funding/idrc-invites-applications-john-g-bene-fellowship-2026",
+   "tipo": "premio",
+   "segmentos": [
+    "agro",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "5748e1fa8cfc",
+   "titulo": "Global call for research concept notes: climate-smart livestock systems",
+   "orgao": "IDRC (Canadá)",
+   "link": "https://idrc-crdi.ca/en/funding/global-call-research-concept-notes-climate-smart-livestock-systems",
+   "resumo": "The Bill & Melinda Gates Foundation, the UK’s Foreign, Commonwealth & Development Office and Canada’s International Development Research Centre (IDRC) are investing an initial CAD13.5 million to lead, through IDRC, a fund for climate-smart livestock systems (CSLS) in Africa. The ",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:IDRC (Canadá)",
+   "anuncio": "https://idrc-crdi.ca/en/funding/global-call-research-concept-notes-climate-smart-livestock-systems",
+   "tipo": "fomento",
+   "segmentos": [
+    "clima"
+   ],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "4e19ed95be39",
+   "titulo": "$100 Million Impact XPRIZE Carbon Removal Musk Foundation Energy + Climate + Nature",
+   "orgao": "XPRIZE",
+   "link": "https://www.xprize.org/competitions/carbonremoval",
+   "resumo": "Designed to stabilize the climate and help the world avoid irreversible climate catastrophe, this prize challenged teams to develop durable, scalable solutions that pull carbon dioxide from the air or oceans and lock it away permanently and sustainably.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:XPRIZE",
+   "anuncio": "https://www.xprize.org/competitions/carbonremoval",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "agro",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "10e85969369d",
+   "titulo": "$10 Million Impact XPRIZE Rainforest alana Energy + Climate + Nature",
+   "orgao": "XPRIZE",
+   "link": "https://www.xprize.org/competitions/rainforest",
+   "resumo": "Designed to give communities and conservationists the tools to defend the planet’s richest ecosystems, this prize challenged teams to develop autonomous technologies that can rapidly and comprehensively assess tropical rainforest biodiversity, empowering conservation efforts and ",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:XPRIZE",
+   "anuncio": "https://www.xprize.org/competitions/rainforest",
+   "tipo": "fomento",
+   "segmentos": [
+    "ia",
+    "iot",
+    "saude",
+    "agro",
+    "clima"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "206d6c9e1b9f",
+   "titulo": "EU-LAC Digital Accelerator lanza su sexta convocatoria para alianzas entre corporaciones y startups de Europa, América Latina y el Caribe",
+   "orgao": "eeas.europa.eu",
+   "link": "https://www.eeas.europa.eu/delegations/venezuela/eu-lac-digital-accelerator-lanza-su-sexta-convocatoria-para-alianzas-entre-corporaciones-y-startups_und_pt",
+   "resumo": "Las alianzas elegibles deberán estar formadas por una corporación con un reto digital y una startup o pyme que aporte una solución, y ambas organizaciones deberán estar establecidas en regiones elegibles distintas. Las startups seleccionadas podrán acceder a una subvención de has",
+   "adicionado_em": "2026-11-16",
+   "fonte": "noticia:eeas.europa.eu",
+   "anuncio": "https://www.eeas.europa.eu/delegations/venezuela/eu-lac-digital-accelerator-lanza-su-sexta-convocatoria-para-alianzas-entre-corporaciones-y-startups_und_pt",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "residuos",
+    "logistica"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
   }
  ]
 }
