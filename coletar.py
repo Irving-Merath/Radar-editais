@@ -29,7 +29,8 @@ FONTES_HTML = [
     {"orgao": "FACEPE", "url": "https://www.facepe.br/editais/todos/?c=aberto", "ufs": ["PE"]},
     {"orgao": "FAPES", "url": "https://fapes.es.gov.br/editais-abertos", "ufs": ["ES"]},
     {"orgao": "FAPERGS", "url": "https://fapergs.rs.gov.br/chamadas-e-editais", "ufs": ["RS"]},
-    {"orgao": "CNPq", "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao", "ufs": []},
+    {"orgao": "CNPq", "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao", "ufs": [],
+     "sem_sublistas": True},  # as outras listas do CNPq descrevem programas, não chamadas abertas
     # Confap: a página de cada chamada reúne o edital e as regras de cada FAP; ela é o link salvo.
     {"orgao": "Confap", "url": "https://confap.org.br/pt/editais", "ufs": [], "abrangencia": "internacional",
      "link_proprio": True},
@@ -251,7 +252,8 @@ RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecion
                    # documentos de apoio de uma chamada (não são o edital em si)
                    r"^ ?anexo|anexo [ivx]+\b|modelo|termo de adesao|diretrizes fapes|^ ?divulgacao|announcement|"
                    r"formulario|plano de trabalho|cronograma|enquadrad|premiad|agraciad|anunciados|lista |"
-                   r"fornecedores|dispensa|rodada de submiss", re.I)
+                   r"fornecedores|dispensa|rodada de submiss|publicacao confap|aditivo|minuta|busca de chamadas|"
+                   r"a submissao de propostas|conselho nacional das fundacoes", re.I)
 # Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
 BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
                              r"treinamento tecnico)")
@@ -278,7 +280,8 @@ TITULO_NOTICIA = re.compile(r"\b(lanca|lancou|lancam|abre|abriu|anuncia|anunciou
                             r"sexta)|neste (sabado|domingo)|vai premiar|vai selecionar|seleciona|oferece)\b")
 ARQUIVO_EDITAL = re.compile(r"pdf|msword|officedocument|opendocument", re.I)
 # Páginas que pedem login/cadastro para ver o conteúdo não servem como "o edital".
-URL_LOGIN = re.compile(r"login|signin|sign-in|/auth|/sso|cadastr|/entrar|/registr|account|minha-conta", re.I)
+URL_LOGIN = re.compile(r"login|signin|sign-in|/auth|/sso|cadastr|/entrar|/registr|account|minha-conta|"
+                       r"/sage/?$|sisfaperj|sigfapes|@@search|searchabletext|/busca|buscador", re.I)
 NUMERO_EDITAL = re.compile(r"\b(\d{1,3})\s?/\s?(20\d\d)\b")
 
 
@@ -312,8 +315,18 @@ def link_valido(href):
 
 def link_antigo(href):
     """Arquivo com ano no endereço (ex.: /2018/...) anterior ao ano passado: edital velho."""
-    anos = [int(a) for a in re.findall(r"(?<!\d)(20\d\d)(?!\d)", urlparse(href).path)]
-    return bool(anos) and max(anos) < HOJE.year - 1
+    u = urlparse(href)
+    anos = [int(a) for a in re.findall(r"(?<!\d)(20\d\d)(?!\d)", u.path)]
+    if anos and max(anos) < HOJE.year - 1:
+        return True
+    um_ano = HOJE - dt.timedelta(days=365)
+    m = re.search(r"/(20\d\d)/(0[1-9]|1[0-2])/", u.path)  # pasta de upload, ex.: /wp-content/uploads/2025/02/
+    if m and dt.date(int(m.group(1)), int(m.group(2)), 28) < um_ano:
+        return True
+    v = parse_qs(u.query).get("v", [""])[0]  # carimbo de envio em milissegundos (?v=1759164126000)
+    if re.fullmatch(r"1\d{12}", v) and dt.date.fromtimestamp(int(v) / 1000) < um_ano:
+        return True
+    return False
 
 
 def link_de_edital_valido(href):
@@ -482,6 +495,10 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
     if link and nota >= 5 and not link.lower().split("?")[0].endswith(".pdf") and nivel == 0 \
             and not ler_pagina(link):  # página do edital não abre, pede login ou é de ano passado
         link, nota = None, 0
+    propria_ok = (aceitar_propria and OFICIAL.search(dominio(url_final)) and not parece_noticia(url_final, titulo)
+                  and link_de_edital_valido(url_final) and SINAL_FORTE.search(normalizar(titulo + " " + texto[:3000])))
+    if propria_ok and not (link and nota >= 5 and link.lower().split("?")[0].endswith(".pdf")):
+        return url_final, resumo, texto, pdfs  # a própria página oficial é a publicação da chamada
     if link and nota >= 5:
         if not parece_noticia(link) or link.lower().endswith(".pdf"):
             return link, resumo, texto, pdfs
@@ -572,7 +589,7 @@ def coletar_html(fonte, conhecidos):
             continue
         url_final, links, ignorar, sublistas, menus_links = lido
         print(f"{fonte['orgao']}: {url_final} → {len(links)} links, {len(sublistas)} listas de editais")
-        if url == fonte["url"]:
+        if url == fonte["url"] and not fonte.get("sem_sublistas"):
             fila += [u for u in sublistas if u not in visitadas][:MAX_SUBLISTAS]
         vistos, motivos = set(), {}
         for titulo, link in links:
@@ -594,6 +611,7 @@ def coletar_html(fonte, conhecidos):
             if fonte.get("link_proprio") and (edital or pdfs):
                 achados = [(titulo, link)]
             # Link com texto genérico ("Clique aqui e leia o edital") fica com o título do anúncio.
+            achados = [(re.sub(r"[_]+", " ", re.sub(r"\.pdf$", "", t, flags=re.I)), h) for t, h in achados]
             achados = [(titulo if re.match(r" ?(clique|acesse|leia|confira|baixe|veja|consulte|link|http|www)", normalizar(t))
                         else t, h) for t, h in achados]
             if not achados:
