@@ -35,6 +35,18 @@ FONTES_HTML = [
     {"orgao": "Confap", "url": "https://confap.org.br/pt/editais", "ufs": [], "abrangencia": "internacional",
      "link_proprio": True},
 ]
+# Agências estrangeiras: só entram chamadas que citam Brasil, América Latina ou chamada global ("exige").
+LATAM = r"brasil|brazil|latin america|america latina|latinoamerica|latam|south america|global south|sul global|global call|worldwide|open to all|any country"
+FONTES_HTML += [
+    {"orgao": "IDRC (Canadá)", "url": "https://idrc-crdi.ca/en/funding", "ufs": [], "abrangencia": "internacional",
+     "exige": LATAM, "sem_sublistas": True},
+    {"orgao": "Governo do Reino Unido", "url": "https://www.gov.uk/international-development-funding", "ufs": [],
+     "abrangencia": "internacional", "exige": r"brasil|brazil|latin america|america latina|south america", "sem_sublistas": True},
+    # XPRIZE: competições globais, abertas a equipes de qualquer país. Os títulos são curtos ("Water Scarcity"),
+    # então os links são reconhecidos pelo endereço.
+    {"orgao": "XPRIZE", "url": "https://www.xprize.org/competitions?status=Active", "ufs": [], "abrangencia": "internacional",
+     "padrao_link": r"xprize\.org/competitions/[a-z0-9-]+$", "link_proprio": True, "sem_sublistas": True},
+]
 # FAPs de SC, CE, DF e PR têm certificado de segurança incompleto (o robô não acessa sem
 # desligar a verificação, o que não é seguro); FAPEMIG, Finep e Sebrae dependem de JavaScript.
 # Finep, FAPEMIG, Prosas e Sebrae Startups montam a lista de editais com JavaScript (o robô não
@@ -91,7 +103,8 @@ BUSCAS_WEB = [
 ]
 
 OPORTUNIDADE = re.compile(r"edital|chamada|cpsi|encomenda tecnol|desafio|premio|programa|selecao|seleciona|inscric|"
-                          r"open call|aceleracao|acelerar|grant|vagas|propostas|concorrer|subvencao", re.I)
+                          r"open call|aceleracao|acelerar|grant|vagas|propostas|concorrer|subvencao|convocatoria|call for|challenge|"
+                          r"prize|accelerator|aceleradora|applications|funding", re.I)
 INOVACAO = re.compile(r"inova|startup|tecnolog|impacto|pesquisa|cpsi|empreend|ciencia|finep|bndes|faperj|fapesp|"
                       r"sebrae|embrapii|sustentab|acelera|negocio|subvencao|empresa|industria|digital", re.I)
 
@@ -120,11 +133,15 @@ TIPO_KW = [  # a ordem importa: o primeiro que aparecer define o tipo
     ("premio", ["premio", "premiacao", " award"]),
 ]
 PROP_KW = {
-    "cpf": ["pessoa fisica", " cpf ", "pesquisador", "estudante", "bolsa", "bolsista"],
+    "cpf": ["pessoa fisica", " cpf ", "pesquisador", "estudante", "bolsa", "bolsista", "researcher", "investigador",
+            "individual", "fellowship"],
     "mei": [" mei ", "microempreendedor"],
-    "startup": ["startup", " empresa", "micro e pequena", " pme", "base tecnologica"],
-    "osc": [" osc ", " ong ", "sociedade civil", "negocio de impacto", "negocios de impacto", "associac", "cooperativa"],
-    "parceria": ["consorcio", "parceria", "em rede", " ict ", "cooperacao", "coexecutor"],
+    "startup": ["startup", " empresa", "micro e pequena", " pme", "base tecnologica", " sme", " smes ", "compan",
+                "enterprise", "emprendedor"],
+    "osc": [" osc ", " ong ", "sociedade civil", "negocio de impacto", "negocios de impacto", "associac", "cooperativa",
+            " ngo", "civil society", "non profit", "nonprofit", "sociedad civil"],
+    "parceria": ["consorcio", "parceria", "em rede", " ict ", "cooperacao", "coexecutor", "consortium", "partnership",
+                 "partners", "cooperation", "consorcio"],
 }
 UF_RE = {
     "AC": r"\bacre\b|\bfapac\b", "AL": r"\balagoas\b|\bfapeal\b", "AP": r"\bamapa\b|\bfapeap\b",
@@ -171,7 +188,8 @@ def achar_prazo(texto):
         except ValueError:
             continue
         perto = texto[max(0, pos - 90):pos]
-        if not re.search(r"inscri|prazo|submiss|ate |encerra|limite|deadline", perto):
+        if not re.search(r"inscri|prazo|submiss|ate |encerra|limite|deadline|until|closes|closing|apply by|due|"
+                         r"hasta|cierre|plazo|fecha limite", perto):
             continue
         if HOJE <= data <= HOJE + dt.timedelta(days=400):
             datas.append(data)
@@ -269,9 +287,11 @@ DOMINIOS_IGNORADOS = re.compile(r"facebook|instagram|twitter|x\.com|linkedin|you
 ARQUIVO_NAO_EDITAL = re.compile(r"\.(jpe?g|png|gif|webp|svg|mp4|mp3|zip|css|js|docx?|xlsx?|odt|ods|pptx?)(\?|$)", re.I)
 SINAL_EDITAL = re.compile(r"edital|chamada|inscri|regulamento|cpsi|encomenda|selecao|programa|desafio|premio|"
                           r"call|apply|candidat|submiss|oportunidade", re.I)
-SINAL_FORTE = re.compile(r"edital|chamada|regulamento|inscric|inscreva|formulario|submiss", re.I)
+SINAL_FORTE = re.compile(r"edital|chamada|regulamento|inscric|inscreva|formulario|submiss|call for|global call|"
+                         r"convocatoria|grant|prize|challenge|apply|applications", re.I)
 OFICIAL = re.compile(r"(^|\.)(gov|org|edu|jus|leg)\.br$|\.gov\.br|\.rio$|fap|finep|sebrae|bndes|firjan|senai|"
-                     r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio|facepe|confap", re.I)
+                     r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio|facepe|confap|"
+                     r"europa\.eu|idrc|xprize|gov\.uk|ukri|\.gov$|\.int$|\.edu$", re.I)
 # Endereços e títulos com cara de notícia: o robô não aceita uma notícia como "o edital".
 URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|materia|/blog|/artigo|/post/|/\d{4}/\d{2}/|"
                          r"faperj\.br/\?id=\d+\.7\.", re.I)
@@ -599,14 +619,23 @@ def coletar_html(fonte, conhecidos):
                 continue
             vistos.add(link)
             n = normalizar(titulo)
-            motivo = ("curto" if len(titulo) < 15 else "sem cara de oportunidade" if not OPORTUNIDADE.search(n)
+            por_endereco = fonte.get("padrao_link") and re.search(fonte["padrao_link"], link)
+            motivo = ("já conhecido" if por_endereco and gerar_id(link) in conhecidos else None) if por_endereco else (
+                      "curto" if len(titulo) < 15 else "sem cara de oportunidade" if not OPORTUNIDADE.search(n)
                       else "ruído/resultado" if eh_ruido(titulo) else "lista" if LISTA_EDITAIS.match(n)
                       else "já conhecido" if gerar_id(link) in conhecidos or gerar_id(titulo) in conhecidos
                       else None)
             if motivo:
                 motivos[motivo] = motivos.get(motivo, 0) + 1
                 continue
-            edital, resumo, texto, pdfs = resolver_anuncio(titulo, link, ignorar - {link}, aceitar_propria=True)
+            edital, resumo, texto, pdfs = resolver_anuncio(titulo, link, ignorar - {link},
+                                                           aceitar_propria=not por_endereco)
+            if por_endereco and texto:  # página da competição/chamada (ex.: XPRIZE)
+                edital = edital or link
+            if fonte.get("exige") and not re.search(fonte["exige"], normalizar(titulo + " " + resumo + " " + texto[:8000])):
+                conhecidos |= {gerar_id(titulo), gerar_id(link)}
+                print("  não cita Brasil/América Latina, ignorado:", titulo[:70])
+                continue
             ja_vistos = {gerar_id(titulo), gerar_id(link)}  # marcados só depois de criar os itens
             # Um anúncio oficial pode lançar vários editais: cada PDF vira um item, com o nome do edital.
             achados = pdfs or ([(titulo, edital)] if edital else [])
@@ -668,7 +697,7 @@ def busca_duckduckgo(busca):
         yield a.get_text(" ", strip=True), desc, href
 
 
-def coletar_busca(busca, conhecidos, web=False):
+def coletar_busca(busca, conhecidos, web=False, idioma=("pt-BR", "BR")):
     """Notícias (web=False) ou resultados da web (web=True) do Bing → link do edital oficial."""
     # Notícias: RSS do Bing Notícias. Web: DuckDuckGo (o RSS de busca web do Bing ignora a pergunta
     # e devolve resultados aleatórios).
@@ -677,7 +706,8 @@ def coletar_busca(busca, conhecidos, web=False):
         if web:
             resultados = list(busca_duckduckgo(busca))
         else:
-            url = f"https://www.bing.com/news/search?q={quote_plus(busca)}&format=rss&setlang=pt-BR&cc=BR&mkt=pt-BR"
+            lang, cc = idioma
+            url = f"https://www.bing.com/news/search?q={quote_plus(busca)}&format=rss&setlang={lang}&cc={cc}"
             resultados = list(itens_rss(url))
     except Exception as e:
         print("Falha na busca", busca, e)
@@ -710,6 +740,60 @@ def coletar_busca(busca, conhecidos, web=False):
         novos.append(item)
         print("  ok:", titulo[:60], "→", edital)
     print("Busca", "web" if web else "notícias", ":", busca, "→", len(novos), "novos")
+    return novos
+
+
+# Notícias em espanhol e inglês sobre chamadas abertas a startups e pesquisadores da América Latina.
+BUSCAS_EXTERIOR = [
+    ("convocatoria startups América Latina", ("es", "MX")),
+    ("convocatoria abierta innovación Latinoamérica", ("es", "MX")),
+    ("aceleradora convocatoria startups latinoamericanas", ("es", "AR")),
+    ("open call startups Latin America", ("en", "US")),
+    ("challenge prize applications open Latin America innovation", ("en", "US")),
+    ("grant call Brazil researchers international", ("en", "US")),
+]
+
+
+def coletar_ue(conhecidos):
+    """Chamadas abertas da União Europeia (Horizon Europe e outros) que citam Brasil ou América Latina.
+
+    Usa a API pública do portal Funding & Tenders (a página do portal depende de JavaScript)."""
+    novos, vistos = [], set()
+    for termo in ["Brazil", "Latin America"]:
+        q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501", "31094502"]}}]}}
+        arquivos = {"query": ("blob", json.dumps(q), "application/json"),
+                    "languages": ("blob", json.dumps(["en"]), "application/json")}
+        try:
+            r = requests.post("https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA"
+                              f"&text=%22{quote_plus(termo)}%22&pageSize=50&pageNumber=1",
+                              files=arquivos, headers=HEADERS, timeout=40)
+            r.raise_for_status()
+            resultados = r.json().get("results", [])
+        except Exception as e:
+            print("Falha na API da União Europeia", termo, e)
+            continue
+        print(f"União Europeia: '{termo}' → {len(resultados)} chamadas")
+        for res in resultados:
+            md = res.get("metadata", {})
+            ident = (md.get("identifier") or [""])[0]
+            titulo = (md.get("title") or [res.get("content") or ""])[0]
+            link = res.get("url") or ""
+            if not ident or ident in vistos or not link or gerar_id(link) in conhecidos:
+                continue
+            vistos.add(ident)
+            prazos = sorted(d[:10] for d in md.get("deadlineDate", []) if d[:10] >= HOJE.isoformat())
+            if not prazos:
+                continue
+            desc = BeautifulSoup(" ".join(md.get("description", [])), "html.parser").get_text(" ", strip=True)
+            item = {"id": gerar_id(link), "titulo": f"{titulo} ({ident})"[:200], "orgao": "União Europeia",
+                    "link": link, "anuncio": link, "resumo": desc[:280], "adicionado_em": HOJE.isoformat(),
+                    "fonte": "api:ue"}
+            item.update(classificar(titulo, desc, None, link, desc[:280]))
+            item.update({"abrangencia": "internacional", "ufs": [], "prazo": prazos[0]})
+            conhecidos.add(item["id"])
+            novos.append(item)
+            print("  ok:", titulo[:60], "→", prazos[0])
+    print("União Europeia →", len(novos), "novos")
     return novos
 
 
@@ -756,6 +840,9 @@ def main():
             novos += coletar_busca(busca, conhecidos, web=False)
         for busca in BUSCAS_WEB:
             novos += coletar_busca(busca, conhecidos, web=True)
+        novos += coletar_ue(conhecidos)
+        for busca, idioma in BUSCAS_EXTERIOR:
+            novos += coletar_busca(busca, conhecidos, idioma=idioma)
     itens += novos
 
     limite_prazo = (HOJE - dt.timedelta(days=90)).isoformat()
