@@ -14,4 +14,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests beautifulsoup4 pypdf
-      - run: python -u .diag/diag.py 'https://www.finep.gov.br/en/e/chamada-publica/222684/1057230' 'http://www.finep.gov.br/chamadas-publicas/chamadapublica/768' 'https://confap.org.br/pt/editais' 'https://fapesp.br/chamadas' 'https://fapesp.br/pipe' 'https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao' 'http://memoria2.cnpq.br/web/guest/chamadas-publicas' 'https://www.gov.br/capes/pt-br/assuntos/editais-e-resultados-capes' 'https://embrapii.org.br/categoria/chamadas-publicas/' 'https://www.fapesc.sc.gov.br/category/chamadas-abertas/' 'https://fapergs.rs.gov.br/editais-abertos' 'https://www.facepe.br/editais/todos/?c=aberto' 'https://www.fapeam.am.gov.br/editais/' 'https://www.funcap.ce.gov.br/editais/' 'http://www.fapesb.ba.gov.br/category/edital/' 'https://www.fapdf.df.gov.br/editais/' 'https://fapes.es.gov.br/editais-abertos' 'https://www.fundacaoaraucaria.org.br/index.php/chamadas-publicas' 'https://www.fapeg.go.gov.br/editais/' 'https://fapespa.pa.gov.br/editais' 'https://www.fapema.br/editais/' 'https://www.fapemat.mt.gov.br/editais' 'https://www.sebrae.com.br/sites/PortalSebrae/editais' 'https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/chamadas-publicas' 'https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals' 'https://www.britishcouncil.org.br/programas/educacao/ciencia' 'https://www.newtonfund.ac.uk/'
+      - run: python coletar.py
+      - name: Salvar editais
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add editais.json
+          git diff --staged --quiet || git commit -m "Coleta semanal $(date +%F)"
+          git push
