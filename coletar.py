@@ -39,7 +39,7 @@ FONTES_HTML = [
 LATAM = r"brasil|brazil|latin america|america latina|latinoamerica|latam|south america|global south|sul global|global call|worldwide|open to all|any country"
 FONTES_HTML += [
     {"orgao": "IDRC (Canadá)", "url": "https://idrc-crdi.ca/en/funding", "ufs": [], "abrangencia": "internacional",
-     "exige": LATAM, "sem_sublistas": True, "exige_prazo": True},
+     "exige": r"brasil|brazil|latin america|america latina|latinoamerica|south america|caribbean", "sem_sublistas": True, "exige_prazo": True},
     {"orgao": "Governo do Reino Unido", "url": "https://www.gov.uk/international-development-funding", "ufs": [],
      "abrangencia": "internacional", "exige": r"brasil|brazil|latin america|america latina|south america", "sem_sublistas": True},
     # XPRIZE: competições globais, abertas a equipes de qualquer país. Os títulos são curtos ("Water Scarcity"),
@@ -465,8 +465,8 @@ def escolher_link_edital(principal, url_pagina, titulo, ignorar=frozenset()):
             nota -= 1  # notícia: só é usada como ponte (o robô entra nela e procura o edital)
         if OFICIAL.search(dom):
             nota += 3
-        elif not pagina_oficial and dom != dom_pagina:
-            nota += 1
+        elif dom != dom_pagina:
+            nota += 1  # link para fora: em notícia, costuma ser o edital; em comunicado oficial, a convocatória
         if dom == dom_pagina and not pagina_oficial:
             nota -= 3  # em site de notícia, link interno é outra matéria
         if numeros and any(n in normalizar(texto_a + " " + href).replace(" ", "") for n in numeros):
@@ -774,8 +774,10 @@ def coletar_ue(conhecidos):
 
     Usa a API pública do portal Funding & Tenders (a página do portal depende de JavaScript)."""
     novos, vistos = [], set()
-    filtro = re.compile(r"\bbrazil|\bbrasil|latin america|latin american|\blac\b|eu-lac|celac|south america", re.I)
-    q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501"]}}]}}  # abertas
+    filtro = re.compile(r"\bbrazil|\bbrasil|latin america|latin american|\blac\b|eu-lac|celac|south america|mercosur|"
+                        r"caribbean|andean|amazon", re.I)
+    # 31094501 = aberta, 31094502 = em breve (abre nos próximos meses, já com prazo definido)
+    q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501", "31094502"]}}]}}
     arquivos = {"query": ("blob", json.dumps(q), "application/json"),
                 "languages": ("blob", json.dumps(["en"]), "application/json")}
     total_lidas = 0
