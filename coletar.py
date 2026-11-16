@@ -30,7 +30,9 @@ FONTES_HTML = [
     {"orgao": "FAPES", "url": "https://fapes.es.gov.br/editais-abertos", "ufs": ["ES"]},
     {"orgao": "FAPERGS", "url": "https://fapergs.rs.gov.br/chamadas-e-editais", "ufs": ["RS"]},
     {"orgao": "CNPq", "url": "https://www.gov.br/cnpq/pt-br/chamadas/abertas-para-submissao", "ufs": []},
-    {"orgao": "Confap", "url": "https://confap.org.br/pt/editais", "ufs": [], "abrangencia": "internacional"},
+    # Confap: a página de cada chamada reúne o edital e as regras de cada FAP; ela é o link salvo.
+    {"orgao": "Confap", "url": "https://confap.org.br/pt/editais", "ufs": [], "abrangencia": "internacional",
+     "link_proprio": True},
 ]
 # FAPs de SC, CE, DF e PR têm certificado de segurança incompleto (o robô não acessa sem
 # desligar a verificação, o que não é seguro); FAPEMIG, Finep e Sebrae dependem de JavaScript.
@@ -245,7 +247,11 @@ RUIDO = re.compile(r"resultado|foram selecionad|sao selecionad|lista de selecion
                    r"eliminacao de doc|licitacao|pregao|concurso publico|processo seletivo simplificado|"
                    r"contratacao de pessoal|aviso de|errata|como submeter|manual|tutorial|perguntas frequentes|faq|"
                    r"graduacao|vestibular|vagas para curso|adendo|lista de espera|enquadramento|convocacao|"
-                   r"rerratifica|prorrogacao|novo prazo|prestacao de contas", re.I)
+                   r"rerratifica|prorrogacao|prorrogad|novo prazo|novo cronograma|prestacao de contas|"
+                   # documentos de apoio de uma chamada (não são o edital em si)
+                   r"^ ?anexo|anexo [ivx]+\b|modelo|termo de adesao|diretrizes fapes|^ ?divulgacao|announcement|"
+                   r"formulario|plano de trabalho|cronograma|enquadrad|premiad|agraciad|anunciados|lista |"
+                   r"fornecedores|dispensa|rodada de submiss", re.I)
 # Vagas de bolsa em projetos acadêmicos (ex.: "Bolsa de PD em Química") não são editais de inovação.
 BOLSA_ACADEMICA = re.compile(r"^ ?bolsas? de (pd|pos doutorado|mestrado|doutorado|ic|iniciacao|tt |tt i|jp|"
                              r"treinamento tecnico)")
@@ -258,12 +264,12 @@ DOMINIOS_IGNORADOS = re.compile(r"facebook|instagram|twitter|x\.com|linkedin|you
                                 r"t\.me|telegram|threads\.net|addtoany|neoflip|pinterest|reddit|tiktok|flipboard|"
                                 r"google\.|bing\.|msn\.com|mailto:|sharer|share\?|/share|intent/|"
                                 r"susep\.gov\.br", re.I)
-ARQUIVO_NAO_EDITAL = re.compile(r"\.(jpe?g|png|gif|webp|svg|mp4|mp3|zip|css|js)(\?|$)", re.I)
+ARQUIVO_NAO_EDITAL = re.compile(r"\.(jpe?g|png|gif|webp|svg|mp4|mp3|zip|css|js|docx?|xlsx?|odt|ods|pptx?)(\?|$)", re.I)
 SINAL_EDITAL = re.compile(r"edital|chamada|inscri|regulamento|cpsi|encomenda|selecao|programa|desafio|premio|"
                           r"call|apply|candidat|submiss|oportunidade", re.I)
 SINAL_FORTE = re.compile(r"edital|chamada|regulamento|inscric|inscreva|formulario|submiss", re.I)
-OFICIAL = re.compile(r"\.gov\.br|\.org\.br|\.edu\.br|\.jus\.br|\.leg\.br|\.rio$|fap|finep|sebrae|bndes|firjan|senai|"
-                     r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio", re.I)
+OFICIAL = re.compile(r"(^|\.)(gov|org|edu|jus|leg)\.br$|\.gov\.br|\.rio$|fap|finep|sebrae|bndes|firjan|senai|"
+                     r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio|facepe|confap", re.I)
 # Endereços e títulos com cara de notícia: o robô não aceita uma notícia como "o edital".
 URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|materia|/blog|/artigo|/post/|/\d{4}/\d{2}/|"
                          r"faperj\.br/\?id=\d+\.7\.", re.I)
@@ -286,7 +292,11 @@ def eh_ruido(titulo):
     if MENU.match(t) or RUIDO.search(t) or BOLSA_ACADEMICA.match(t):
         return True
     anos = [int(a) for a in re.findall(r"\b(20\d\d)\b", t)]
-    return bool(anos) and max(anos) < HOJE.year
+    if anos and max(anos) < HOJE.year:
+        return True
+    # Número do edital de ano passado (ex.: "Edital 40/2025"), mesmo que o título cite uma data atual.
+    anos_edital = [int(a) for _, a in NUMERO_EDITAL.findall(t.replace(" / ", "/"))]
+    return bool(anos_edital) and max(anos_edital) < HOJE.year
 
 
 def eh_pagina_inicial(href):
@@ -308,7 +318,7 @@ def link_antigo(href):
 
 def link_de_edital_valido(href):
     return (link_valido(href) and not eh_pagina_inicial(href) and not URL_LOGIN.search(href)
-            and not link_antigo(href))
+            and not link_antigo(href) and not re.search(r"resultado|errata|adendo|anexo", href, re.I))
 
 
 def conteudo_principal(sopa, lista=False):
@@ -441,7 +451,8 @@ def pdfs_de_edital(principal, url_pagina, ignorar=frozenset()):
     for a in principal.find_all("a", href=True):
         href = urljoin(url_pagina, a["href"]).split("#")[0]
         texto = a.get_text(" ", strip=True)
-        if (href.lower().endswith(".pdf") and href not in ignorar and len(texto) >= 15
+        if (href.lower().split("?")[0].endswith(".pdf") and href not in ignorar and len(texto) >= 15
+                and link_de_edital_valido(href)
                 and re.search(r"edital|chamada", normalizar(texto)) and not eh_ruido(texto)
                 and href not in [h for _, h in achados]):
             achados.append((texto, href))
@@ -468,6 +479,9 @@ def resolver_anuncio(titulo, url, ignorar=frozenset(), aceitar_propria=False, ni
     link, nota = escolher_link_edital(principal, url_final, titulo, ignorar)
     if nivel == 0 and not (link and nota >= 5):
         print(f"    melhor link em {url_final[:80]}: {link} (nota {nota})")
+    if link and nota >= 5 and not link.lower().split("?")[0].endswith(".pdf") and nivel == 0 \
+            and not ler_pagina(link):  # página do edital não abre, pede login ou é de ano passado
+        link, nota = None, 0
     if link and nota >= 5:
         if not parece_noticia(link) or link.lower().endswith(".pdf"):
             return link, resumo, texto, pdfs
@@ -577,6 +591,8 @@ def coletar_html(fonte, conhecidos):
             ja_vistos = {gerar_id(titulo), gerar_id(link)}  # marcados só depois de criar os itens
             # Um anúncio oficial pode lançar vários editais: cada PDF vira um item, com o nome do edital.
             achados = pdfs or ([(titulo, edital)] if edital else [])
+            if fonte.get("link_proprio") and (edital or pdfs):
+                achados = [(titulo, link)]
             # Link com texto genérico ("Clique aqui e leia o edital") fica com o título do anúncio.
             achados = [(titulo if re.match(r" ?(clique|acesse|leia|confira|baixe|veja|consulte|link|http|www)", normalizar(t))
                         else t, h) for t, h in achados]
