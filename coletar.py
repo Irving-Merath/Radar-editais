@@ -39,13 +39,14 @@ FONTES_HTML = [
 LATAM = r"brasil|brazil|latin america|america latina|latinoamerica|latam|south america|global south|sul global|global call|worldwide|open to all|any country"
 FONTES_HTML += [
     {"orgao": "IDRC (Canadá)", "url": "https://idrc-crdi.ca/en/funding", "ufs": [], "abrangencia": "internacional",
-     "exige": LATAM, "sem_sublistas": True},
+     "exige": LATAM, "sem_sublistas": True, "exige_prazo": True},
     {"orgao": "Governo do Reino Unido", "url": "https://www.gov.uk/international-development-funding", "ufs": [],
      "abrangencia": "internacional", "exige": r"brasil|brazil|latin america|america latina|south america", "sem_sublistas": True},
     # XPRIZE: competições globais, abertas a equipes de qualquer país. Os títulos são curtos ("Water Scarcity"),
     # então os links são reconhecidos pelo endereço.
     {"orgao": "XPRIZE", "url": "https://www.xprize.org/competitions?status=Active", "ufs": [], "abrangencia": "internacional",
-     "padrao_link": r"xprize\.org/competitions/[a-z0-9-]+$", "link_proprio": True, "sem_sublistas": True},
+     "padrao_link": r"xprize\.org/competitions/[a-z0-9-]+$", "link_proprio": True, "sem_sublistas": True,
+     "exige_prazo": True},  # a lista também mostra competições já encerradas
 ]
 # FAPs de SC, CE, DF e PR têm certificado de segurança incompleto (o robô não acessa sem
 # desligar a verificação, o que não é seguro); FAPEMIG, Finep e Sebrae dependem de JavaScript.
@@ -160,6 +161,11 @@ INTERNACIONAL = re.compile(r"internacional|international|transnacional|global|wo
                            r"alemanha|franca|espanha|portugal|belgica|canada|estados unidos|japao|china", re.I)
 MESES = {m: i + 1 for i, m in enumerate(["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho",
                                           "agosto", "setembro", "outubro", "novembro", "dezembro"])}
+# Meses em espanhol e inglês (chamadas estrangeiras), já sem acento.
+MESES.update({m: i + 1 for i, m in enumerate(["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+                                              "agosto", "septiembre", "octubre", "noviembre", "diciembre"])})
+MESES_EN = {m: i + 1 for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july",
+                                            "august", "september", "october", "november", "december"])}
 
 
 def normalizar(t):
@@ -181,6 +187,11 @@ def achar_prazo(texto):
         achados.append((m.start(), m.group(1), m.group(2), m.group(3)))
     for m in re.finditer(r"(\d{1,2}) de (" + "|".join(MESES) + r") de (\d{4})", texto):
         achados.append((m.start(), m.group(1), MESES[m.group(2)], m.group(3)))
+    meses_en = "|".join(MESES_EN)
+    for m in re.finditer(r"\b(" + meses_en + r") (\d{1,2})(?:st|nd|rd|th)? (\d{4})", texto):  # February 15 2027
+        achados.append((m.start(), m.group(2), MESES_EN[m.group(1)], m.group(3)))
+    for m in re.finditer(r"(\d{1,2}) (" + meses_en + r") (\d{4})", texto):  # 15 February 2027
+        achados.append((m.start(), m.group(1), MESES_EN[m.group(2)], m.group(3)))
     datas, passadas = [], []
     for pos, d, mth, a in achados:
         try:
@@ -288,7 +299,7 @@ ARQUIVO_NAO_EDITAL = re.compile(r"\.(jpe?g|png|gif|webp|svg|mp4|mp3|zip|css|js|d
 SINAL_EDITAL = re.compile(r"edital|chamada|inscri|regulamento|cpsi|encomenda|selecao|programa|desafio|premio|"
                           r"call|apply|candidat|submiss|oportunidade", re.I)
 SINAL_FORTE = re.compile(r"edital|chamada|regulamento|inscric|inscreva|formulario|submiss|call for|global call|"
-                         r"convocatoria|grant|prize|challenge|apply|applications", re.I)
+                         r"convocatoria|grant|prize|challenge|apply|applications|open call|open-call", re.I)
 OFICIAL = re.compile(r"(^|\.)(gov|org|edu|jus|leg)\.br$|\.gov\.br|\.rio$|fap|finep|sebrae|bndes|firjan|senai|"
                      r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio|facepe|confap|"
                      r"europa\.eu|idrc|xprize|gov\.uk|ukri|\.gov$|\.int$|\.edu$", re.I)
@@ -297,7 +308,8 @@ URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|materia|/blog|/artigo|
                          r"faperj\.br/\?id=\d+\.7\.", re.I)
 TITULO_NOTICIA = re.compile(r"\b(lanca|lancou|lancam|abre|abriu|anuncia|anunciou|divulga|divulgou|apresenta|"
                             r"recebe|prorroga|prorrogou|participa|aderiu|adesao|nesta (segunda|terca|quarta|quinta|"
-                            r"sexta)|neste (sabado|domingo)|vai premiar|vai selecionar|seleciona|oferece)\b")
+                            r"sexta)|neste (sabado|domingo)|vai premiar|vai selecionar|seleciona|oferece|"
+                            r"lanza|lanzo|anuncio|presenta|launches|launched|announces|opens)\b")
 ARQUIVO_EDITAL = re.compile(r"pdf|msword|officedocument|opendocument", re.I)
 # Páginas que pedem login/cadastro para ver o conteúdo não servem como "o edital".
 URL_LOGIN = re.compile(r"login|signin|sign-in|/auth|/sso|cadastr|/entrar|/registr|account|minha-conta|"
@@ -656,6 +668,9 @@ def coletar_html(fonte, conhecidos):
                 conhecidos.add(uid)
                 item = montar_item(titulo_edital, fonte["orgao"], link_edital, link, "html:" + fonte["orgao"],
                                    resumo, fonte["ufs"], texto)
+                if fonte.get("exige_prazo") and not (item.get("prazo") and item["prazo"] >= HOJE.isoformat()):
+                    print("  sem prazo de inscrição futuro, ignorado:", titulo_edital[:60])
+                    continue
                 if fonte.get("abrangencia"):  # ex.: Confap só publica chamadas internacionais
                     item["abrangencia"], item["ufs"] = fonte["abrangencia"], []
                 novos.append(item)
@@ -759,20 +774,23 @@ def coletar_ue(conhecidos):
 
     Usa a API pública do portal Funding & Tenders (a página do portal depende de JavaScript)."""
     novos, vistos = [], set()
-    for termo in ["Brazil", "Latin America"]:
-        q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501", "31094502"]}}]}}
-        arquivos = {"query": ("blob", json.dumps(q), "application/json"),
-                    "languages": ("blob", json.dumps(["en"]), "application/json")}
+    filtro = re.compile(r"\bbrazil|\bbrasil|latin america|latin american|\blac\b|eu-lac|celac|south america", re.I)
+    q = {"bool": {"must": [{"terms": {"type": ["1", "2", "8"]}}, {"terms": {"status": ["31094501"]}}]}}  # abertas
+    arquivos = {"query": ("blob", json.dumps(q), "application/json"),
+                "languages": ("blob", json.dumps(["en"]), "application/json")}
+    total_lidas = 0
+    for pagina in range(1, 21):
         try:
             r = requests.post("https://api.tech.ec.europa.eu/search-api/prod/rest/search?apiKey=SEDIA"
-                              f"&text=%22{quote_plus(termo)}%22&pageSize=50&pageNumber=1",
-                              files=arquivos, headers=HEADERS, timeout=40)
+                              f"&text=***&pageSize=100&pageNumber={pagina}", files=arquivos, headers=HEADERS, timeout=40)
             r.raise_for_status()
             resultados = r.json().get("results", [])
         except Exception as e:
-            print("Falha na API da União Europeia", termo, e)
-            continue
-        print(f"União Europeia: '{termo}' → {len(resultados)} chamadas")
+            print("Falha na API da União Europeia, página", pagina, e)
+            break
+        if not resultados:
+            break
+        total_lidas += len(resultados)
         for res in resultados:
             md = res.get("metadata", {})
             ident = (md.get("identifier") or [""])[0]
@@ -781,10 +799,12 @@ def coletar_ue(conhecidos):
             if not ident or ident in vistos or not link or gerar_id(link) in conhecidos:
                 continue
             vistos.add(ident)
+            desc = BeautifulSoup(" ".join(md.get("description", [])), "html.parser").get_text(" ", strip=True)
+            if not filtro.search(titulo + " " + desc):
+                continue  # só chamadas que citam Brasil ou América Latina
             prazos = sorted(d[:10] for d in md.get("deadlineDate", []) if d[:10] >= HOJE.isoformat())
             if not prazos:
                 continue
-            desc = BeautifulSoup(" ".join(md.get("description", [])), "html.parser").get_text(" ", strip=True)
             item = {"id": gerar_id(link), "titulo": f"{titulo} ({ident})"[:200], "orgao": "União Europeia",
                     "link": link, "anuncio": link, "resumo": desc[:280], "adicionado_em": HOJE.isoformat(),
                     "fonte": "api:ue"}
@@ -793,6 +813,7 @@ def coletar_ue(conhecidos):
             conhecidos.add(item["id"])
             novos.append(item)
             print("  ok:", titulo[:60], "→", prazos[0])
+    print(f"União Europeia: {total_lidas} chamadas abertas lidas")
     print("União Europeia →", len(novos), "novos")
     return novos
 
