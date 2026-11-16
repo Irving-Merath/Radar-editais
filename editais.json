@@ -7,7 +7,7 @@
    "orgao": "FAPERJ",
    "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_35_2026_–_Programa_de_Atração_de_Grupos_de_Pesquisa_do_Cone_Sul.pdf",
    "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1141.7.9",
    "tipo": "fomento",
@@ -35,7 +35,7 @@
    "orgao": "FAPERJ",
    "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_33_2026_–_Apoio_à_Divulgação_Científica_e_Popularização_da_Ciência_no_Estado_do_Rio_de_Janeiro.pdf",
    "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1132.7.8",
    "tipo": "fomento",
@@ -64,7 +64,7 @@
    "orgao": "FAPERJ",
    "link": "https://www.faperj.br/rp/downloads/Edital_FAPPERJ_Nº_26_2026_–_Bolsa_de_Inovação_Tecnológica_(INT).pdf",
    "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1115.7.1",
    "tipo": "poc",
@@ -92,7 +92,7 @@
    "orgao": "FAPERJ",
    "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_27_2026_–_Bolsa_de_Iniciação_Tecnológica_(IT).pdf",
    "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1115.7.1",
    "tipo": "fomento",
@@ -118,18 +118,19 @@
    "titulo": "A FAPERJ anunciou sua adesão à chamada do Programa 'Desafios da Amazônia' – parceria entre o Fundo Amazônia e o CONFAP. Objetivo é apoiar o desenvolvimento de soluções inovadoras na região.",
    "orgao": "FAPERJ",
    "link": "https://www.amazoniamaisdez.org.br/chamadas-abertas",
-   "resumo": "The British Council, through the UK government's International Science Partnerships Fund (ISPF), has joined the Amazonia+10 Initiative to launch another call for proposals under the Amazonia BR/UK Workshops Grants program, aimed at researchers from the UK and Brazil. The call wil",
-   "adicionado_em": "2026-11-15",
+   "resumo": "O Conselho Nacional de Fundações Estaduais de Amparo à Pesquisa (CONFAP), no âmbito da Iniciativa Amazônia+10, em parceria com o Banco Nacional de Desenvolvimento Econômico e Social (BNDES), torna pública a 1ª Chamada do Programa Desafios da Amazônia e convida pesquisadores e org",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1065.7.6",
    "tipo": "poc",
    "segmentos": [
-    "educacao",
+    "logistica",
     "clima"
    ],
    "proponentes": [
     "cpf",
     "startup",
+    "osc",
     "parceria"
    ],
    "abrangencia": "regional",
@@ -145,7 +146,7 @@
    "orgao": "FAPERJ",
    "link": "https://confap.org.br/pt/editais/111/chamada-confap-wbi-belgica-2026",
    "resumo": "Fomento à Ciência, Tecnologia & Inovação",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1066.7.1",
    "tipo": "fomento",
@@ -172,7 +173,7 @@
    "orgao": "FAPERJ",
    "link": "https://www.faperj.br/rp/downloads/Edital_FAPERJ_Nº_12_2026_Programa_CENTELHA_3_16_jun_2026.pdf",
    "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "html:FAPERJ",
    "anuncio": "https://www.faperj.br/?id=1042.7.7",
    "tipo": "cpsi",
@@ -197,54 +198,183 @@
    "valor": "R$ 8.158.260,00"
   },
   {
-   "id": "43cd0ccdb912",
-   "titulo": "Estreitando a cooperação com a UE, América Latina e Caribe, a Fundação anunciou, nesta quinta (27/2), o apoio a 3 chamadas em parceria com o Confap: Mobility CONFAP Italy, EU-LAC e CDTI Espanha.",
-   "orgao": "FAPERJ",
-   "link": "https://news.confap.org.br/wp-content/uploads/2025/02/Chamada-CONFAP-CDTI-2025-2026.pdf",
-   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
-   "adicionado_em": "2026-11-15",
-   "fonte": "html:FAPERJ",
-   "anuncio": "https://www.faperj.br/?id=731.7.4",
+   "id": "0bdb27b91765",
+   "titulo": "Chamada destinará até R$ 25 milhões a projetos de pesquisa para inovação em pequenas empresas no estado de São Paulo",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/pipe_apoiara_projetos_de_tecnologias_educacionais/338/",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/pipe_apoiara_projetos_de_tecnologias_educacionais/338/",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": null,
+   "valor": "R$ 25 milhões"
+  },
+  {
+   "id": "ec3b41de20db",
+   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Tecnologias Educacionais – Fase 1",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/jornada-educacionais-2026",
+   "resumo": "Sumário: Lançamento da chamada: 13/10/2026 Modalidade de Apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 12/11/2026 Prazo para apresentação da proposta completa para propostas enquadradas    13/01/2027 Anúncio dos projetos selecionados: a",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/jornada-educacionais-2026",
    "tipo": "poc",
    "segmentos": [
-    "educacao",
-    "saude",
     "logistica",
-    "clima",
+    "agro",
     "financas"
    ],
    "proponentes": [
     "cpf",
+    "mei",
     "startup",
-    "parceria"
+    "osc"
    ],
    "abrangencia": "regional",
    "ufs": [
-    "RJ"
+    "SP"
    ],
-   "prazo": null,
-   "valor": "R$ 220 mil"
+   "prazo": "2027-01-13",
+   "valor": "R$ 500.000,00"
   },
   {
-   "id": "6463f56ada94",
-   "titulo": "Governo estadual lança edital que prevê fomento à aceleração de negócios de impacto",
-   "orgao": "adece.ce.gov.br",
-   "link": "https://www.adece.ce.gov.br/wp-content/uploads/sites/98/2025/09/19-Edital-Assinado.pdf",
-   "resumo": "Na primeira fase do programa, 10 negócios serão incentivados com o valor de R$ 25 mil cada para o desenvolvimento das soluções. Inscrições seguem até 2 de outubro",
-   "adicionado_em": "2026-11-15",
-   "fonte": "noticia:opovo.com.br",
-   "anuncio": "https://www.opovo.com.br/noticias/economia/2025/09/15/governo-estadual-lanca-edital-que-preve-fomento-a-aceleracao-de-negocios-de-impacto.html",
+   "id": "2f66efe53680",
+   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Indústria do Futuro – Fase 1",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/jornada-futuro-2026",
+   "resumo": "Sumário: Lançamento da chamada: 08/09/2026 Modalidade de apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 08/10/2026 Prazo para apresentação da proposta completa para propostas enquadradas: 09/12/2026 Anúncio dos projetos selecionados: a p",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/jornada-futuro-2026",
+   "tipo": "poc",
+   "segmentos": [
+    "logistica",
+    "agro",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-12-09",
+   "valor": "R$ 500.000,00"
+  },
+  {
+   "id": "f484ba51ca8a",
+   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Transição Energética – Fase 1",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/jornada-tecnologica-2026-transicao-energetica-fase",
+   "resumo": "Sumário: Lançamento da Chamada: 03/08/2026 Modalidade de Apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 02/09/2026 Prazo para apresentação da proposta completa para propostas enquadradas: 03/11/2026 Anúncio dos projetos selecionados: A p",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/jornada-tecnologica-2026-transicao-energetica-fase",
+   "tipo": "poc",
+   "segmentos": [
+    "logistica",
+    "agro",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-11-03",
+   "valor": "R$ 500.000,00"
+  },
+  {
+   "id": "1177837530d9",
+   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica 1ª Rodada 2026 – Fase 1",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/jornada-tecnologica-2026-fase-1",
+   "resumo": "Sumário: Lançamento da Chamada: 29/06/2026 Modalidade de Apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 29/07/2026 Prazo para apresentação da proposta completa para propostas enquadradas: 28/09/2026 Anúncio dos projetos selecionados: A p",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/jornada-tecnologica-2026-fase-1",
+   "tipo": "poc",
+   "segmentos": [
+    "logistica",
+    "agro",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-09-28",
+   "valor": "R$ 500.000,00"
+  },
+  {
+   "id": "87e96fd15c60",
+   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Soberania Digital – Fase 1",
+   "orgao": "FAPESP PIPE",
+   "link": "https://fapesp.br/pipe/2026-digital",
+   "resumo": "Sumário: Lançamento da Chamada: 25/05/2026 Modalidade de Apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 24/06/2026 Prazo para apresentação da proposta completa para propostas enquadradas: 24/08/2026 Anúncio dos projetos selecionados: A p",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPESP PIPE",
+   "anuncio": "https://fapesp.br/pipe/2026-digital",
+   "tipo": "poc",
+   "segmentos": [
+    "logistica",
+    "agro",
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "osc"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-08-24",
+   "valor": "R$ 500.000,00"
+  },
+  {
+   "id": "b0b355315755",
+   "titulo": "Edital nº31/2026 Ciência no Governo: Programa Cientista Arretado (1 de outubro de 2026)",
+   "orgao": "FACEPE",
+   "link": "https://www2.facepe.br/wp-content/uploads/2026/10/2026.09.30-Cientista-Arretado.pdf",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FACEPE",
+   "anuncio": "https://www2.facepe.br/wp-content/uploads/2026/10/2026.09.30-Cientista-Arretado.pdf",
    "tipo": "poc",
    "segmentos": [
     "educacao",
-    "cultura",
     "saude",
-    "logistica",
-    "agro",
     "energia",
     "clima",
-    "financas",
-    "social"
+    "cidades",
+    "financas"
    ],
    "proponentes": [
     "cpf",
@@ -254,10 +384,489 @@
    ],
    "abrangencia": "regional",
    "ufs": [
-    "CE"
+    "PE"
    ],
    "prazo": null,
-   "valor": "R$ 25 mil"
+   "valor": "R$ 10.520.000,00"
+  },
+  {
+   "id": "29fc5e5bcc03",
+   "titulo": "EDITAL DE ABERTURA CHAMAMENTO PÚBLICO Nº 01/2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Licita%C3%A7%C3%B5es/Chamamento%20P%C3%BAblico.pdf?v=1774297039000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Licita%C3%A7%C3%B5es/Chamamento%20P%C3%BAblico.pdf?v=1774297039000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "df2144c1891e",
+   "titulo": "CHAMADA FOREST PATHWAYS 2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/call_announcement_chamada-forest-2026.pdf?v=1790870773000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/call_announcement_chamada-forest-2026.pdf?v=1790870773000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "aafab96534a7",
+   "titulo": "Diretrizes da Fapes - Chamada SBEP 2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Portif%C3%B3lios/diretrizes-da-fapes-chamada-sbep-2026.pdf?v=1791235161000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Portif%C3%B3lios/diretrizes-da-fapes-chamada-sbep-2026.pdf?v=1791235161000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "39f79ec0a5c1",
+   "titulo": "CHAMADA MOBILITY CONFAP ITALY 2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Chamada-MCI-%E2%80%93-MOBILITY-CONFAP-ITALY-2026.pdf?v=1781727690000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Chamada-MCI-%E2%80%93-MOBILITY-CONFAP-ITALY-2026.pdf?v=1781727690000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "b380aee65396",
+   "titulo": "CHAMADA OCEAN 2 CRA - BELMONT FORUM",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Ocean%202%20%E2%80%93%20Towards%20the%20Ocean%20We%20Want_%20Biodiversity%20and%20Ecosystem%20Sustainability%20for%20Nature%20and%20Human%20Well-being%20-%20Belmont%20Forum.pdf?v=1771967322000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Ocean%202%20%E2%80%93%20Towards%20the%20Ocean%20We%20Want_%20Biodiversity%20and%20Ecosystem%20Sustainability%20for%20Nature%20and%20Human%20Well-being%20-%20Belmont%20Forum.pdf?v=1771967322000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "0a075dbef95a",
+   "titulo": "CHAMADA CONFAP & CDTI 2025-2026 - BRASIL E ESPANHA",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Chamada%20CONFAP%20-%20CDTI%20_2025_2026_MINUTA-1-1.pdf?v=1764248756000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Chamada%20CONFAP%20-%20CDTI%20_2025_2026_MINUTA-1-1.pdf?v=1764248756000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "18646d0a4c42",
+   "titulo": "Edital - Chamada RAMP 2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Edital%20-%20Chamada%20RAMP%202026.pdf?v=1783965802000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Edital%20-%20Chamada%20RAMP%202026.pdf?v=1783965802000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "03e7bf79c30d",
+   "titulo": "Diretrizes Chamada Internacional RAMP-2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Diretrizes_Chamada_Internacional_RAMP-2026.pdf?v=1783965806000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Diretrizes_Chamada_Internacional_RAMP-2026.pdf?v=1783965806000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6d4ccdcfa3ce",
+   "titulo": "EDITAL DA CHAMADA CONFAP - CDTI 2026-2027",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Portif%C3%B3lios/chamada-confap-cdti-2026-2027.pdf?v=1792441078000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Portif%C3%B3lios/chamada-confap-cdti-2026-2027.pdf?v=1792441078000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "57a14c085dd1",
+   "titulo": "Chamada CONFAP - WBI 2026",
+   "orgao": "FAPES",
+   "link": "https://fapes.es.gov.br/media/Editais/Chamada%20CONFAP%20-%20WBI%202026.pdf?v=1783362358000",
+   "resumo": "",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPES",
+   "anuncio": "https://fapes.es.gov.br/media/Editais/Chamada%20CONFAP%20-%20WBI%202026.pdf?v=1783362358000",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "ES"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6dbbaf496f90",
+   "titulo": "Edital Fapergs 03/2026 Programa de Apoio aos Ecossistemas de...",
+   "orgao": "FAPERGS",
+   "link": "https://fapergs.rs.gov.br/edital-fapergs-03-2026-programa-de-apoio-aos-ecossistemas-de-inovacao-edicao-2026",
+   "resumo": "Publicado o resultado final do Edital Fapergs 03/2026 Programa de Apoio aos Ecossistemas de Inovação - Faixa A e Faixa B.\n\nConfira abaixo o resultado final nas Faixa A e B do Edital Fapergs 03/2026 Programa de Apoio aos Ecossistemas de Inovação.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:FAPERGS",
+   "anuncio": "https://fapergs.rs.gov.br/edital-fapergs-03-2026-programa-de-apoio-aos-ecossistemas-de-inovacao-resultado-final-das-faixas-a-e-b",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RS"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "cd06d99384de",
+   "titulo": "Chamada Pública CNPq/Petrobras N° 31/2026 - Projeto InspirAÇÃO",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-31-2026/chamada-publica-cnpq-N-31-2026",
+   "resumo": "O Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), em parceria institucional com o Centro de Pesquisas, Desenvolvimento e Inovação Leopoldo Américo Miguez de Mello (Cenpes) e com financiamento da Petrobras, convida Instituição Científica, Tecnológica e de Ino",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-31-2026/chamada-publica-cnpq-N-31-2026",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "energia"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2026-12-08",
+   "valor": ""
+  },
+  {
+   "id": "d77eb3486087",
+   "titulo": "Chamada Pública MCTI/CNPq/CISB/SAAB AB Nº 37/2026 - Cooperação Brasil-Suécia",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-37-2026/chamada-publica-cnpq-N-37-2026",
+   "resumo": "A presente chamada objetiva selecionar candidatos para desenvolver parte de suas pesquisas doutorais ou projeto de pós-doutorado na Suécia em áreas definidas consensualmente entre o CNPq, o CISB e a SAAB AB.",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-37-2026/chamada-publica-cnpq-N-37-2026",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-03-12",
+   "valor": ""
+  },
+  {
+   "id": "e643e2b52497",
+   "titulo": "Chamada Pública CNPq/CAPES Nº 30/2026 – Programa de Mestrado e Doutorado Acadêmico para Inovação – MAI/DAI",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
+   "resumo": "A edição de 2026 do Programa de Mestrado e Doutorado para Inovação (MAI/DAI), que estimula a realização de pesquisas de mestrado e doutorado em universidades em parceria com empresas, recebe propostas até o dia 11 de dezembro. A chamada é realizada pelo Conselho Nacional de Desen",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-30-2026/chamada-publica-cnpq-N-30-2026",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2026-12-11",
+   "valor": ""
+  },
+  {
+   "id": "6cb01549e00a",
+   "titulo": "Chamada Pública CNPq/MCTI N° 36/2026 - Apoio a cursos de curta duração em biodiversidade, no âmbito do Centro Franco-Brasileiro de Biodiversidade Amazônica (CFBBA)",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-36-2026/chamada-publica-cnpq-N-36-2026",
+   "resumo": "A presente Chamada Pública tem por objetivo apoiar a realização de cursos de curta duração na área de biodiversidade, a serem promovidos no âmbito do Centro Franco-Brasileiro de Biodiversidade Amazônica (CFBBA). A iniciativa visa fortalecer as capacidades científica e tecnológica",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-36-2026/chamada-publica-cnpq-N-36-2026",
+   "tipo": "fomento",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2027-02-12",
+   "valor": ""
+  },
+  {
+   "id": "c2ebf41f1d71",
+   "titulo": "Chamada CNPq Nº 34/2026 - Auxílio à Promoção de Eventos Científicos, Tecnológicos e/ou de Inovação - ARC",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
+   "resumo": "O CNPq torna pública a Chamada CNPq nº 34/2026, que tem por objeto a poiar a realização no Brasil de eventos de grande porte, de abrangência mundial, internacional ou nacional, relacionados a ciência, tecnologia e inovação, tais como encontros, congressos e outros similares que v",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-34-2026/chamada-publica-cnpq-N-34-2026",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-12-04",
+   "valor": ""
+  },
+  {
+   "id": "879be19f3d65",
+   "titulo": "Chamada CNPq nº 33/2026 - Bolsas de Produtividade do CNPq",
+   "orgao": "CNPq",
+   "link": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/chamada-publica-cnpq-N-33-2026",
+   "resumo": "O CNPq torna pública a Chamada CNPq nº 33/2026, que tem por objeto conceder bolsas nas seguintes modalidades: Produtividade em Desenvolvimento Tecnológico e Extensão Inovadora (DT), Produtividade em Pesquisa (PQ) e Produtividade em Pesquisa Sênior (PQSr). São objetivos desta cham",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:CNPq",
+   "anuncio": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-33-2026/chamada-publica-cnpq-N-33-2026",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2027-01-07",
+   "valor": ""
+  },
+  {
+   "id": "3043c6f47738",
+   "titulo": "Chamada do CONFAP para Apoio Complementar ao MSCA Doctoral Networks 2026",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/120/chamada-do-confap-para-apoio-complementar-ao-msca-doctoral-networks-2026",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/120/chamada-do-confap-para-apoio-complementar-ao-msca-doctoral-networks-2026",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-24",
+   "valor": ""
+  },
+  {
+   "id": "185228a8e3c6",
+   "titulo": "Chamada Transnacional Conjunta - FOREST 2026",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/119/chamada-transnacional-conjunta-forest-2026",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/119/chamada-transnacional-conjunta-forest-2026",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura",
+    "residuos",
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-12-02",
+   "valor": ""
+  },
+  {
+   "id": "e5538755e3f1",
+   "titulo": "4ª Chamada Transnacional Conjunta da Parceria de Economia Azul Sustentável",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/118/4-chamada-transnacional-conjunta-da-parceria-de-economia-azul-sustentavel-",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/118/4-chamada-transnacional-conjunta-da-parceria-de-economia-azul-sustentavel-",
+   "tipo": "fomento",
+   "segmentos": [
+    "social"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-16",
+   "valor": ""
+  },
+  {
+   "id": "bd5f8a512f4a",
+   "titulo": "Chamada Transnacional Conjunta Biodiversa+ (BiodivFuture) 2026-2027",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/117/chamada-transnacional-conjunta-biodiversa-biodivfuture-2026-2027",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/117/chamada-transnacional-conjunta-biodiversa-biodivfuture-2026-2027",
+   "tipo": "fomento",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-04-16",
+   "valor": ""
+  },
+  {
+   "id": "22d31a322848",
+   "titulo": "Chamada Transnacional Conjunta 2026 - Gestão Sustentável dos Recursos Hídricos (Water4All)",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/116/chamada-transnacional-conjunta-2026-gestao-sustentavel-dos-recursos-hidricos-water4all-",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/116/chamada-transnacional-conjunta-2026-gestao-sustentavel-dos-recursos-hidricos-water4all-",
+   "tipo": "poc",
+   "segmentos": [
+    "residuos"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-04-06",
+   "valor": ""
+  },
+  {
+   "id": "a4c84f162dae",
+   "titulo": "Chamada CONFAP & CDTI 2026-2027",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/114/chamada-confap-cdti-2026-2027",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/114/chamada-confap-cdti-2026-2027",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-10-08",
+   "valor": ""
+  },
+  {
+   "id": "f887042ad02a",
+   "titulo": "DAAD - Programa de Auxílio para Doutorandos com Bolsa Nacional 2026",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/113/daad-programa-de-auxilio-para-doutorandos-com-bolsa-nacional-2026",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-16",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/113/daad-programa-de-auxilio-para-doutorandos-com-bolsa-nacional-2026",
+   "tipo": "fomento",
+   "segmentos": [
+    "saude"
+   ],
+   "proponentes": [
+    "cpf",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-09-03",
+   "valor": ""
   },
   {
    "id": "db4eff860056",
@@ -265,7 +874,7 @@
    "orgao": "finep.gov.br",
    "link": "https://www.finep.gov.br/en/e/chamada-publica/222684/1057230",
    "resumo": "description",
-   "adicionado_em": "2026-11-15",
+   "adicionado_em": "2026-11-16",
    "fonte": "noticia:gov.br",
    "anuncio": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2026/setembro/economia-solidaria-finep-abre-selecao-de-projetos-de-inovacao-social",
    "tipo": "fomento",
@@ -288,29 +897,6 @@
    "ufs": [],
    "prazo": "2027-01-14",
    "valor": "R$ 2 milhões"
-  },
-  {
-   "id": "f4532c29ca18",
-   "titulo": "Finep abre chamada de R$ 500 milhões para pesquisa aplicada",
-   "orgao": "finep.gov.br",
-   "link": "http://www.finep.gov.br/chamadas-publicas/chamadapublica/768",
-   "resumo": "description",
-   "adicionado_em": "2026-11-15",
-   "fonte": "noticia:istoedinheiro.com.br",
-   "anuncio": "https://istoedinheiro.com.br/finep-abre-chamada-de-r-500-milhoes-para-pesquisa-aplicada",
-   "tipo": "fomento",
-   "segmentos": [
-    "saude",
-    "logistica",
-    "agro"
-   ],
-   "proponentes": [
-    "parceria"
-   ],
-   "abrangencia": "nacional",
-   "ufs": [],
-   "prazo": null,
-   "valor": "R$ 500 milhões"
   }
  ]
 }
