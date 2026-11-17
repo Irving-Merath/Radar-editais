@@ -823,6 +823,98 @@ def coletar_ue(conhecidos):
     return novos
 
 
+# ---------------------------------------------------------------- PNCP (contratações públicas)
+# O PNCP é o portal oficial onde órgãos de todo o país publicam suas contratações. CPSI (Lei Complementar
+# 182/2021) e encomendas tecnológicas aparecem lá. A busca usa frases exatas: a palavra solta "CPSI"
+# casa com qualquer edital.
+BUSCAS_PNCP = [
+    ("\"contrato público para solução inovadora\"", "cpsi"),
+    ("\"solução inovadora\"", "cpsi"),
+    ("\"Lei Complementar 182\"", "cpsi"),
+    ("\"marco legal das startups\"", "cpsi"),
+    ("\"CPSI\"", "cpsi"),
+    ("\"encomenda tecnológica\"", "etec"),
+]
+CONFIRMA_PNCP = {
+    "cpsi": re.compile(r"cpsi|solucao inovadora|solucoes inovadoras|complementar n? ?182|marco legal das startups"),
+    "etec": re.compile(r"encomenda tecnologica|encomendas tecnologicas"),
+}
+UFS_VALIDAS = set(UF_RE)
+
+
+def pncp_get(url, params=None, tentativas=4):
+    """GET no PNCP com novas tentativas (o servidor às vezes derruba a conexão)."""
+    for t in range(tentativas):
+        try:
+            r = requests.get(url, params=params, headers={**HEADERS, "Accept": "application/json"}, timeout=40)
+            if r.status_code == 200:
+                return r.json()
+            print("  PNCP respondeu", r.status_code, url[:90])
+        except Exception as e:
+            print("  PNCP falhou (tentativa", t + 1, ")", type(e).__name__)
+        import time
+        time.sleep(2 * (t + 1))
+    return None
+
+
+def coletar_pncp(conhecidos):
+    novos, mostrou_campos = [], False
+    for frase, tipo in BUSCAS_PNCP:
+        for pagina in range(1, 6):
+            d = pncp_get("https://pncp.gov.br/api/search/", {
+                "q": frase, "tipos_documento": "edital", "ordenacao": "-data", "pagina": pagina,
+                "tam_pagina": 50, "status": "recebendo_proposta"})
+            itens = (d or {}).get("items") or []
+            if pagina == 1:
+                print(f"PNCP: {frase} → {(d or {}).get('total', 0)} editais recebendo propostas")
+            if itens and not mostrou_campos:
+                print("  campos:", sorted(itens[0].keys()))
+                mostrou_campos = True
+            for it in itens:
+                texto = normalizar(f"{it.get('title', '')} {it.get('description', '')}")
+                if not CONFIRMA_PNCP[tipo].search(texto):
+                    continue  # a busca do PNCP é aproximada: confere se o objeto fala mesmo de CPSI/ETEC
+                partes = (it.get("item_url") or "").strip("/").split("/")  # compras/<cnpj>/<ano>/<sequencial>
+                if len(partes) != 4:
+                    continue
+                _, cnpj, ano, seq = partes
+                link = f"https://pncp.gov.br/app/editais/{cnpj}/{ano}/{seq}"
+                if gerar_id(link) in conhecidos:
+                    continue
+                conhecidos.add(gerar_id(link))
+                # Prazo de propostas e link do arquivo do edital (API oficial de consulta do PNCP).
+                prazo, arquivo = None, None
+                det = pncp_get(f"https://pncp.gov.br/api/consulta/v1/orgaos/{cnpj}/compras/{ano}/{seq}", tentativas=2)
+                if det and det.get("dataEncerramentoProposta"):
+                    prazo = det["dataEncerramentoProposta"][:10]
+                arqs = pncp_get(f"https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{seq}/arquivos",
+                                tentativas=2)
+                for a in arqs or []:
+                    if re.search(r"edital", normalizar(f"{a.get('tipoDocumentoNome', '')} {a.get('titulo', '')}")):
+                        arquivo = a.get("url") or a.get("uri")
+                        break
+                if prazo and prazo < HOJE.isoformat():
+                    continue
+                orgao = (it.get("orgao_nome") or "").title()
+                municipio = it.get("municipio_nome") or ""
+                uf = (it.get("uf") or "").upper()
+                titulo = f"{it.get('title', 'Edital')} – {orgao}"
+                desc = it.get("description") or ""
+                item = {"id": gerar_id(link), "titulo": titulo[:200], "orgao": orgao or "PNCP",
+                        "link": arquivo or link, "anuncio": link, "resumo": desc[:280],
+                        "adicionado_em": HOJE.isoformat(), "fonte": "api:pncp"}
+                item.update(classificar(titulo, f"{desc} {municipio}", [uf] if uf in UFS_VALIDAS else None, link, desc[:280]))
+                item.update({"tipo": tipo, "prazo": prazo or item.get("prazo")})
+                if "startup" not in item["proponentes"]:
+                    item["proponentes"].append("startup")  # CPSI/ETEC são contratos com empresas
+                novos.append(item)
+                print(f"  ok [{tipo}]: {titulo[:70]} → prazo {prazo}")
+            if len(itens) < 50:
+                break
+    print("PNCP →", len(novos), "novos")
+    return novos
+
+
 def coletar_noticias(busca, conhecidos):
     return coletar_busca(busca, conhecidos, web=False)
 
@@ -867,6 +959,7 @@ def main():
         for busca in BUSCAS_WEB:
             novos += coletar_busca(busca, conhecidos, web=True)
         novos += coletar_ue(conhecidos)
+        novos += coletar_pncp(conhecidos)
         for busca, idioma in BUSCAS_EXTERIOR:
             novos += coletar_busca(busca, conhecidos, idioma=idioma)
     itens += novos
