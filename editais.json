@@ -1,6 +1,100 @@
 {
- "atualizado_em": "2026-11-16",
+ "atualizado_em": "2026-11-17",
  "editais": [
+  {
+   "id": "7b319ad89760",
+   "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
+   "orgao": "Confap",
+   "link": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
+   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
+   "adicionado_em": "2026-11-17",
+   "fonte": "html:Confap",
+   "anuncio": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
+   "tipo": "fomento",
+   "segmentos": [
+    "educacao",
+    "residuos",
+    "clima"
+   ],
+   "proponentes": [
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-02-15",
+   "valor": ""
+  },
+  {
+   "id": "15709c06409d",
+   "titulo": "Edital nº 19/2026 – Secretaria Da Fazenda Do Estado Do Piaui",
+   "orgao": "Secretaria Da Fazenda Do Estado Do Piaui",
+   "link": "https://pncp.gov.br/pncp-api/v1/orgaos/06553556000191/compras/2026/23/arquivos/6",
+   "anuncio": "https://pncp.gov.br/app/editais/06553556000191/2026/23",
+   "resumo": " Licitação especial para celebração de Contrato(s) Público(s) de Solução Inovadora – CPSI  para contratação de pessoa física ou jurídica, isoladamente ou em consórcio de até 2 (duas) empresas para o desafio, para a prestação de serviços de desenvolvimento e qualificação tecnológi",
+   "adicionado_em": "2026-11-17",
+   "fonte": "api:pncp",
+   "tipo": "cpsi",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PI"
+   ],
+   "prazo": "2026-12-23",
+   "valor": ""
+  },
+  {
+   "id": "1169bf53b2d2",
+   "titulo": "Edital de Chamamento Público nº 191/2026 – Conselho De Arquitetura E Urbanismo De Sao Paulo (Cau-Sp)",
+   "orgao": "Conselho De Arquitetura E Urbanismo De Sao Paulo (Cau-Sp)",
+   "link": "https://pncp.gov.br/pncp-api/v1/orgaos/15131560000152/compras/2026/86/arquivos/3",
+   "anuncio": "https://pncp.gov.br/app/editais/15131560000152/2026/86",
+   "resumo": "Contratação de soluções inovadoras, por meio de Contrato Público para Solução Inovadora (CPSI), com execução de Provas de Conceito (PoC), destinadas à validação de abordagens tecnológicas para apoio às atividades de fiscalização profissional do CAU/SP. As soluções deverão contemp",
+   "adicionado_em": "2026-11-17",
+   "fonte": "api:pncp",
+   "tipo": "cpsi",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2027-01-05",
+   "valor": ""
+  },
+  {
+   "id": "76866e599e9c",
+   "titulo": "Edital nº 01-CPSI/2026 – Consorcio De Inovacao Na Gestao Publica",
+   "orgao": "Consorcio De Inovacao Na Gestao Publica",
+   "link": "https://pncp.gov.br/pncp-api/v1/orgaos/09427503000112/compras/2026/30/arquivos/1",
+   "anuncio": "https://pncp.gov.br/app/editais/09427503000112/2026/30",
+   "resumo": "Seleção de uma única proposta para celebração de Contrato Público para Solução Inovadora – CPSI, visando ao desenvolvimento final, à experimentação e ao teste de uma solução inovadora, estruturada como Produto Mínimo Viável – MVP experimental, obrigatoriamente em ambiente real ou",
+   "adicionado_em": "2026-11-17",
+   "fonte": "api:pncp",
+   "tipo": "cpsi",
+   "segmentos": [
+    "saude",
+    "cidades"
+   ],
+   "proponentes": [
+    "parceria",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SC"
+   ],
+   "prazo": "2026-11-26",
+   "valor": ""
+  },
   {
    "id": "08ed47acdbfd",
    "titulo": "Edital FAPERJ Nº 35/2026 – Programa de Atração de Grupos de Pesquisa do Cone Sul",
@@ -1150,31 +1244,6 @@
    ],
    "prazo": "2027-01-26",
    "valor": "R$ 500.000,00"
-  },
-  {
-   "id": "7b319ad89760",
-   "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
-   "orgao": "Confap",
-   "link": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
-   "resumo": "Fomento à Ciência, Tecnologia & Inovação",
-   "adicionado_em": "2026-11-16",
-   "fonte": "html:Confap",
-   "anuncio": "https://confap.org.br/pt/editais/112/1-chamada-da-parceria-de-materias-primas-para-a-transicao-verde-e-digital-ramp-",
-   "tipo": "fomento",
-   "segmentos": [
-    "educacao",
-    "residuos",
-    "clima"
-   ],
-   "proponentes": [
-    "startup",
-    "osc",
-    "parceria"
-   ],
-   "abrangencia": "internacional",
-   "ufs": [],
-   "prazo": "2027-02-15",
-   "valor": ""
   },
   {
    "id": "e715f3317ee1",
