@@ -127,8 +127,12 @@ SEG_KW = {
     "social": ["impacto social", "socioambiental", "vulnerab", "comunidade", "periferia", "diversidade"],
 }
 TIPO_KW = [  # a ordem importa: o primeiro que aparecer define o tipo
-    ("cpsi", ["cpsi", "contrato publico para solucao inovadora", "solucao inovadora", "lei complementar 182", "marco legal das startups"]),
+    # CPSI só com menção explícita: a Lei Complementar 182 (Marco Legal das Startups) e "solução inovadora"
+    # aparecem também em editais de fomento e aceleração (ex.: Centelha).
+    ("cpsi", [" cpsi ", "contrato publico para solucao inovadora", "contratos publicos para solucao inovadora",
+              "contrato publico para solucoes inovadoras"]),
     ("etec", ["encomenda tecnologica", " etec "]),
+    ("aceleracao", ["centelha", "ideacao", "pre aceleracao"]),  # programas para startups em ideação/validação
     ("poc", ["prova de conceito", " poc ", "inovacao aberta", "open innovation", "desafio"]),
     ("aceleracao", ["aceleracao", "incubacao", "pre-aceleracao", "accelerator"]),
     ("premio", ["premio", "premiacao", " award"]),
@@ -235,7 +239,9 @@ def classificar(titulo, corpo, ufs_padrao=None, link="", resumo=""):
     t_regiao = normalizar(f"{titulo}\n{resumo}\n{(corpo or '')[:3000]}")
     t_curto = normalizar(f"{titulo}\n{resumo}")
     segmentos = [s for s, kws in SEG_KW.items() if tem(t, kws)]
-    tipo = next((k for k, kws in TIPO_KW if tem(t, kws)), "fomento")
+    # Tipo pelo título, resumo e começo do texto (onde fica o objeto do edital), não pelo documento inteiro.
+    t_tipo = normalizar(f"{titulo}\n{resumo}\n{(corpo or '')[:8000]}")
+    tipo = next((k for k, kws in TIPO_KW if tem(t_tipo, kws)), "fomento")
     proponentes = [p for p, kws in PROP_KW.items() if tem(t, kws)]
     if ufs_padrao:  # fonte de um estado (ex.: FAPERJ): vale para esse estado
         ufs = set(ufs_padrao) | uf_do_dominio(link)
@@ -304,7 +310,7 @@ OFICIAL = re.compile(r"(^|\.)(gov|org|edu|jus|leg)\.br$|\.gov\.br|\.rio$|fap|fin
                      r"petrobras|prosas|embrapii|cnpq|capes|fiocruz|fundacao|instituto|agerio|facepe|confap|"
                      r"europa\.eu|idrc|xprize|gov\.uk|ukri|\.gov$|\.int$|\.edu$", re.I)
 # Endereços e títulos com cara de notícia: o robô não aceita uma notícia como "o edital".
-URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|materia|/blog|/artigo|/post/|/\d{4}/\d{2}/|"
+URL_NOTICIA = re.compile(r"noticia|/news|imprensa|agencia|/materia|/blog|/artigo|/post/|/20\d\d/[01]\d/[0-3]\d/|"
                          r"faperj\.br/\?id=\d+\.7\.", re.I)
 TITULO_NOTICIA = re.compile(r"\b(lanca|lancou|lancam|abre|abriu|anuncia|anunciou|divulga|divulgou|apresenta|"
                             r"recebe|prorroga|prorrogou|participa|aderiu|adesao|nesta (segunda|terca|quarta|quinta|"
@@ -948,6 +954,10 @@ def main():
         dados = {"editais": []}
     itens = dados["editais"] if isinstance(dados, dict) else dados
     itens = [i for i in itens if not item_ruim(i)]
+    for i in itens:  # corrige o tipo de itens antigos marcados como CPSI só por citarem a LC 182
+        if i.get("tipo") == "cpsi" and i.get("fonte") != "api:pncp":
+            t = normalizar(f"{i.get('titulo', '')} {i.get('resumo', '')}")
+            i["tipo"] = next((k for k, kws in TIPO_KW if tem(t, kws)), "fomento")
     conhecidos = {i["id"] for i in itens} | {gerar_id(i["titulo"]) for i in itens}
 
     novos = []
