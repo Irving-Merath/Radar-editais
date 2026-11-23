@@ -1,6 +1,745 @@
 {
- "atualizado_em": "2026-11-17",
+ "atualizado_em": "2026-11-23",
  "editais": [
+  {
+   "id": "23cc635f9816",
+   "titulo": "Governo da Paraíba lança edital para levar 22 startups paraibanas ao Web Summit Qatar 2027",
+   "orgao": "us.list-manage.com",
+   "link": "https://us.list-manage.com/16_lzcXuind?e=e3fb8b580d&c2id=70cf2cb354786a7fb4fb1153f6c6d58e",
+   "resumo": "Notícias sobre economia, negócios, empreendedorismo, cultura e diversidades de João Pessoa, Campina Grande e toda a paraíba.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "noticia:paraibatotal.com.br",
+   "anuncio": "https://paraibatotal.com.br/2026/11/23/governo-da-paraiba-lanca-edital-para-levar-22-startups-paraibanas-ao-web-summit-qatar-2027/",
+   "tipo": "fomento",
+   "segmentos": [
+    "cultura",
+    "social"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PB"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "0888e2c9c153",
+   "titulo": "Inova Mais: Edital fomenta projetos de inovação",
+   "orgao": "sebrae.com.br",
+   "link": "https://sebrae.com.br/sites/PortalSebrae/ufs/ms/programas/edital-de-desenvolvimento-estadual-inova-mais,85ff9525d3e90910VgnVCM1000001b00320aRCRD",
+   "resumo": "O Sebrae é parceiro ideal para começar, crescer ou transformar seu negócio. Confira as soluções para impulsionar o empreendedorismo na sua região.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "noticia:g1.globo.com",
+   "anuncio": "https://g1.globo.com/ms/mato-grosso-do-sul/especial-publicitario/sebrae-ms/sebrae-e-meu-proprio-negocio/noticia/2024/08/15/inova-mais-edital-fomenta-projetos-de-inovacao.ghtml",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "6e68849d9214",
+   "titulo": "Firjan IEL disponibiliza R$ 1 milhão em edital para implementar IA em indústrias do RJ",
+   "orgao": "conectalab.firjan.com.br",
+   "link": "http://conectalab.firjan.com.br/edital",
+   "resumo": "A transformação digital na indústria já não é mais uma tendência: é uma necessidade estratégica para quem deseja se manter competitivo. No centro dessa revolução está a Inteligência Artificial (IA), capaz de aumentar a produtividade, reduzir custos, otimizar processos e abrir nov",
+   "adicionado_em": "2026-11-23",
+   "fonte": "noticia:g1.globo.com",
+   "anuncio": "https://g1.globo.com/rj/regiao-serrana/noticia/2025/08/31/firjan-iel-disponibiliza-r-1-milhao-em-edital-para-implementar-ia-em-industrias-do-rj.ghtml",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "ia"
+   ],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 1 milhão"
+  },
+  {
+   "id": "d446026a7711",
+   "titulo": "Prêmio ApexBrasil e EXAME abre inscrições para cooperativas e startups",
+   "orgao": "lps.exame.com",
+   "link": "https://lps.exame.com/premio-melhores-negocios-internacionais-2026?utm_source=conteudo&utm_medium=article&utm_campaign=apex_eventos_lead_n/a&utm_content=bbp_de-cooperativas-a-startups-veja-quem-pode-concorrer-ao-premio-da-apexbrasil-e-exame&utm_term=n/a_n/a",
+   "resumo": "Celebrando o impacto das empresas brasileiras no mercado global",
+   "adicionado_em": "2026-11-23",
+   "fonte": "noticia:tribunahoje.com",
+   "anuncio": "https://tribunahoje.com/noticias/cooperativas/2026/09/10/193386-premio-apexbrasil-e-exame-abre-inscricoes-para-cooperativas-e-startups",
+   "tipo": "premio",
+   "segmentos": [
+    "ia",
+    "cultura",
+    "agro",
+    "clima",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-09-30",
+   "valor": "R$37,00"
+  },
+  {
+   "id": "04119036a457",
+   "titulo": "PDF PDF SEI-260003/010990/2026 - faperj.br",
+   "orgao": "faperj.br",
+   "link": "https://www.faperj.br/rp/downloads/Edital_FAPPERJ_N%C2%BA_26_2026_%E2%80%93_Bolsa_de_Inova%C3%A7%C3%A3o_Tecnol%C3%B3gica_(INT).pdf",
+   "resumo": "A Fundação Carlos Chagas Filho de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ, vinculada à Secretaria de Estado de Ciência, Tecnologia e Inovação - SECTI, faz saber, por via do presente Edital , que estão abertas as inscrições para a seleção de projetos do \" Edital Pro",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:faperj.br",
+   "anuncio": "https://www.faperj.br/rp/downloads/Edital_FAPPERJ_N%C2%BA_26_2026_%E2%80%93_Bolsa_de_Inova%C3%A7%C3%A3o_Tecnol%C3%B3gica_(INT).pdf",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "cultura",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "mei",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-11-26",
+   "valor": "R$ 90.000.000,00"
+  },
+  {
+   "id": "6348a1f0d87c",
+   "titulo": "Arquivo de Editais - Observatório do 3° Setor",
+   "orgao": "observatorio3setor.org.br",
+   "link": "https://observatorio3setor.org.br/secoes_tematicas/editais/",
+   "resumo": "Fundación Mapfre abre inscrições para a 10ª edição dos Prêmios à Inovação Social e vencedor leva 100 mil euros Iniciativa global selecionará soluções de impacto positivo no Brasil, América Latina, Europa e Estados Unidos.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:observatorio3setor.org.br",
+   "anuncio": "https://observatorio3setor.org.br/secoes_tematicas/editais/",
+   "tipo": "premio",
+   "segmentos": [
+    "clima",
+    "social"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 500 mil"
+  },
+  {
+   "id": "47fe3095f60e",
+   "titulo": "Programas Abertos - Fundação Araucária",
+   "orgao": "fappr.pr.gov.br",
+   "link": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/files/documento/2026-10/cp_20-2026_top_manager_ii.pdf",
+   "resumo": "Chamadas Públicas (CP) | Processos de Inexigibilidade (PI) | Parcerias da Araucária (PA) | Processos de Manifestação de Interesse (PMI) \r \r \r Chamadas Públicas\r \r  \r \r \r \r CP 20/26: Top Managers Fase II",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:fappr.pr.gov.br",
+   "anuncio": "https://www.fappr.pr.gov.br/Programas-Abertos",
+   "tipo": "fomento",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "educacao",
+    "cultura",
+    "saude",
+    "logistica",
+    "agro",
+    "clima",
+    "cidades",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PR"
+   ],
+   "prazo": "2026-11-23",
+   "valor": "R$ 3,6"
+  },
+  {
+   "id": "0966f4c002c2",
+   "titulo": "Chamadas públicas para contratação de inovação",
+   "orgao": "bndes.gov.br",
+   "link": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/licitacoes-contratos/licitacoes/!ut/p/z1/fY7LCsIwEEX3_Qo3XZaJVgWXBV_YguBC0mxkTIMdbZO2ieLnG6U-Vm7mXC5zhgERDAZBANzDh368CULjjU7oyGisgEMupodsli7W4y3LVjs2ZMkkXSb7eRqzaQybl_j1nxf-G7w3-vUPIKdz24oEhDTaqbsDftSFsgfS1pG7ytdHIStNrULmOtS2wU5pSRiyiiQ5lEbZSEVPv0Nn7G8fMllijQXaqLkefe8DaXNDiWYEzUXkD_aOW04!/",
+   "resumo": "Buscando fortalecer nossa colaboração para o ecossistema de inovação, incluindo startups, o BNDES realiza, dentre outras iniciativas, chamadas públicas para contratação de inovação. O objetivo dessas seleções é identificar desafios específicos do BNDES, discutir soluções técnicas",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:bndes.gov.br",
+   "anuncio": "https://www.bndes.gov.br/wps/vanityurl/chamadadeinovacao",
+   "tipo": "cpsi",
+   "segmentos": [
+    "ia",
+    "saude",
+    "clima",
+    "financas"
+   ],
+   "proponentes": [
+    "mei",
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$300 mil"
+  },
+  {
+   "id": "b862327bfeb2",
+   "titulo": "Chamada Pública para Seleção de Fundo de Investimento em Participações ...",
+   "orgao": "bndes.gov.br",
+   "link": "https://www.bndes.gov.br/wps/wcm/connect/site/b758250b-7009-4363-a218-c2fc34890d9a/Edital+Conex%C3%B5es+Startups.pdf?MOD=AJPERES&CVID=pXrd.7y",
+   "resumo": "Chamada pública FIP Conexões Startups 2026",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:bndes.gov.br",
+   "anuncio": "https://www.bndes.gov.br/wps/portal/site/home/mercado-de-capitais/fundos-de-investimentos/chamadas-publicas-para-selecao-de-fundos/fip-conexoes-startups-2026",
+   "tipo": "aceleracao",
+   "segmentos": [],
+   "proponentes": [
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 160 milhões"
+  },
+  {
+   "id": "f47e5c2015be",
+   "titulo": "CPSI - sites.tcu.gov.br",
+   "orgao": "sites.tcu.gov.br",
+   "link": "https://sites.tcu.gov.br/recursos/cpsi/arquivos-pdf-propostas/PropostaPublica-Automageo.pdf",
+   "resumo": "O Contrato PÃºblico para SoluÃ§Ã£o Inovadora (CPSI) representou um marco na busca por modernizar e ampliar a eficiÃªncia da fiscalizaÃ§Ã£o de obras pÃºblicas pelo Tribunal de Contas da UniÃ£o (TCU). TrÃªs startups - Automageo, Colab e Prefeitura Eficiente - foram selecionadas par",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:sites.tcu.gov.br",
+   "anuncio": "https://sites.tcu.gov.br/cpsi/",
+   "tipo": "cpsi",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "visao",
+    "educacao",
+    "saude",
+    "energia",
+    "clima",
+    "cidades",
+    "social"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "095813bc6a63",
+   "titulo": "PDF SEI/CPRM - 2985090 - Edital",
+   "orgao": "sgb.gov.br",
+   "link": "https://sgb.gov.br/cpsi/media/edital-cpsi_v2.pdf",
+   "resumo": "Com a finalidade de verificar se o licitante mantém as condições de participação e de habilitação, os cadastros informados no item 7.2 deste edital serão novamente consultados antes da assinatura do CPSI .",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:sgb.gov.br",
+   "anuncio": "https://sgb.gov.br/cpsi/media/edital-cpsi_v2.pdf",
+   "tipo": "cpsi",
+   "segmentos": [
+    "educacao",
+    "energia"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "SP"
+   ],
+   "prazo": "2026-10-15",
+   "valor": "R$200.000,00"
+  },
+  {
+   "id": "26411fb618eb",
+   "titulo": "Chamadas Públicas - legacy.finep.gov.br",
+   "orgao": "legacy.finep.gov.br",
+   "link": "https://legacy.finep.gov.br/en/chamadas-publicas/chamadaspublicas",
+   "resumo": "Agência pública que financia a inovação, desde a pesquisa básica até a preparação do produto para o mercado.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:legacy.finep.gov.br",
+   "anuncio": "https://legacy.finep.gov.br/en/chamadas-publicas/chamadaspublicas",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "52b8d6829dc5",
+   "titulo": "Finep publica chamada de R$ 100 milhões para impulsionar soluções ...",
+   "orgao": "faleconosco.finep.gov.br",
+   "link": "https://faleconosco.finep.gov.br/web/guest/w/finep-publica-chamada-de-r-100-milh%C3%B5es-para-impulsionar-solu%C3%A7%C3%B5es-tecnol%C3%B3gicas-na-economia-solid%C3%A1ria",
+   "resumo": "A Finep acaba de publicar o edital da Chamada Pública PRONINC 2026 , que destina até R$ 100 milhões em recursos não reembolsáveis do Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT) para apoiar projetos de desenvolvimento ou adaptação de soluções tecnológicas vo",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:faleconosco.finep.gov.br",
+   "anuncio": "https://faleconosco.finep.gov.br/web/guest/w/finep-publica-chamada-de-r-100-milh%C3%B5es-para-impulsionar-solu%C3%A7%C3%B5es-tecnol%C3%B3gicas-na-economia-solid%C3%A1ria",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "residuos",
+    "saude",
+    "agro",
+    "energia",
+    "clima",
+    "cidades",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2027-01-14",
+   "valor": "R$ 100 milhões"
+  },
+  {
+   "id": "65664f3f15fa",
+   "titulo": "Serviço de Atendimento ao Cliente - SAC - Fale Conosco - Finep",
+   "orgao": "faleconosco.finep.gov.br",
+   "link": "https://faleconosco.finep.gov.br/sac",
+   "resumo": "Obtenha orientações, esclarecimentos e suporte aos produtos e serviços oferecidos pela Finep.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:faleconosco.finep.gov.br",
+   "anuncio": "https://faleconosco.finep.gov.br/sac",
+   "tipo": "aceleracao",
+   "segmentos": [],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 90 milhões"
+  },
+  {
+   "id": "e9e348a20eb4",
+   "titulo": "Chamadas públicas para contratação de inovação - bndes.gov.br",
+   "orgao": "bndes.gov.br",
+   "link": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/licitacoes-contratos/licitacoes/chamadas-publicas-inovacao2",
+   "resumo": "Buscando fortalecer nossa colaboração para o ecossistema de inovação, incluindo startups, o BNDES realiza, dentre outras iniciativas, chamadas públicas para contratação de inovação. O objetivo dessas seleções é identificar desafios específicos do BNDES, discutir soluções técnicas",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:bndes.gov.br",
+   "anuncio": "https://www.bndes.gov.br/wps/portal/site/home/transparencia/licitacoes-contratos/licitacoes/chamadas-publicas-inovacao2",
+   "tipo": "cpsi",
+   "segmentos": [
+    "ia",
+    "saude",
+    "clima",
+    "financas"
+   ],
+   "proponentes": [
+    "mei",
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$300 mil"
+  },
+  {
+   "id": "7006f90ef25c",
+   "titulo": "BNDES Conexões | Editais e chamadas abertos",
+   "orgao": "conexoes.bndes.gov.br",
+   "link": "https://conexoes.bndes.gov.br/chamadas-e-editais",
+   "resumo": "Chamadas e editais abertos agora. Conheça os tipos de chamadas e editais disponíveis.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:conexoes.bndes.gov.br",
+   "anuncio": "https://conexoes.bndes.gov.br/chamadas-e-editais",
+   "tipo": "fomento",
+   "segmentos": [
+    "social"
+   ],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": "2026-12-04",
+   "valor": ""
+  },
+  {
+   "id": "50b137652d23",
+   "titulo": "AÇÃO CONJUNTA DE FOMENTO FINEP -BNDES - Finep",
+   "orgao": "finep.gov.br",
+   "link": "https://www.finep.gov.br/l/751962",
+   "resumo": "description",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:finep.gov.br",
+   "anuncio": "https://www.finep.gov.br/l/751962",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "4f7812a67fc0",
+   "titulo": "PDF Chamada Pública Para Seleção De Propostas De Atração, Implantação Ou ...",
+   "orgao": "legacy.finep.gov.br",
+   "link": "https://legacy.finep.gov.br/images/chamadas-publicas/2025/20_02_2025_Chamada_Centros_de_PD.pdf",
+   "resumo": "CHAMADA PÚBLICA é uma iniciativa conjunta do Banco Nacional de Desenvolvimento Econômico e Social - BNDES e da Financiadora de Estudos e Projetos - FINEP, que tem por objetivo fomentar a atração, implantação ou expansão de Centros de Pesquisa, Desenvolvimento Tecnológico e Inovaç",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:legacy.finep.gov.br",
+   "anuncio": "https://legacy.finep.gov.br/images/chamadas-publicas/2025/20_02_2025_Chamada_Centros_de_PD.pdf",
+   "tipo": "poc",
+   "segmentos": [
+    "financas"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": "R$ 10 milhões"
+  },
+  {
+   "id": "0d7ae71755cd",
+   "titulo": "Edital BNDES 2026: chamadas abertas para startups · Capitaai",
+   "orgao": "fappr.pr.gov.br",
+   "link": "https://www.fappr.pr.gov.br/sites/fundacao-araucaria/arquivos_restritos/files/documento/2026-10/cp_20-2026_top_manager_ii.pdf",
+   "resumo": "Domine o edital bndes 2026 e garanta financiamento para sua inovação. Veja o passo a passo para enviar sua proposta e vencer a concorrência hoje.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:capitaai.com.br",
+   "anuncio": "https://capitaai.com.br/blog/edital-bndes-2026-chamadas-abertas-para-startups-icts-e-oscs",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "cultura",
+    "saude",
+    "logistica",
+    "agro"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "PR",
+    "RJ"
+   ],
+   "prazo": "2026-08-31",
+   "valor": "R$ 180.000.000"
+  },
+  {
+   "id": "6a334567af79",
+   "titulo": "Chamadas Públicas Archive - Embrapii",
+   "orgao": "embrapii.org.br",
+   "link": "https://embrapii.org.br/chamadas-publicas/",
+   "resumo": "A EMBRAPII (Empresa Brasileira de Pesquisa e Inovação Industrial), é uma empresa constituída com o foco em apoiar instituições de pesquisa tecnológica fomentando a inovação na indústria brasileira.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:embrapii.org.br",
+   "anuncio": "https://embrapii.org.br/chamadas-publicas/",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "nacional",
+   "ufs": [],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "e16d9169694b",
+   "titulo": "FAPERJ",
+   "orgao": "faperj.br",
+   "link": "https://faperj.br/rp/downloads/Edital_FAPERJ_Nº_04_2025_–_Programa_Startup_RJ_2025_Apoio_à_Difusão_de_Ambiente_de_Inovação_em_Tecnologia_Digital_no_Estado_do_Rio_de_Janeiro.pdf",
+   "resumo": "Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro - FAPERJ",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:faperj.br",
+   "anuncio": "https://faperj.br/?id=729.7.8",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "iot",
+    "educacao",
+    "cultura",
+    "saude",
+    "logistica",
+    "energia",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": "R$ 12 milhões"
+  },
+  {
+   "id": "3d7488b4ab6a",
+   "titulo": "PDF EDITAL ABERTO: FAPERJ FAPERJ Nº 15/2026 - Programa Prioridade Indústria ...",
+   "orgao": "firjan.com.br",
+   "link": "https://www.firjan.com.br/data/files/00/00/3B/7C/94D50A106CEF99E919284EA8/boletim_radar_edicao59_setembro_2026.pdf",
+   "resumo": "Apoiar projetos de transformação digital e adoção de tecnologias habilitadoras da Indústria 4.0 por startups e empresas industriais sediadas no Estado do Rio de Janeiro, promovendo ganhos de produtividade, eficiência, sustentabilidade e competitividade da indústria fluminense.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:firjan.com.br",
+   "anuncio": "https://www.firjan.com.br/data/files/00/00/3B/7C/94D50A106CEF99E919284EA8/boletim_radar_edicao59_setembro_2026.pdf",
+   "tipo": "poc",
+   "segmentos": [
+    "bigdata",
+    "ia",
+    "iot",
+    "educacao",
+    "cultura",
+    "saude",
+    "logistica",
+    "agro",
+    "energia",
+    "clima",
+    "cidades",
+    "financas",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup",
+    "osc",
+    "parceria"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2027-09-30",
+   "valor": "R$ 6.000.000,00"
+  },
+  {
+   "id": "2dbf255e3e77",
+   "titulo": "PDF Edital Gerência De Projetos Ii Nº 22/2026 Sebrae/Rj Chamada Pública ...",
+   "orgao": "sebraerj.com.br",
+   "link": "https://sebraerj.com.br/media/attachments/2026/10/20/edital--22.2026---sartup-win-jovem.pdf",
+   "resumo": "O Startup Win Jovem é um programa de pré-aceleração desenvolvido pelo Sebrae/RJ para estimular o empreendedorismo jovem, a criação e o aumento da competitividade de startups de base tecnológica no estado do Rio de Janeiro.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:sebraerj.com.br",
+   "anuncio": "https://sebraerj.com.br/media/attachments/2026/10/20/edital--22.2026---sartup-win-jovem.pdf",
+   "tipo": "aceleracao",
+   "segmentos": [
+    "ia",
+    "educacao",
+    "social"
+   ],
+   "proponentes": [
+    "cpf",
+    "startup"
+   ],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": "2026-11-06",
+   "valor": ""
+  },
+  {
+   "id": "40cbebf7357a",
+   "titulo": "SAGA SENAI de Inovação",
+   "orgao": "plataforma.gpinovacao.senai.br",
+   "link": "https://plataforma.gpinovacao.senai.br/plataforma/desafio/1291",
+   "resumo": "O INOVA SENAI é uma iniciativa dos Departamentos Regionais (DRs) do SENAI e do Departamento Nacional (DN) que tem como objetivo promover o empreendedorismo, a criatividade e a cultura de inovação por meio do desenvolvimento de negócios inovadores desde a concepção, planejamento, ",
+   "adicionado_em": "2026-11-23",
+   "fonte": "web:plataforma.gpinovacao.senai.br",
+   "anuncio": "https://plataforma.gpinovacao.senai.br/plataforma/desafio/1291",
+   "tipo": "poc",
+   "segmentos": [
+    "educacao",
+    "cultura"
+   ],
+   "proponentes": [],
+   "abrangencia": "regional",
+   "ufs": [
+    "RJ"
+   ],
+   "prazo": null,
+   "valor": ""
+  },
+  {
+   "id": "05f774c4dcad",
+   "titulo": "Erasmus Mundus Joint Masters (ERASMUS-EDU-2027-PEX-EMJM-MOB)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-EMJM-MOB",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-PEX-EMJM-MOB",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-02-16",
+   "valor": ""
+  },
+  {
+   "id": "777db639783e",
+   "titulo": "Capacity building in VET in Caribbean (ERASMUS-EDU-2027-CB-VET-CA)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-CA",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-CA",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "da7036a30432",
+   "titulo": "Capacity building in VET in Western Balkans (ERASMUS-EDU-2027-CB-VET-WB)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-WB",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-WB",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "5cba898f34a7",
+   "titulo": "Capacity building in VET in Sub-Saharan Africa (ERASMUS-EDU-2027-CB-VET-SSA)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SSA",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SSA",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "545fe012bff1",
+   "titulo": "Capacity building in VET in Latin America (ERASMUS-EDU-2027-CB-VET-LA)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-LA",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-LA",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "46639868fb50",
+   "titulo": "Capacity building in VET in South Mediterranean Countries (ERASMUS-EDU-2027-CB-VET-SMC)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SMC",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-SMC",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "66450abdcd27",
+   "titulo": "Capacity building in VET in Neighborhood East (ERASMUS-EDU-2027-CB-VET-NE)",
+   "orgao": "União Europeia",
+   "link": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-NE",
+   "anuncio": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/ERASMUS-EDU-2027-CB-VET-NE",
+   "resumo": "",
+   "adicionado_em": "2026-11-23",
+   "fonte": "api:ue",
+   "tipo": "fomento",
+   "segmentos": [],
+   "proponentes": [],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2027-05-12",
+   "valor": ""
+  },
+  {
+   "id": "5ba222c765e2",
+   "titulo": "MassChallenge 2027: reto de materiales para startups",
+   "orgao": "bogota.gov.co",
+   "link": "https://bogota.gov.co/boletin-oferta-internacional/masschallenge-2027-oportunidades-para-startups-de-bogota",
+   "resumo": "¿Tienes una startup en Bogotá que transforma residuos en nuevos materiales o desarrolla soluciones para cuidar el planeta? Esta oportunidad internacional puede ayudarte a conectar tu innovación con grandes empresas y llevarla a nuevos mercados.",
+   "adicionado_em": "2026-11-23",
+   "fonte": "noticia:ecosistemastartup.com",
+   "anuncio": "https://ecosistemastartup.com/masschallenge-2027-reto-de-materiales-para-startups/",
+   "tipo": "poc",
+   "segmentos": [
+    "residuos",
+    "clima"
+   ],
+   "proponentes": [
+    "startup"
+   ],
+   "abrangencia": "internacional",
+   "ufs": [],
+   "prazo": "2026-11-25",
+   "valor": ""
+  },
   {
    "id": "7b319ad89760",
    "titulo": "1ª chamada da Parceria de Matérias-Primas para a Transição Verde e Digital (RAMP)",
@@ -422,34 +1161,6 @@
     "SP"
    ],
    "prazo": "2026-09-28",
-   "valor": "R$ 500.000,00"
-  },
-  {
-   "id": "87e96fd15c60",
-   "titulo": "Chamada de Propostas para o Programa PIPE Jornada Tecnológica Soberania Digital – Fase 1",
-   "orgao": "FAPESP PIPE",
-   "link": "https://fapesp.br/pipe/2026-digital",
-   "resumo": "Sumário: Lançamento da Chamada: 25/05/2026 Modalidade de Apoio: PIPE - Fase 1 Duração máxima: 12 meses Data limite para submissão da pré-proposta: 24/06/2026 Prazo para apresentação da proposta completa para propostas enquadradas: 24/08/2026 Anúncio dos projetos selecionados: A p",
-   "adicionado_em": "2026-11-16",
-   "fonte": "html:FAPESP PIPE",
-   "anuncio": "https://fapesp.br/pipe/2026-digital",
-   "tipo": "poc",
-   "segmentos": [
-    "logistica",
-    "agro",
-    "financas"
-   ],
-   "proponentes": [
-    "cpf",
-    "mei",
-    "startup",
-    "osc"
-   ],
-   "abrangencia": "regional",
-   "ufs": [
-    "SP"
-   ],
-   "prazo": "2026-08-24",
    "valor": "R$ 500.000,00"
   },
   {
